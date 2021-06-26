@@ -5,7 +5,14 @@
 .main{
     border: 10px solid cornflowerblue;
     padding-left: 30px;
+    line-height: 30px;
 }
 .detail{
     padding-left: 20px;
+}
+.main-content{
+    font-size: 20px;
+}
+.add-content{
+    font-size: 15px
 }
