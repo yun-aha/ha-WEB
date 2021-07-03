@@ -2,7 +2,9 @@
 *{
     font-family:'Nanum Myeongjo', serif;
 }
-
+h1{
+    text-align: center;
+}
 tr{
     font-style: italic;
 }
@@ -13,4 +15,5 @@ tr{
 
 .copyright{
     color: cornflowerblue;
+    text-align: center;
 }

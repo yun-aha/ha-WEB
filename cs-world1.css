@@ -7,6 +7,9 @@
     padding-left: 30px;
     line-height: 30px;
 }
+h1{
+    text-align: center;
+}
 .detail{
     padding-left: 20px;
 }
@@ -15,4 +18,8 @@
 }
 .add-content{
     font-size: 15px
+}
+.copyright{
+    color: cornflowerblue;
+    text-align: center;
 }
