@@ -6,6 +6,9 @@
     border: 10px solid cornflowerblue;
     padding-left: 30px;
 }
+h1{
+    text-align: center;
+}
 .copyright{
     color: cornflowerblue;
     text-align: center;
