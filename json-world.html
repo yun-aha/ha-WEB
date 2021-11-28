@@ -15,14 +15,18 @@
     <li><a href="css-world.html">CSS</a><br></li>
     <li><a href="json-world.html">JavaScript</a><br></li>
 </ol>
-    <input type="button" value="day" onclick="
-        document.querySelector('.main').style.border='border: 10px solid cornflowerblue;'
-        document.querySelector('body').style.backgroundColor='ghostwhite'
-        document.querySelector('body').style.color='black'">
-    <input type="button" value="night" onclick="
-        document.querySelector('.main').style.border='border: 10px solid white;'
-        document.querySelector('body').style.backgroundColor='black'
-        document.querySelector('body').style.color='ghostwhite'">
+    <input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value==='night'){
+        document.querySelector('.main').style.border='border: 10px solid white';
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='ghostwhite';
+        document.querySelector('#night_day').value='day';
+    }else{
+        document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
+        document.querySelector('body').style.backgroundColor='ghostwhite';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#night_day').value='night';
+    }">
 
 
 <h2> It's JavaScript</h2>
