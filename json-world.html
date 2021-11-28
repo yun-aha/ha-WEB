@@ -34,7 +34,20 @@
 Early web pages are simple forms without interaction with users<br>
 All interactions are possible only through communication with the server<br>
 </p>
-
+    <input type="button" value="blue" onclick="
+    if(this.value==='blue'){
+        var target = document.querySelector('body');
+        document.querySelector('.main').style.border='border: 10px solid violet';
+        target.style.backgroundColor='blue';
+        target.style.color='ghostwhite';
+        this.value='day';
+    }else{
+        var target = document.querySelector('body');
+        document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
+        target.style.backgroundColor='ghostwhite';
+        target.style.color='black';
+        this.value='blue';
+    }">
     <div class="copyright">
         <p>copyright HYEON. All rights are reserved.</p>
     </div>
