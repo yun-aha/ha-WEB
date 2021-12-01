@@ -41,12 +41,24 @@ All interactions are possible only through communication with the server<br>
         target.style.backgroundColor='blue';
         target.style.color='ghostwhite';
         this.value='day';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i+1;
+        }
     }else{
         var target = document.querySelector('body');
         document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
         target.style.backgroundColor='ghostwhite';
         target.style.color='black';
         this.value='blue';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'blue';
+            i = i+1;
+        }
     }">
     <div class="copyright">
         <p>copyright HYEON. All rights are reserved.</p>
