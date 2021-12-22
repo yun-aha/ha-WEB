@@ -6,15 +6,19 @@
         <link rel="stylesheet" href="js.world1.css">
 </head>
 
-<body>
 
-<div class="main">
+<header>
     <h1><a href="index.html">Hello WEB:)</a></h1>
 <ol>
     <li><a href="html-world.html">HTML</a><br></li>
     <li><a href="css-world.html">CSS</a><br></li>
     <li><a href="json-world.html">JavaScript</a><br></li>
 </ol>
+</header>
+
+
+<body>
+<div class="main">
     <input id="night_day" type="button" value="night" onclick="
     if(document.querySelector('#night_day').value==='night'){
         document.querySelector('.main').style.border='border: 10px solid white';
@@ -60,10 +64,16 @@ All interactions are possible only through communication with the server<br>
             i = i+1;
         }
     }">
-    <div class="copyright">
-        <p>copyright HYEON. All rights are reserved.</p>
-    </div>
 
 </div>
 </body>
+
+
+<footer>
+    <div class="copyright">
+        <p>copyright HYEON. All rights are reserved.</p>
+    </div>
+</footer>
+
+
 </html>

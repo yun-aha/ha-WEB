@@ -6,38 +6,45 @@
     <link rel="stylesheet" href="ht-world1.css">
 </head>
 
-<body>
-<div class="main">
+
+<header>
     <h1><a href="index.html">Hello WEB:)</a></h1>
 <ol>
     <li><a href="html-world.html">HTML</a><br></li>
     <li><a href="css-world.html">CSS</a><br></li>
     <li><a href="json-world.html">JavaScript</a><br></li>
 </ol>
+</header>
 
+
+<body>
+<div class="main">
     <h2>Let's learn about HTML.</h2>
-    <section class="detail">
+
+    <article class="detail">
+
         <section class="main-content">
-        <p style='margin-top:45px;'>
-        <h4><a href="https://www.w3.org/TR/html52/"target ="_blank"title="html5 specification">
-            HTML</a>이란 무엇일까?</h4>
-        do you know about tag? <br><strong>'br'</strong> is line tag<br>
-        Also <strong>'p'</strong> is paragraph line tag.</p>
-        <ol>
-            <li>html tag는 html 문서라면 꼭 써줘야 한다. (!DOCTYPE html, html, /html)</li>
-            <li>Head tag는 내용물에 대한 추가 정보</li>
-            <li>body tag는 내용물의 모든 내용</li>
-            <li>title tag는 페이지 이름(주소창)</li>
-            <li>link tag는 html과 css파일을 연결하는데 필요한 코드로 head tag안에 쓴다.</li>
-            <li>div tag는 division으로 여러 태그들을 묶어서 css를 함께 꾸며주기 위해 쓰이는 태그<br>
-            (같은 태그지만 따로 꾸미고 싶을 땐 class 사용</li>
-            <li>section tag는 division tag와 완전히 똑같음, html요소들을 꾸미기 위해 묶어주는 역할</li>
-            <li>article tag는 division, section과 같음<br>
-            (div,section,a tag를 적절하게 분배하여 깔끔하게 코드를 만든다.)</li>
-            <li>h1,h2,h3...tag +로렘 입숨lorem ipsum</li>
-        </ol>
+            <p style='margin-top:45px;'>
+            <h4><a href="https://www.w3.org/TR/html52/"target ="_blank"title="html5 specification">
+                HTML</a>이란 무엇일까?</h4>
+            do you know about tag? <br><strong>'br'</strong> is line tag<br>
+            Also <strong>'p'</strong> is paragraph line tag.</p>
+                <ol>
+                    <li>html tag는 html 문서라면 꼭 써줘야 한다. (!DOCTYPE html, html, /html)</li>
+                    <li>Head tag는 내용물에 대한 추가 정보</li>
+                    <li>body tag는 내용물의 모든 내용</li>
+                    <li>title tag는 페이지 이름(주소창)</li>
+                    <li>link tag는 html과 css파일을 연결하는데 필요한 코드로 head tag안에 쓴다.</li>
+                    <li>div tag는 division으로 여러 태그들을 묶어서 css를 함께 꾸며주기 위해 쓰이는 태그<br>
+                    (같은 태그지만 따로 꾸미고 싶을 땐 class 사용</li>
+                    <li>section tag는 division tag와 완전히 똑같음, html요소들을 꾸미기 위해 묶어주는 역할</li>
+                    <li>article tag는 division, section과 같음<br>
+                    (div,section,a tag를 적절하게 분배하여 깔끔하게 코드를 만든다.)</li>
+                    <li>h1,h2,h3...tag +로렘 입숨lorem ipsum</li>
+                </ol>
         </section>
-            <section class="add-content">
+
+        <section class="add-content">
             <ul>
                 <strong>  추가 내용  </strong>
                 <li>영어에 기반하여 문서가 동작하기 때문에 한글을 사용하려면 <br>
@@ -45,17 +52,36 @@
                 <li>html은 문서의 요소요소를 구분, css는 화면상에서 적절한 곳에 있도록 구분<br></li>
                 <li>같은 파일에 두 언어를 사용하는 것은 읽는데 피로감,, 따로 작성하도록 한다!</li>
             </ul>
-            </section>
-        <h3>Now, Let's learn about attribute</h3>
-        <p style='margin-top:30px;'>
-        <strong>'img'</strong> you can add image and also
-        you can use 'width' to control image len.<br>
-        like-> img src="",width</p>
-        <img src="wellington.jpg" width="20%">
-    </section>
+        </section>
+
+            <h3>Now, Let's learn about attribute</h3>
+            <p style='margin-top:30px;'>
+            <strong>'img'</strong> you can add image and also
+            you can use 'width' to control image len.<br>
+            like-> img src="",width</p>
+            <img src="wellington.jpg" width="20%">
+        
+        <section class="description">
+            <h3><strong>Description list</strong></h3>
+            <dl>
+                <dt>리스트 구성</dt>
+                <dd>제목(이름) : dt</dd>
+                <dd>태그와 값(설명) : dd</dd>
+            </dl>
+        </section>
+
+        
+    </article>
+
+
+</div>
+</body>
+
+<footer>
     <div class="copyright">
         <p>copyright HYEON. All rights are reserved.</p>
     </div>
-</div>
-</body>
+</footer>
+
+
 </html>
