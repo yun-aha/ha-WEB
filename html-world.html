@@ -8,7 +8,7 @@
 
 
 <header>
-    <h1><a href="index.html">Hello WEB:)</a></h1>
+    <h1><a href="index.html" style="text-decoration: none;">Hello WEB:)</a></h1>
 <ol>
     <li><a href="html-world.html">HTML</a><br></li>
     <li><a href="css-world.html">CSS</a><br></li>
@@ -59,7 +59,7 @@
             <strong>'img'</strong> you can add image and also
             you can use 'width' to control image len.<br>
             like-> img src="",width</p>
-            <img src="wellington.jpg" width="20%">
+            <img src="wellington.jpg" alt="wellington" width="20%">
         
         <section class="description">
             <h3><strong>Description list</strong></h3>
@@ -70,6 +70,36 @@
             </dl>
         </section>
 
+        <section class="table">
+            <h3><strong>Table</strong></h3>
+            <table>
+                <caption>표의 구조</caption>
+                
+                <colgroup>
+                    <col span="3" style="background-color: rgb(146, 183, 252); text-align: center;">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>제목</th>
+                        <th>본문</th>
+                        <th>요약</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>thead</td>
+                        <td>tbody</td>
+                        <td>tfoot</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">표 태그들</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
         
     </article>
 
