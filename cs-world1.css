@@ -1,14 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 *{
-    font-family:'Nanum Myeongjo', serif;
+    font-family:'Gowun Dodum', sans-serif;;
 }
+
+h1{
+    text-align: center;
+    text-shadow: 7px 7px 7px #7c12dfa6;
+}
+.nav{
+    list-style: none;
+    text-align: center;
+}
+
 .main{
     border: 10px solid cornflowerblue;
     padding: 30px;
     line-height: 30px;
-}
-h1{
-    text-align: center;
 }
 .detail{
     padding-left: 20px;
