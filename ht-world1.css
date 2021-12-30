@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+html{
+    background-color: ghostwhite;
+}
 *{
     font-family:'Gowun Dodum', sans-serif;;
 }
@@ -6,15 +9,33 @@ h1{
     text-align: center;
     text-shadow: 7px 7px 7px #7c12dfa6;
 }
-.nav{
+nav{
+    margin: auto 35% auto 38%;
+    display: block;
+    width: 60%;
+}
+nav li{
+    float: left;
     list-style: none;
-    text-align: center;
+    display: inline-block;
+}
+nav a{
+    display:block;
+    padding:10px 20px;
+    text-decoration: none;
+}
+nav a:hover{
+    color:cornflowerblue;
 }
 
 .main{
+    clear: left;
     border: 10px solid cornflowerblue;
+    border-radius: 20px;
     padding: 30px;
     line-height: 30px;
+    width: 80%;
+    margin:auto;
 }
 .detail{
     padding-left: 20px;
