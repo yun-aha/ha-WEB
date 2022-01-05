@@ -36,6 +36,9 @@ nav a:hover{
     width: 80%;
     margin:auto;
 }
+p{
+    opacity: 0;
+}
 .copyright{
     color: cornflowerblue;
     text-align: center;

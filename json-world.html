@@ -20,29 +20,45 @@
 
 
 <body>
+    <script>
+        function showDetail(tag){
+            document.querySelector(tag).style.opacity = '1';
+        }
+        function hideDetail(tag){
+            document.querySelector(tag).style.opacity = '0';
+        }
+    </script>
 <div class="main">
     <input id="night_day" type="button" value="night" onclick="
+    alert('click!');
     if(document.querySelector('#night_day').value==='night'){
         document.querySelector('.main').style.border='border: 10px solid white';
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='ghostwhite';
+        document.querySelector('html,body').style.backgroundColor='black';
+        document.querySelector('html,body').style.color='ghostwhite';
         document.querySelector('#night_day').value='day';
     }else{
         document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
-        document.querySelector('body').style.backgroundColor='ghostwhite';
-        document.querySelector('body').style.color='black';
+        document.querySelector('html,body').style.backgroundColor='ghostwhite';
+        document.querySelector('html,body').style.color='black';
         document.querySelector('#night_day').value='night';
     }">
 
 
 <h2> It's JavaScript</h2>
+
+<button onclick="
+    if(document.querySelector('p').style.opacity=='0'){
+        showDetail('p')
+    }else{hideDetail('p')}
+">자세히 보기</button>
+
 <p>JavaScript is a programming language used to dynamically create web pages.<br>
 Early web pages are simple forms without interaction with users<br>
 All interactions are possible only through communication with the server<br>
 </p>
     <input type="button" value="blue" onclick="
     if(this.value==='blue'){
-        var target = document.querySelector('body');
+        var target = document.querySelector('html,body');
         document.querySelector('.main').style.border='border: 10px solid violet';
         target.style.backgroundColor='blue';
         target.style.color='ghostwhite';
@@ -54,7 +70,7 @@ All interactions are possible only through communication with the server<br>
             i = i+1;
         }
     }else{
-        var target = document.querySelector('body');
+        var target = document.querySelector('html,body');
         document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
         target.style.backgroundColor='ghostwhite';
         target.style.color='black';
