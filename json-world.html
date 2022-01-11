@@ -20,14 +20,6 @@
 
 
 <body>
-    <script>
-        function showDetail(tag){
-            document.querySelector(tag).style.opacity = '1';
-        }
-        function hideDetail(tag){
-            document.querySelector(tag).style.opacity = '0';
-        }
-    </script>
 <div class="main">
     <input id="night_day" type="button" value="night" onclick="
     alert('click!');
@@ -83,13 +75,37 @@ All interactions are possible only through communication with the server<br>
         }
     }">
 
+<div>Hello Web : <span id="time"></span>일 경과</div>
+<button onclick="
+        var newWin = window.open('index.html','','width=500,height=400');
+        if (newWin == null){alert('팝업이 차단되어 있습니다. 팝업 차단 해체해주세요.')}
+        newWin.moveBy(100,100);">팝업창</button>
 </div>
+
+<script>
+    function showDetail(tag){
+        document.querySelector(tag).style.opacity = '1';
+    }
+    function hideDetail(tag){
+        document.querySelector(tag).style.opacity = '0';
+    }
+
+    var now = new Date();
+    var firstDay = new Date("2021-04-16");
+    var toNow = now.getTime();
+    var toFirst = firstDay.getTime();
+    var passedTime = toNow - toFirst;
+
+    passedTime = Math.round(passedTime/(1000*60*60*24));
+    document.querySelector('#time').innerText = passedTime;
+</script>
 </body>
 
 
 <footer>
+    
     <div class="copyright">
-        <p>copyright HYEON. All rights are reserved.</p>
+        copyright HYEON. All rights are reserved.
     </div>
 </footer>
 
