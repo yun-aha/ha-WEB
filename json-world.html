@@ -48,6 +48,13 @@
 Early web pages are simple forms without interaction with users<br>
 All interactions are possible only through communication with the server<br>
 </p>
+<p>
+    <h3>1. 변수</h3> 변수를 사용하려면 반드시 선언이 필요. 변수를 선언할 때는 var, let, const 키워드를 사용<br>
+    <strong>undefined</strong>는 자바스크립트에서 제공하는 원시 타입의 값이다.<br>
+    var키워드를 사용한 변수 선언은 선언 단계와 초기화 단계가 동시에 진행된다. <br>
+    만약 초기화 단계를 거치지 않으면 확보된 메모리 공간에는 이전에 다른 애플리케이션이 사용했던 값이 남아 있을 수 있다.<br>
+    이 값을 <strong>쓰레기 값garbage value</strong>라 한다.
+</p>
     <input type="button" value="blue" onclick="
     if(this.value==='blue'){
         var target = document.querySelector('html,body');
