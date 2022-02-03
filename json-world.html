@@ -175,6 +175,43 @@ All interactions are possible only through communication with the server<br>
                 <li>const변수는 선언될 때 값을 할당해야 한다,</li>
                 <li>const에는 블록 범위가 있다.</li>
             </ul>
+
+        <h3><li>Date</li></h3>
+            <ul>
+                <li>Date는 날짜와 시간을 위한 메서드를 제공하는 빌트인 객체이면서 생성자 함수다.</li>
+                <li>new Date()는 현재 날짜와 시간을 가지는 Date객체 반환</li>
+                <li>월은 생략할 수 없고, 매개변수를 하나만 제공하면 밀리초로 처리된다.</li>
+                <li>한 자리 및 두 자리 연도는 이전 세기(19xx)로 해석된다.</li>
+                <li>new Date(dateString)으로 새 날짜 개체를 만들 수 있다.</li>
+                <li>자바스크립트는 1970년 1월 1일 00:00:00(UTC)이후의 날짜를 밀리초 단위로 저장한다.</li>
+                <li>자바스크립트는 기본적으로 날짜를 전체 텍스트 문자열 형식으로 출력, 날짜 개체를 HTML로 표시하면 toString()메서드를 사용하여 자동으로 문자열로 변환</li>
+                <li>자바스크립트 날짜 입력 형식에는 일반적으로 3가지 유형이 있다(ISO날짜,짧은 날짜, 긴 날짜)</li>
+                <li><strong>ISO Date</strong>"2015-03-25" (The International Standard)</li>
+                <li><strong>Short Date</strong>"03/25/2015"</li>
+                <li><strong>Long Date</strong>"Mar 25 2015" or "25 Mar 2015"</li>
+                <li>toUTCString()메서드는 날짜를 UTC문자열로 변환</li>
+                <li>toDateString()메서드는 날짜를 더 읽기 쉬운 형식으로 변환</li>
+                <li>toISOString()메서드는 ISO 표준 형식을 사용하여 Date 객체를 문자열로 변환</li>
+                <li>유효한 날짜 문자열이 있는 경우 Date.parse()메서드를 사용하여 밀리초로 변환</li>
+                <li>getFullYear(), getMonth(), getDate(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), getTime(), getDay(), Date.now()</li>
+                <li>날짜 설정 방법 : setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds(), setTime()</li>
+                <li>getTimezoneOffset()은 UTC와 Date 객체에 지정된 로캘 시간과의 차이를 분 단위로 반환</li>
+                <li>toLocaleString(), toLocaleTimeString()</li>
+            </ul>
+
+        <h3><li>Math</li></h3>
+            <ul>
+                <li>Math.PI, Math.abs, Math.round, Math.ceil, Math.floor, Math.sqrt, Math.random, Math.pow, Math.max, Math.min</li>
+            </ul>
+
+        <h3><li>Loop</li></h3>
+            <ul>
+                <li>for : 코드 블록을 여러번 반복</li>
+                <li>for/in : 객체의 속성을 통해 루프</li>
+                <li>for/of : 반복 가능한 객체의 값을 반복</li>
+                <li>while : 지정된 조건이 참인 동안 코드 블록을 반복</li>
+                <li>do/while : 또한 지정된 조건이 참인 동안 코드 블록을 반복</li>
+            </ul>
     </ol>
 </div>     
 
