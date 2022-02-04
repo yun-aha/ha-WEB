@@ -182,7 +182,7 @@ All interactions are possible only through communication with the server<br>
                 <li>new Date()는 현재 날짜와 시간을 가지는 Date객체 반환</li>
                 <li>월은 생략할 수 없고, 매개변수를 하나만 제공하면 밀리초로 처리된다.</li>
                 <li>한 자리 및 두 자리 연도는 이전 세기(19xx)로 해석된다.</li>
-                <li>new Date(dateString)으로 새 날짜 개체를 만들 수 있다.</li>
+                <li>new Date(dateString)으로 새 날짜 개체를 만들 수 있다.</li> 
                 <li>자바스크립트는 1970년 1월 1일 00:00:00(UTC)이후의 날짜를 밀리초 단위로 저장한다.</li>
                 <li>자바스크립트는 기본적으로 날짜를 전체 텍스트 문자열 형식으로 출력, 날짜 개체를 HTML로 표시하면 toString()메서드를 사용하여 자동으로 문자열로 변환</li>
                 <li>자바스크립트 날짜 입력 형식에는 일반적으로 3가지 유형이 있다(ISO날짜,짧은 날짜, 긴 날짜)</li>
@@ -210,7 +210,22 @@ All interactions are possible only through communication with the server<br>
                 <li>for/in : 객체의 속성을 통해 루프</li>
                 <li>for/of : 반복 가능한 객체의 값을 반복</li>
                 <li>while : 지정된 조건이 참인 동안 코드 블록을 반복</li>
-                <li>do/while : 또한 지정된 조건이 참인 동안 코드 블록을 반복</li>
+                <li>do/while : 코드 블록을 한번 실행한 다음 지정된 조건이 참인 동안 루프를 반복</li>
+            </ul>
+
+        <h3><li>Set과 Map</li></h3>
+            <ul>
+                <li>set객체는 중복되지 않는 유일한 값들의 집합이다.</li>
+                <li>Set 객체의 요소 개수를 확인할 때는 Set.size를 사용</li>
+                <li>Set.add() : 요소 추가</li>
+                <li>===연산자는 NaN과 NaN을 다르다고 평가하지만 Set객체는 NaN과 NaN을 같다고 평가</li>
+                <li>Set.has()는 객체에 특정 요소가 존재하는지 확인하여 불리언 값을 반환</li>
+                <li>특정 요소를 삭제하려면 Set.delete를 사용, 모든 요소를 일괄 삭제하려면 Set.clear()사용</li>
+                <li>Set 객체의 요소를 순회하려면 Set.forEach()를 사용, 3개의 인수를 전달받는다.</li>
+                <li>교집합 : setA.intersection(setB), 합집합 : setA.union(setB), 차집합 : setA.difference(setB)</li>
+                <li>상위집합 확인 : setA.isSuperset(setB)</li>
+                <hr>
+                <li></li>
             </ul>
     </ol>
 </div>     
