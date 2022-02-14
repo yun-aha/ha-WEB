@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        html,body{
+            text-align: center;
+            border: 0;
+        }
+        #find_img{
+            line-height: 70px;
+            margin-top: 60px;
+            height: 100%;
+            display: inline-block;
+        }
+        .main_box{
+            display: grid;
+            grid-template-columns: repeat(2,200px);
+            grid-template-rows: repeat(4,100px);
+            grid-gap: 10px 10px;
+            justify-content: center;
+            height: 70%;
+            margin: 10px;
+        }
+        #box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8{
+            display: none;
+        }
+        #box1 + label, #box4 + label, #box5 + label, #box8 + label{
+            width: 200px;
+            height: 100px;
+            background: url(https://cdn.pixabay.com/photo/2016/06/27/17/54/leaf-1482948_960_720.jpg);
+        }
+        #box1:checked + label::after, #box4:checked + label::after, #box5:checked + label::after, #box8:checked + label::after{
+            display: inline-block;
+            width: 190px;
+            height: 90px;
+            text-align: center;
+            border: 5px solid black;
+            content:'';
+        }
+        #box2 + label, #box3 + label, #box6 + label, #box7 + label{
+            width: 200px;
+            height: 100px;
+            background: url(https://cdn.pixabay.com/photo/2013/02/20/11/30/autumn-83761_960_720.jpg);
+        }
+        #box2:checked + label::after, #box3:checked + label::after, #box6:checked + label::after, #box7:checked + label::after{
+            display: inline-block;
+            width: 190px;
+            height: 90px;
+            text-align: center;
+            border: 5px solid black;
+            content:'';
+        }
+        .btn{
+            display: inline-grid;
+            grid-template-columns: repeat(2,230px);
+            grid-template-rows: repeat(2,30px);
+            grid-gap: 0 10px;
+            height: 30%;
+        }
+    </style>
+
+    <body>
+        <section id="find_img">
+            <div class="main_box">
+                <input type="checkbox" id="box1"><label for="box1"></label>
+                <input type="checkbox" id="box2"><label for="box2"></label>
+                <input type="checkbox" id="box3"><label for="box3"></label>
+                <input type="checkbox" id="box4"><label for="box4"></label>
+                <input type="checkbox" id="box5"><label for="box5"></label>
+                <input type="checkbox" id="box6"><label for="box6"></label>
+                <input type="checkbox" id="box7"><label for="box7"></label>
+                <input type="checkbox" id="box8"><label for="box8"></label>
+            </div>
+            <div class="btn">
+                <a href="#">다시하기</a>
+                <button type="button">정답 확인하기</button>
+                <div>오답</div><div>정답</div>
+            </div>
+        </section>
+    </body>
+</html>
