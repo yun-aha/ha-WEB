@@ -6,12 +6,12 @@
             border: 0;
         }
         #find_img{
-            line-height: 70px;
-            margin-top: 60px;
+            margin-top: 50px;
             height: 100%;
             display: inline-block;
         }
         .main_box{
+            line-height: 70px;
             display: grid;
             grid-template-columns: repeat(2,200px);
             grid-template-rows: repeat(4,100px);
@@ -27,34 +27,45 @@
             width: 200px;
             height: 100px;
             background: url(https://cdn.pixabay.com/photo/2016/06/27/17/54/leaf-1482948_960_720.jpg);
+            border-radius: 1rem;
         }
         #box1:checked + label::after, #box4:checked + label::after, #box5:checked + label::after, #box8:checked + label::after{
             display: inline-block;
             width: 190px;
             height: 90px;
             text-align: center;
-            border: 5px solid black;
+            border: 5px solid rgba(0, 0, 0, 0.692);
+            border-radius: 1rem;
             content:'';
         }
         #box2 + label, #box3 + label, #box6 + label, #box7 + label{
             width: 200px;
             height: 100px;
             background: url(https://cdn.pixabay.com/photo/2013/02/20/11/30/autumn-83761_960_720.jpg);
+            border-radius: 1rem;
         }
         #box2:checked + label::after, #box3:checked + label::after, #box6:checked + label::after, #box7:checked + label::after{
             display: inline-block;
             width: 190px;
             height: 90px;
             text-align: center;
-            border: 5px solid black;
+            border: 5px solid rgba(0, 0, 0, 0.692);
             content:'';
+            border-radius: 1rem;
         }
         .btn{
-            display: inline-grid;
+            display: grid;
             grid-template-columns: repeat(2,230px);
-            grid-template-rows: repeat(2,30px);
+            grid-template-rows: repeat(2,50px);
             grid-gap: 0 10px;
-            height: 30%;
+            align-items: center;
+            margin: 25px;
+        }
+        .btn a{
+            display: inline-block;
+            border: 3px solid blueviolet;
+            height: 40px;
+            font-size: 25px;
         }
     </style>
 
@@ -71,7 +82,7 @@
                 <input type="checkbox" id="box8"><label for="box8"></label>
             </div>
             <div class="btn">
-                <a href="#">다시하기</a>
+                <a href="#" onClick="window.location.reload()" style="cursor: pointer;">다시하기</a>
                 <button type="button">정답 확인하기</button>
                 <div>오답</div><div>정답</div>
             </div>
