@@ -37,6 +37,7 @@
             border: 5px solid rgba(0, 0, 0, 0.692);
             border-radius: 1rem;
             content:'';
+            background-color : rgba(255, 235, 205, 0.76);
         }
         #box2 + label, #box3 + label, #box6 + label, #box7 + label{
             width: 200px;
@@ -50,8 +51,9 @@
             height: 90px;
             text-align: center;
             border: 5px solid rgba(0, 0, 0, 0.692);
-            content:'';
             border-radius: 1rem;
+            content:'';
+            background-color : rgba(255, 235, 205, 0.76);
         }
         .btn{
             display: grid;
@@ -63,9 +65,28 @@
         }
         .btn a{
             display: inline-block;
-            border: 3px solid blueviolet;
+            background-color: gray;
+            color: black;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            text-decoration: none;
             height: 40px;
             font-size: 25px;
+        }
+        .btn button{
+            display: inline-block;
+            background-color: violet;
+            color: black;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            height: 40px;
+            font-size: 25px;
+        }
+        #wrong{
+            opacity:0;
+        }
+        #right{
+            opacity: 0;
         }
     </style>
 
@@ -82,10 +103,39 @@
                 <input type="checkbox" id="box8"><label for="box8"></label>
             </div>
             <div class="btn">
-                <a href="#" onClick="window.location.reload()" style="cursor: pointer;">다시하기</a>
-                <button type="button">정답 확인하기</button>
-                <div>오답</div><div>정답</div>
+                <a href="#" onclick="window.location.reload()" style="cursor: pointer;">다시하기</a>
+                <button type="button" onclick="test()">정답 확인하기</button>
+                <div id="wrong">오답입니다!!<br> 다시 시도해 주세요.</div>
+                <div id="right">정답!!<br>멋져요!</div>
             </div>
         </section>
+
+        <script>
+            function test() {
+                var Box1 = document.getElementById("box1").checked;
+                var Box2 = document.getElementById("box2").checked;
+                var Box3 = document.getElementById("box3").checked;
+                var Box4 = document.getElementById("box4").checked;
+                var Box5 = document.getElementById("box5").checked;
+                var Box6 = document.getElementById("box6").checked;
+                var Box7 = document.getElementById("box7").checked;
+                var Box8 = document.getElementById("box8").checked;
+
+                if (Box1==true && Box4==true && Box5==true && Box8==true){
+                    if(Box2==false && Box3==false && Box6==false && Box7==false){
+                    var Right = document.getElementById("right");
+                    Right.style.opacity = 1;
+                    }
+                    else{
+                    var Wrong = document.getElementById("wrong");
+                    Wrong.style.opacity = 1;
+                    }
+                } 
+                else{
+                    var Wrong = document.getElementById("wrong");
+                    Wrong.style.opacity = 1;
+                }
+            }
+        </script>
     </body>
 </html>
