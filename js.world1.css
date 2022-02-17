@@ -10,18 +10,17 @@ h1{
     text-shadow: 7px 7px 7px #7c12dfa6;
 }
 nav{
-    margin: auto 35% auto 38%;
+    margin: auto;
+    text-align: center;
     display: block;
     width: 60%;
 }
 nav li{
-    float: left;
     list-style: none;
     display: inline-block;
 }
 nav a{
-    display:block;
-    padding:10px 20px;
+    padding: 15px 20px;
     text-decoration: none;
 }
 nav a:hover{

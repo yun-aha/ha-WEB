@@ -6,7 +6,6 @@
             border: 0;
         }
         #find_img{
-            margin-top: 50px;
             height: 100%;
             display: inline-block;
         }
@@ -37,7 +36,7 @@
             border: 5px solid rgba(0, 0, 0, 0.692);
             border-radius: 1rem;
             content:'';
-            background-color : rgba(255, 235, 205, 0.76);
+            background-color : rgba(255, 235, 205, 0.514);
         }
         #box2 + label, #box3 + label, #box6 + label, #box7 + label{
             width: 200px;
@@ -53,7 +52,7 @@
             border: 5px solid rgba(0, 0, 0, 0.692);
             border-radius: 1rem;
             content:'';
-            background-color : rgba(255, 235, 205, 0.76);
+            background-color : rgba(255, 235, 205, 0.514);
         }
         .btn{
             display: grid;
@@ -72,6 +71,11 @@
             text-decoration: none;
             height: 40px;
             font-size: 25px;
+            line-height: 40px;
+        }
+        .btn a:hover{
+            background-color: darkgray;
+            font-weight: bold;
         }
         .btn button{
             display: inline-block;
@@ -82,16 +86,29 @@
             height: 40px;
             font-size: 25px;
         }
+        .btn button:hover{
+            background-color: pink;
+            font-weight: bold;
+        }
         #wrong{
-            opacity:0;
+            opacity: 0;
+            font-size: 18px;
+            color: red;
+            font-weight: bolder;
         }
         #right{
             opacity: 0;
+            font-size: 18px;
+            color: blue;
+            font-weight: bolder;
+            background: url(https://cdn.pixabay.com/photo/2015/11/14/14/42/heart-1043245_960_720.jpg) no-repeat;
+            background-size: contain;
         }
     </style>
 
     <body>
         <section id="find_img">
+            <h2>Clover?</h2>
             <div class="main_box">
                 <input type="checkbox" id="box1"><label for="box1"></label>
                 <input type="checkbox" id="box2"><label for="box2"></label>
@@ -120,20 +137,22 @@
                 var Box6 = document.getElementById("box6").checked;
                 var Box7 = document.getElementById("box7").checked;
                 var Box8 = document.getElementById("box8").checked;
+                var Right = document.getElementById("right");
+                var Wrong = document.getElementById("wrong");
 
                 if (Box1==true && Box4==true && Box5==true && Box8==true){
                     if(Box2==false && Box3==false && Box6==false && Box7==false){
-                    var Right = document.getElementById("right");
                     Right.style.opacity = 1;
+                    Wrong.style.opacity = 0;
                     }
                     else{
-                    var Wrong = document.getElementById("wrong");
                     Wrong.style.opacity = 1;
+                    Right.style.opacity = 0;
                     }
                 } 
                 else{
-                    var Wrong = document.getElementById("wrong");
                     Wrong.style.opacity = 1;
+                    Right.style.opacity = 0;
                 }
             }
         </script>
