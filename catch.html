@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        /* base */
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+        *{
+            font-family:'Gowun Dodum', sans-serif;;
+        }
+        html,body{
+            text-align: center;
+            border: 0;
+            background-color: ghostwhite;
+        }
+        /* catch */
+        #catch{
+            height: 600px;
+            display: block;
+            position: relative;
+        }
+        .main_box{
+            display: inline-block;
+            height: 70%;
+            width: 100%;
+            position: relative;
+        }
+        #ex_a, #ex_c, #ex_e, #ex_b, #ex_d, #ex_f{
+            background-color: rgba(250, 193, 247, 0.753);
+            border-radius: 50%;
+            border : 1px groove rgb(250, 193, 247);
+            height: 120px;
+            width: 120px;
+            position: absolute;
+            box-shadow: 0px 5px 30px blueviolet;
+            animation: blink linear infinite 3s;
+            transition: 0.5s;
+        }
+        @keyframes blink {
+            70% {
+                box-shadow: inherit;
+            }
+            75% {           
+                box-shadow: none;
+            }
+            80% {
+                box-shadow: inherit;
+            }
+            83% {
+                box-shadow: none;
+            }
+            85% {
+                color: inherit;
+                box-shadow: inherit;
+            }
+            95% {
+                box-shadow: inherit;
+            }
+        }
+        #ex_a:hover, #ex_c:hover, #ex_e:hover, #ex_b:hover, #ex_d:hover, #ex_f:hover{
+            transform: scale(1.1);
+        }
+        #ex_a{
+            left: 60px;
+            top: 120px;
+        }
+        #ex_b{
+            right: 60px;
+            top: 200px;
+        }
+        #ex_c{
+            left: 300px;
+            top: 300px;
+        }
+        #ex_d{
+            right: 300px;
+            top: 50px;
+        }
+        #ex_e{
+            left: 500px;
+            top: 250px;
+        }
+        .btn{
+            display: block;
+            margin: 25px;
+            position: relative;
+        }
+        .btn a{
+            display: inline-block;
+            border: 1px solid blue;
+            border-radius: 10px;
+            text-decoration: none;
+            height: 30px;
+            width: 150px;
+            margin: 10px;
+            font-size: 20px;
+        }
+        .btn div{
+            display: block;
+        }
+    </style>
+
+    <body>
+        <section id="catch">
+            <h2>catch things!</h2>
+            <div class="main_box">
+                <button type="button" id="ex_a" onclick="right()">a</button>
+                <button type="button" id="ex_b" onclick="wrong()">b</button>
+                <button type="button" id="ex_c" onclick="right()">c</button>
+                <button type="button" id="ex_d" onclick="wrong()">d</button>
+                <button type="button" id="ex_e" onclick="right()">e</button>
+                <button type="button" id="ex_f" onclick="wrong()">f</button>
+            </div>
+            <div class="btn">
+                <a href="#" onclick="window.location.reload()" style="cursor: pointer;">다시하기</a>
+                    <div id="check">Fail</div>
+            </div>
+        </section>
+    
+
+    <script>
+        function wrong(){
+
+        }
+        function right(){
+
+        }
+
+    </script>
+    </body>
+</html>
