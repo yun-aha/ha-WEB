@@ -95,6 +95,10 @@
         }
         .btn div{
             display: block;
+            font-size: 50px;
+            color: blue;
+            background-color: rgba(19, 245, 169, 0.527);
+            border-radius: 3rem;
         }
     </style>
 
@@ -123,10 +127,25 @@
 
             wrong_btn.style.border = "6px groove red";
             wrong_btn.style.boxShadow = "0px 15px 100px red";
-            wrong_check.innerText = "Fail!! Play Again"
+            wrong_check.innerText = "Fail! Play Again";
+            wrong_check.style.color = "red";
+            wrong_check.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
         }
+        
         function right(thing){
-            
+            var right_btn = document.getElementById(thing);
+            var right_check = document.getElementById("check");
+            var Boxa = document.getElementById("ex_a");
+            var Boxe = document.getElementById("ex_e");
+            var Boxf = document.getElementById("ex_f");
+
+            right_btn.style.border = "6px groove blueviolet";
+            right_btn.style.boxShadow = "0px 15px 100px blue";
+            if(Boxa.style.border=="6px groove blueviolet" && Boxe.style.border=="6px groove blueviolet" && Boxf.style.border=="6px groove blueviolet"){
+                if(right_check.innerText!="Fail! Play Again"){
+                    right_check.innerText = "Succeed";
+                }
+            }
         }
 
     </script>
