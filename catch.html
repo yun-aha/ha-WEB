@@ -23,10 +23,10 @@
             width: 100%;
             position: relative;
         }
-        #ex_a, #ex_c, #ex_e, #ex_b, #ex_d, #ex_f{
+        #ex_a, #ex_f, #ex_e, #ex_b, #ex_d, #ex_c{
             background-color: rgba(250, 193, 247, 0.753);
             border-radius: 50%;
-            border : 1px groove rgb(250, 193, 247);
+            border : 2px groove rgb(250, 193, 247);
             height: 120px;
             width: 120px;
             position: absolute;
@@ -102,26 +102,31 @@
         <section id="catch">
             <h2>catch things!</h2>
             <div class="main_box">
-                <button type="button" id="ex_a" onclick="right()">a</button>
-                <button type="button" id="ex_b" onclick="wrong()">b</button>
-                <button type="button" id="ex_c" onclick="right()">c</button>
-                <button type="button" id="ex_d" onclick="wrong()">d</button>
-                <button type="button" id="ex_e" onclick="right()">e</button>
-                <button type="button" id="ex_f" onclick="wrong()">f</button>
+                <button type="button" id="ex_a" onclick="right('ex_a')">a</button>
+                <button type="button" id="ex_b" onclick="wrong('ex_b')">b</button>
+                <button type="button" id="ex_c" onclick="wrong('ex_c')">c</button>
+                <button type="button" id="ex_d" onclick="wrong('ex_d')">d</button>
+                <button type="button" id="ex_e" onclick="right('ex_e')">e</button>
+                <button type="button" id="ex_f" onclick="right('ex_f')">f</button>
             </div>
             <div class="btn">
                 <a href="#" onclick="window.location.reload()" style="cursor: pointer;">다시하기</a>
-                    <div id="check">Fail</div>
+                    <div id="check"></div>
             </div>
         </section>
     
 
     <script>
-        function wrong(){
+        function wrong(thing){
+            var wrong_btn = document.getElementById(thing);
+            var wrong_check = document.getElementById("check");
 
+            wrong_btn.style.border = "6px groove red";
+            wrong_btn.style.boxShadow = "0px 15px 100px red";
+            wrong_check.innerText = "Fail!! Play Again"
         }
-        function right(){
-
+        function right(thing){
+            
         }
 
     </script>
