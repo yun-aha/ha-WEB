@@ -11,11 +11,41 @@
             border: 0;
             background-color: ghostwhite;
         }
+        h1{
+            text-align: center;
+            text-shadow: 7px 7px 7px #7c12dfa6;
+        }
+        nav{
+            margin: auto;
+            text-align: center;
+            display: block;
+            width: 60%;
+        }
+        nav li{
+            list-style: none;
+            display: inline-block;
+        }
+        nav a{
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+        nav a:hover{
+            color:cornflowerblue;
+        }
+        .copyright{
+            color: cornflowerblue;
+            text-align: center;
+        }
+        hr{
+            width: 90%;
+        }
+
         /* catch */
         #catch{
             height: 600px;
             display: block;
             position: relative;
+            margin: 30px;
         }
         .main_box{
             display: inline-block;
@@ -95,16 +125,28 @@
         }
         .btn div{
             display: block;
-            font-size: 50px;
+            font-size: 40px;
             color: blue;
             background-color: rgba(19, 245, 169, 0.527);
             border-radius: 3rem;
         }
     </style>
 
+<header>
+    <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
+    <nav>
+        <ul>
+            <li><a href="html-world.html">HTML</a></li>
+            <li><a href="css-world.html">CSS</a></li>
+            <li><a href="json-world.html">JavaScript</a></li>
+            <li><a href="free.html">Free</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>
     <body>
         <section id="catch">
-            <h2>catch things!</h2>
+            <h2>Catch things!</h2>
             <div class="main_box">
                 <button type="button" id="ex_a" onclick="right('ex_a')">a</button>
                 <button type="button" id="ex_b" onclick="wrong('ex_b')">b</button>
@@ -150,4 +192,10 @@
 
     </script>
     </body>
+<hr>
+<footer>
+    <div class="copyright">
+        <p>copyright HYEON. All rights are reserved.</p>
+    </div>
+</footer>
 </html>
