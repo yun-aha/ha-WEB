@@ -11,6 +11,7 @@ h1{
 }
 nav{
     margin: auto;
+    padding: 5px;
     text-align: center;
     display: block;
     width: 60%;
@@ -38,4 +39,29 @@ nav a:hover{
 .copyright{
     color: cornflowerblue;
     text-align: center;
+}
+
+#free{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    grid-template-rows: auto;
+    grid-gap: 50px;
+    justify-content: center;
+    text-align: center;
+}
+#free a{
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid blueviolet;
+    background-color: rgba(173, 216, 230, 0.479);
+    padding: 10px;
+    transition: 1s;
+}
+#free a:hover{
+    transform: scale(1.1);
+    border-radius: 30px;
+    text-decoration: wavy rgba(137, 43, 226, 0.699) underline;
+    color: blue;
 }

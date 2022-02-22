@@ -11,6 +11,7 @@ h1{
 }
 nav{
     margin: auto;
+    padding: 5px;
     text-align: center;
     display: block;
     width: 60%;
