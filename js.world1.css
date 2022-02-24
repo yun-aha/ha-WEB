@@ -5,6 +5,10 @@ html{
 *{
     font-family:'Gowun Dodum', sans-serif;;
 }
+header{
+    position: sticky;
+    top: 20px;
+}
 h1{
     text-align: center;
     text-shadow: 7px 7px 7px #7c12dfa6;
@@ -30,7 +34,7 @@ nav a:hover{
 
 .main{
     clear: left;
-    border: 10px solid cornflowerblue;
+    border: 7px solid rgba(63, 12, 110, 0.8);
     border-radius: 20px;
     padding: 30px;
     width: 80%;

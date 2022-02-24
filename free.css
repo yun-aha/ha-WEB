@@ -28,12 +28,13 @@ nav a:hover{
     color:cornflowerblue;
 }
 .main{
-    border: 10px solid cornflowerblue;
+    border: 7px solid rgba(63, 12, 110, 0.8);
     border-radius: 20px;
     padding: 30px;
     line-height: 30px;
     width: 80%;
     margin:auto;
+    text-align: center;
 }
 
 .copyright{

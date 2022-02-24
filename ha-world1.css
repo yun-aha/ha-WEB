@@ -29,8 +29,7 @@ nav a:hover{
 }
 .main{
     text-align: center;
-    clear: left;
-    border: 10px solid cornflowerblue;
+    border: 7px solid rgba(63, 12, 110, 0.8);
     border-radius: 20px;
     padding: 30px;
     line-height: 30px;
@@ -40,7 +39,8 @@ nav a:hover{
 
 table{
     border-collapse: collapse;
-    display: inline-block;
+    float: left;
+    position: fixed;
 }
 caption{
     font-weight: bold;
