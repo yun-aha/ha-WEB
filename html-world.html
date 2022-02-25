@@ -1,121 +1,124 @@
 <!doctype html>
-<html>
+<html lang="ko">
 <head>
-    <title>WEB1 by ha</title>
+    <title>WEB-html by ha</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="ht+css_world.css">
 </head>
 
-
-<header>
-    <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
-    <nav>
-        <ul>
-            <li><a href="html-world.html">HTML</a></li>
-            <li><a href="css-world.html">CSS</a></li>
-            <li><a href="json-world.html">JavaScript</a></li>
-            <li><a href="free.html">Free</a></li>
-        </ul>
-    </nav>
-</header>
-
-
 <body>
-<div class="main">
-    <h2>Let's learn about HTML.</h2>
-
-    <article class="detail">
-
-        <section class="main-content">
-            <p style='margin-top:45px;'>
-            <h4><a href="https://www.w3.org/TR/html52/"target ="_blank"title="html5 specification">
-                HTML</a>이란 무엇일까?</h4>
-            do you know about tag? <br><strong>'br'</strong> is line tag<br>
-            Also <strong>'p'</strong> is paragraph line tag.</p>
-                <ol>
-                    <li>html tag는 html 문서라면 꼭 써줘야 한다. (!DOCTYPE html, html, /html)</li>
-                    <li>Head tag는 내용물에 대한 추가 정보</li>
-                    <li>body tag는 내용물의 모든 내용</li>
-                    <li>title tag는 페이지 이름(주소창)</li>
-                    <li>link tag는 html과 css파일을 연결하는데 필요한 코드로 head tag안에 쓴다.</li>
-                    <li>div tag는 division으로 여러 태그들을 묶어서 css를 함께 꾸며주기 위해 쓰이는 태그<br>
-                    (같은 태그지만 따로 꾸미고 싶을 땐 class 사용</li>
-                    <li>section tag는 division tag와 완전히 똑같음, html요소들을 꾸미기 위해 묶어주는 역할</li>
-                    <li>article tag는 division, section과 같음<br>
-                    (div,section,a tag를 적절하게 분배하여 깔끔하게 코드를 만든다.)</li>
-                    <li>h1,h2,h3...tag +로렘 입숨lorem ipsum</li>
-                </ol>
-        </section>
-
-        <section class="add-content">
+    <header>
+        <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
+        <nav>
             <ul>
-                <strong>  추가 내용  </strong>
-                <li>영어에 기반하여 문서가 동작하기 때문에 한글을 사용하려면 <br>
-                meta charset-"UTF-8" 코드가 필요하다. (#characterset)</li>
-                <li>html은 문서의 요소요소를 구분, css는 화면상에서 적절한 곳에 있도록 구분<br></li>
-                <li>같은 파일에 두 언어를 사용하는 것은 읽는데 피로감,, 따로 작성하도록 한다!</li>
+                <li><a href="html-world.html">HTML</a></li>
+                <li><a href="css-world.html">CSS</a></li>
+                <li><a href="json-world.html">JavaScript</a></li>
+                <li><a href="free.html">Free</a></li>
             </ul>
-        </section>
+        </nav>
+    </header>
 
-            <h3>Now, Let's learn about attribute</h3>
-            <p style='margin-top:30px;'>
-            <strong>'img'</strong> you can add image and also
-            you can use 'width' to control image len.<br>
-            like-> img src="",width</p>
-            <img src="wellington.jpg" alt="wellington" width="20%">
-        
-        <section class="description">
-            <h3><strong>Description list</strong></h3>
-            <dl>
-                <dt>리스트 구성</dt>
-                <dd>제목(이름) : dt</dd>
-                <dd>태그와 값(설명) : dd</dd>
-            </dl>
-        </section>
+    <div class="main">
+        <article>
+        <h2>Let's learn about HTML.</h2>
+            <section class="main-content">
+                <p style='margin-top:45px;'>
+                <h4><a href="https://www.w3.org/TR/html52/"target ="_blank"title="html5 specification">
+                    HTML</a>이란 무엇일까?</h4>
+                do you know about tag? <br><strong>'br'</strong> is line tag<br>
+                Also <strong>'p'</strong> is paragraph line tag.</p>
+                <h3>HTML 구조</h3>
+                    <p>
+                        <ul>
+                            <li>HTMl문서는 일반 문서와 달리 정해진 형식에 맞추어 내용을 입력해야 한다.</li>
+                            <li>웹 문서는 보통 !DOCTYPE html로 시작해 html, head, body라는 3개의 영역으로 구성되어 있다.</li>
+                                <ol>
+                                    <li>!DOCTYPE html : 현재 문서가 HTML5언어로 작성한 웹 문서라는 뜻이다.</li>
+                                    <li>html : 웹 문서의 시작과 끝을 나타내는 태그이다, 웹 브라우저가 html태그를 만나면 /html까지 소스를 읽어 화면에 표시한다.</li>
+                                    <li>head : 웹 브라우저가 웹 문서를 해석하는데 필요한 정보를 입력하는 부분이다.</li>
+                                    <li>body : 실제로 웹 브라우저 화면에 나타나는 내용</li>
+                                </ol>
+                            <li>html태그에서 lang 속성으로 문서에서 사용할 언어를 지정할 수 있다, 검색 사이트에서 특정 언어로 제한해 검색할 때 필요,<br>
+                                화면 낭독기에서 웹 문서를 소리 내어 읽어줄 때 다르게 할 수 있다.</li>
+                            <li>head태그에는 meta, title 태그를 사용</li>
+                                <ul>
+                                    <li>meta는 데이터에 관한 데이터</li>
+                                    <li>meta charset='UTF-8' : 웹 서버는 영어가 기본이므로 화면에 한글로 된 내용을 표시할 때는<br>
+                                        UTF-8이라는 문자 세트를 사용한다고 웹 브라우저에 알려줘야 한다.</li>
+                                    <li>title은 웹 문서의 제목을 나타낸다.</li>
+                                </ul>
+                            <li><h4>시맨틱 태그</h4></li>
+                                <ul>
+                                    <li>HTML의 태그는 그 이름만 봐도 의미를 알 수 있어 시맨틱(semantic, 의미론적인)태그라고 한다.</li>
+                                    <li>시맨틱 태그를 사용하면 웹 브라우저가 HTML의 소스 코드만 보고도 제목과 본문 메뉴를 쉽게 알 수 있다.<br>
+                                        또한, 문서 구조가 정확히 나눠지므로 PC나 모바일의 웹 브라우저와 여러 스마트 기기의 다양한 화면에서 웹 문서를 표현하기 쉽다.<br>
+                                        마지막으로, 인터넷에서 웹 사이트를 검색할 대 필요한 내용을 정확히 찾을 수 있다.</li>
+                                    <li>헤더 영역을 나타내는 header, 내비게이션 영역을 나타내는 nav, 핵심 콘텐츠를 담는 main, 독립적인 콘텐츠를 담는 article, <br>
+                                        콘텐츠 영역을 나타내는 section,사이드 바 영역을 나타내는 aside, 푸터영역을 나타내는 footer, 여러 소스를 묶는 div
+                                    </li>
+                                </ul>
+                            <li>html은 문서의 요소요소를 구분, css는 화면상에서 적절한 곳에 있도록 구분</li>
+                            <li>같은 파일에 두 언어를 사용하는 것은 읽는데 피로감,, 따로 작성하도록 한다!</li>
+                        </ul>
+                    </p>
+                <h3>HTML 태그들</h3>
+                    <p>
+                        
+                    </p>
+                <h3>Now, Let's learn about attribute</h3>
+                <p style='margin-top:30px;'>
+                    <strong>'img'</strong> you can add image and also
+                    you can use 'width' to control image len.<br>
+                    like-> img src="",width</p>
+                <img src="wellington.jpg" alt="wellington" width="20%">
+            </section>
 
-        <section class="table">
-            <h3><strong>Table</strong></h3>
-            <table style="caption-side: bottom; text-align: center;
-            border: 0.2rem solid blue; border-spacing: 0.1rem;">
-                <caption>표의 구조</caption>
-                
-                <colgroup>
-                    <col span="3" style="background-color: rgb(146, 183, 252); text-align: center;">
-                </colgroup>
+            <section class="description">
+                <h3>Description list</h3>
+                    <dl>
+                        <dt>리스트 구성</dt>
+                        <dd>제목(이름) : dt</dd>
+                        <dd>태그와 값(설명) : dd</dd>
+                    </dl>
+            </section>
 
-                <thead>
-                    <tr>
-                        <th>제목</th>
-                        <th>본문</th>
-                        <th>요약</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>thead</td>
-                        <td>tbody</td>
-                        <td>tfoot</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3">표 태그들</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-        
-    </article>
-
-
-</div>
-</body>
-
-<footer>
-    <div class="copyright">
-        <p>copyright HYEON. All rights are reserved.</p>
+            <section class="table">
+                <h3>Table</h3>
+                <table style="caption-side: bottom; text-align: center;
+                border: 0.2rem solid blue; border-spacing: 0.1rem;">
+                    <caption>표의 구조</caption>                
+                    <colgroup>
+                        <col span="3" style="background-color: rgb(146, 183, 252); text-align: center;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>제목</th>
+                            <th>본문</th>
+                            <th>요약</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>thead</td>
+                            <td>tbody</td>
+                            <td>tfoot</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">표 태그들</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </article>
     </div>
-</footer>
+    <footer>
+        <div class="copyright">
+            <p>copyright HYEON. All rights are reserved.</p>
+        </div>
+    </footer>
 
-
+</body>
 </html>

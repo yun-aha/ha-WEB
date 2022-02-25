@@ -1,404 +1,398 @@
 <!doctype html>
-<html>
-    <head>
-        <title>WEB1-javascript by ha</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="js.world1.css">
+<html lang="ko">
+<head>
+    <title>WEB-javascript by ha</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="js.world1.css">
 </head>
 
-
-<header>
-    <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
-    <nav>
-        <ul>
-            <li><a href="html-world.html">HTML</a></li>
-            <li><a href="css-world.html">CSS</a></li>
-            <li><a href="json-world.html">JavaScript</a></li>
-            <li><a href="free.html">Free</a></li>
-        </ul>
-    </nav>
-</header>
-
-
 <body>
-<div class="main">
-    <input id="night_day" type="button" value="night" onclick="
-    alert('click!');
-    if(document.querySelector('#night_day').value==='night'){
-        document.querySelector('.main').style.border='border: 10px solid white';
-        document.querySelector('html,body').style.backgroundColor='black';
-        document.querySelector('html,body').style.color='ghostwhite';
-        document.querySelector('#night_day').value='day';
-    }else{
-        document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
-        document.querySelector('html,body').style.backgroundColor='ghostwhite';
-        document.querySelector('html,body').style.color='black';
-        document.querySelector('#night_day').value='night';
-    }">
-
-
-<h2> It's JavaScript</h2>
-
-<button onclick="
-    if(document.querySelector('p').style.opacity=='0'){
-        showDetail('p')
-    }else{hideDetail('p')}
-">자세히 보기</button>
-
-<p>JavaScript is a programming language used to dynamically create web pages.<br>
-Early web pages are simple forms without interaction with users<br>
-All interactions are possible only through communication with the server<br>
-JavaScript는 1995년 Brendan Eich에 의해 발명되었으며 1997년 ECMA 표준이 되었습니다.
-</p>
-
-<div>
-    <ol>
-        <h3><li>변수</li></h3>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
+        <nav>
             <ul>
-                <li><strong>undefined</strong>는 자바스크립트에서 제공하는 원시 타입의 값이다.<br></li>
-                <li>변수를 사용하려면 반드시 선언이 필요. 변수를 선언할 때는 var, let, const 키워드를 사용</li>
-                <li>var키워드를 사용한 변수 선언은 선언 단계와 초기화 단계가 동시에 진행된다.<br>
-                    만약 초기화 단계를 거치지 않으면 확보된 메모리 공간에는 이전에 다른 애플리케이션이 사용했던 값이 남아 있을 수 있다.<br>
-                    이 값을 <strong>쓰레기 값(garbage value)</strong>라 한다.   </li>
-                <li>자바스크립트 엔진은 소스코드 실행을 위한 준비 단계인 소스코드의 평가 과정에서 변수 선언을 포함한 모든 선언문(변수 선언문, 함수 선언문 등)을<br>
-                    소스 코드에서 찾아내 먼저 실행한다.<br>
-                    이처럼 변수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 <strong>변수 호이스팅(variable hoisting)</strong>이라 한다.<br>
-                    사실 변수 선언뿐 아니라 var, let, const, function, function*, class 키워드를 사용해서 선언하는 모든 식별자(변수, 함수, 클래스 등)는 호이스팅 된다.</li>
-                <li>변수 선언은 소스코드가 순차적으로 실행되는 시점인 런타임 이전에 먼저 실행되지만 값의 할당은 소스코드가 순차적으로 실행되는 시점인 런타임에 실행된다.</li>   
-                <li>값을 재할당할 수 없어서 변수에 저장된 값을 변경할 수 없다면 변수가 아니라 <strong>상수</strong>라 한다.</li>
-                <li>가비지 콜렉터, 언매니지드 언어, 매니지드 언어</li>
+                <li><a href="html-world.html">HTML</a></li>
+                <li><a href="css-world.html">CSS</a></li>
+                <li><a href="json-world.html">JavaScript</a></li>
+                <li><a href="free.html">Free</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+        <input id="night_day" type="button" value="night" onclick="
+        alert('click!');
+        if(document.querySelector('#night_day').value==='night'){
+            document.querySelector('.main').style.border='border: 10px solid white';
+            document.querySelector('html,body').style.backgroundColor='black';
+            document.querySelector('html,body').style.color='ghostwhite';
+            document.querySelector('#night_day').value='day';
+        }else{
+            document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
+            document.querySelector('html,body').style.backgroundColor='ghostwhite';
+            document.querySelector('html,body').style.color='black';
+            document.querySelector('#night_day').value='night';
+        }">
+
+    <h2> It's JavaScript</h2>
+    <button onclick="
+        if(document.querySelector('p').style.opacity=='0'){
+            showDetail('p')
+        }else{hideDetail('p')}
+    ">자세히 보기</button>
+        <p>JavaScript is a programming language used to dynamically create web pages.<br>
+        Early web pages are simple forms without interaction with users<br>
+        All interactions are possible only through communication with the server<br>
+        JavaScript는 1995년 Brendan Eich에 의해 발명되었으며 1997년 ECMA 표준이 되었습니다.
+        </p>
+
+    <article>
+        <ol>
+            <h3><li>변수</li></h3>
+                <ul>
+                    <li><strong>undefined</strong>는 자바스크립트에서 제공하는 원시 타입의 값이다.<br></li>
+                    <li>변수를 사용하려면 반드시 선언이 필요. 변수를 선언할 때는 var, let, const 키워드를 사용</li>
+                    <li>var키워드를 사용한 변수 선언은 선언 단계와 초기화 단계가 동시에 진행된다.<br>
+                        만약 초기화 단계를 거치지 않으면 확보된 메모리 공간에는 이전에 다른 애플리케이션이 사용했던 값이 남아 있을 수 있다.<br>
+                        이 값을 <strong>쓰레기 값(garbage value)</strong>라 한다.   </li>
+                    <li>자바스크립트 엔진은 소스코드 실행을 위한 준비 단계인 소스코드의 평가 과정에서 변수 선언을 포함한 모든 선언문(변수 선언문, 함수 선언문 등)을<br>
+                        소스 코드에서 찾아내 먼저 실행한다.<br>
+                        이처럼 변수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 <strong>변수 호이스팅(variable hoisting)</strong>이라 한다.<br>
+                        사실 변수 선언뿐 아니라 var, let, const, function, function*, class 키워드를 사용해서 선언하는 모든 식별자(변수, 함수, 클래스 등)는 호이스팅 된다.</li>
+                    <li>변수 선언은 소스코드가 순차적으로 실행되는 시점인 런타임 이전에 먼저 실행되지만 값의 할당은 소스코드가 순차적으로 실행되는 시점인 런타임에 실행된다.</li>   
+                    <li>값을 재할당할 수 없어서 변수에 저장된 값을 변경할 수 없다면 변수가 아니라 <strong>상수</strong>라 한다.</li>
+                    <li>가비지 콜렉터, 언매니지드 언어, 매니지드 언어</li>
+                </ul>
+            
+
+            <h3><li>표현식과 문</li></h3>
+                <ul>
+                    <li><strong>값</strong>은 식이 평가되어 생성된 결과를 말한다.</li>
+                    <li><strong>리터럴</strong>은 사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법을 말한다.</li>
+                    <li><strong>표현식</strong>은 값으로 평가될 수 있는 문이다. 표현식이 평가되면 새로운 값을 생성하거나 기존값을 참조한다.</li>
+                    <li><strong>문</strong>은 프로그램을 구성하는 기본 단위이자 최소 실행 단위다.<br>
+                                문은 여러 토큰으로 구성된다. 토큰이란 문법적인 의미를 가지며, 문법적으로 더 이상 나눌 수 없는 코드의 기본 요소를 의미한다.</li>
+                    <li>세미콜론은 문의 종료를 나타낸다. </li>
+                </ul>
+            
+            <h3><li>데이터 타입</li></h3>
+                <ul>
+                    <li><strong>숫자타입</strong>숫자, 정수와 실수 구분 없이 하나의 숫자 타입만 존재</li>
+                    <li><strong>문자열타입</strong>문자열</li>
+                    <li><strong>템플릿 리터럴</strong>ES6부터 도입된 새로운 문자열 표기법으로 멀티라인 문자열, 표현식 삽입, 테그드 템플릿 등 편리한 문자열 처리기능 제공</li>
+                    <li><strong>불리언타입</strong>논리적 참(true)과 거짓(false)</li>
+                    <li><strong>undefined타입</strong>var 키워드로 선언된 변수에 암묵적으로 할당되는 값</li>
+                    <li><strong>null타입</strong>값이 없다는 것을 의도적으로 명시할 때 사용하는 값</li>
+                    <li><strong>심벌 타입</strong>ES6에서 추가된 7번째 타입, 변경 불가능한 원시 타입의 값</li>
+                    <li>위의 데이터 타입 이외의 값은 모두 객체 타입, 자바스크립트는 객체 기반의 언어이며 자바스크립트를 이루고 있는 거의 모든 것이 객체라는 것이다.</li>
+                </ul>
+            
+            <h3><li>typeof</li></h3>
+                <ul>
+                    <li>JavaScript에는 값을 포함할 수 있는 5가지 다른 데이터 유형이 있다.</li>
+                        <ul>
+                            <li>string, number, boolean, object, function</li>
+                        </ul>
+                    <li>6가지 유형의 객체</li>
+                        <ul>
+                            <li>Object, Date, Array, String, Number, Boolean</li>
+                        </ul>
+                    <li>그리고 값을 포함할 수 없는 2가지 데이터 유형</li>
+                        <ul>
+                            <li>null, undefined</li>
+                        </ul>
+                </ul>
+
+            <h3><li>연산자</li></h3>
+                <ul>
+                    <li><strong>산술 연산자</strong>{+  -  *  **  /  %  ++  --}</li>
+                    <li><strong>할당 연산자</strong>{=  +=  -=  *=  /=  %=}</li>
+                    <li><strong>비교 연산자</strong>{==  ===  !=  !==  >  <  >=  <=}</li>
+                    <li>==는 값만 비교, ===는 값과 유형을 비교</li>
+                    <li><strong>논리 연산자</strong>{&&  ||  !}</li>
+                    <li><strong>유형 연산자</strong>{typeof  instanceof}</li>
+                </ul>
+
+            <h3><li>함수</li></h3>
+                <ul>
+                    <li>함수 선언문은 표현식이 아닌 문이다.</li>
+                    <li>함수 선언문으로 정의한 함수와 함수 표현식으로 정의한 함수의 생성(호출) 시점이 다르다.</li>
+                    <li>함수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 함수 호이스팅이라 한다.</li>
+                    <li>함수 표현식으로 함수를 정의하면 함수 호이스팅이 발생하는 것이 아니라 변수 호이스팅이 발생한다. </li>
+                    <li>매개변수보다 인수가 더 많은 경우 초과된 인수는 무시된다.</li>
+                </ul>
+
+            <h3><li>JavaScript String</li></h3>
+                <ul>
+                    <li>String Length</li>
+                    <li>문자열 슬라이스 : slice(start, end), substring(start, end), substr(start, length)</li>
+                    <li>replace()</li>
+                    <li>대문자로 변환 : toUpperCase(), 소문자로 변환 : toLowerCase()</li>
+                    <li>문자열 연결 : concat()</li>
+                    <li>문자열의 양쪽에서 공백 제거 : trim()</li>
+                    <li>문자열 패딩 : padStart(), padEnd()</li>
+                    <li>문자열 문자 추출 : charAt() 문자열의 지정된 인덱스에 있는 문자를 반환, charCodeAt() 문자열의 지정된 인덱스에 있는 문자의 유니코드를 반환</li>
+                    <li>문자열을 배열로 변환 : split()</li>
+                    <li>문자열 검색 : indexOf(), lastIndexOf(), search()</li>
+                    <li>문자열 일치 : match(), includes(), startsWith(), endsWith(), </li>
+                    <li>template literals : 따옴표 대신 역따옴표를 사용하여 문자열 정의, 템플릿 리터럴은 여러 줄 문자열을 허용, Interpolation, 문자열에서 표현식 허용</li>
+                </ul>
+            
+            <h3><li>Number</li></h3>
+                <ul>
+                    <li>숫자가 아닌 문자열을 사용하여 산술을 수행하면 NaN(숫자가 아님)이 발생</li>
+                    <li>isNaN()를 사용하여 값이 숫자가 아닌지 확인할 수 있다.</li>
+                    <li>Infinity는 가능한 가장 큰 수 이외의 수를 계산하는 경우 자바스크립트가 반환하는 값이다.</li>
+                    <li>0으로 나누기도 Infinity를 생성</li>
+                    <li>자바스크립트는 숫자 상수 앞에 0x가 있으면 16진수로 해석한다.</li>
+                    <li><strong>toString()</strong>메서드는 숫자를 문자열로 반환</li>
+                    <li><strong>toExponential()</strong>메서드는 반올림되고 지수 표기법을 사용하여 작성된 숫자가 있는 문자열을 반환, 매개변수는 소수점 뒤의 문자 수를 정의</li>
+                    <li><strong>toFixed()</strong>메서드는 지정된 소수 자릿수로 작성된 숫자와 함께 문자열을 반환</li>
+                    <li><strong>toPrecision()</strong>메서드는 지정된 길이로 작성된 숫자와 함께 문자열을 반환</li>
+                    <li><strong>valueOf()</strong>메서드는 숫자를 숫자로 반환</li>
+                    <li>MAX_VALUE는 자바스크립트에서 가능한 가장 큰 수를 반환, 변수나 표현식 또는 값인 상태에서 .MAX_VALUE를 사용하면 undefined를 반환</li>
+                    <li>MIN_VALUE는 자바스크립트에서 가능한 가장 낮은 수를 반환</li>
+                    <li>POSITIVE_INFINITY 오버플로 시 반환</li>
+                    <li>NEGATIVE_INFINITY 오버플로 시 반환</li>
+                    <h4>변수를 숫자로 변환</h4>
+                    <li><strong>Number()</strong>변수를 숫자로 변환하는데 사용, 날짜도 변환(1.1.1970 이후의 밀리초 수를 반환)</li>
+                    <li><strong>parseInt()</strong>구문 분석 후 정수를 반환, 공백 허용, 첫 번째 숫자만 반환, 변환할 수 없는 경우 NaN가 반환</li>
+                    <li><strong>parseFloat()</strong>구문 분석 후 숫자를 반환, 공백 허용, 첫 번째 숫자만 반환</li>
+                </ul>
+
+            <h3><li>Array</li></h3>
+                <ul>
+                    <li><strong>Array.forEach()</strong>는 각 배열 요소에 대해 한 번씩 함수를 호출</li>
+                    <li>push() : 배열 요소 추가</li>
+                    <li>length속성을 사용하여 새 요소를 배열에 추가할 수도 있습니다, 인덱스가 높은 요소를 추가하면 배열에 정의되지 않은 "구멍"이 생길 수 있다.</li>
+                    <li>new Arry(), []</li>
+                    <li>join(), pop(), push(), shift(), unshift(), delete, concat()</li>
+                    <li><strong>splice()</strong>는 배열에 새 항목 추가, slice()는 배열의 조각을 잘라낸다.</li>
+                    <li>sort()는 배열을 알파벳순으로 정렬</li>
+                    <li>reverse()는 배열의 요소를 뒤집는다, 내림차순으로 배열을 정렬하는데 사용</li>
+                    <li>배열에서 가장 높은 숫자를 찾을 때 Math.max.apply(), 가장 낮은 숫자를 찾을 때 Math.min.apply()</li>
+                    <li><strong>map()</strong>메서드는 각 배열 요소에 대해 함수를 수행하여 새 배열을 만든다.</li>
+                    <li><strong>filter()</strong>메서드는 테스트를 통과한 배열 요소로 새 배열을 만든다.</li>
+                    <li><strong>reduce()</strong>메서드는 각 배열 요소에서 함수를 실행하여 단일 값을 생성한다.</li>
+                    <li>reduceRight()메서드는 오른쪽에서 왼쪽으로 작동</li>
+                    <li><strong>every()</strong>모든 배열 값이 테스트를 통과하는지 확인하여 불리언 타입으로 반환</li>
+                    <li><strong>some()</strong>일부 배열 값이 테스트를 통과하는지 확인하여 불리언 타입으로 반환</li>
+                    <li><strong>indexOf()</strong>는 원본 배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환</li>
+                    <li>lastIndexOf()지정된 요소가 마지막으로 발생한 위치를 반환</li>
+                    <li><strong>find()</strong>는 테스트 함수를 통과하는 첫 번째 배열 요소의 값을 반환</li>
+                    <li>findIndex()는 테스트 함수를 통과하는 첫 번째 배열 요소의 인덱스를 반환</li>
+                    <li><strong>Array.from()</strong>는 길이 속성이 있는 개체 또는 반복 가능한 개체에서 Array개체를 반환</li>
+                    <li><strong>Array.keys()</strong>는 배열 키가 있는 Array Iterator개체를 반환</li>
+                    <li><strong>Array.includes()</strong>는 요소가 배열에 있는지 확인할 수 있다.</li>
+                    <li>const로 선언된 배열은 재할당할 수 없다, 배열의 요소는 변경할 수 있다.</li>
+                    <li>const변수는 선언될 때 값을 할당해야 한다,</li>
+                    <li>const에는 블록 범위가 있다.</li>
+                </ul>
+
+            <h3><li>Date</li></h3>
+                <ul>
+                    <li>Date는 날짜와 시간을 위한 메서드를 제공하는 빌트인 객체이면서 생성자 함수다.</li>
+                    <li>new Date()는 현재 날짜와 시간을 가지는 Date객체 반환</li>
+                    <li>월은 생략할 수 없고, 매개변수를 하나만 제공하면 밀리초로 처리된다.</li>
+                    <li>한 자리 및 두 자리 연도는 이전 세기(19xx)로 해석된다.</li>
+                    <li>new Date(dateString)으로 새 날짜 개체를 만들 수 있다.</li> 
+                    <li>자바스크립트는 1970년 1월 1일 00:00:00(UTC)이후의 날짜를 밀리초 단위로 저장한다.</li>
+                    <li>자바스크립트는 기본적으로 날짜를 전체 텍스트 문자열 형식으로 출력, 날짜 개체를 HTML로 표시하면 toString()메서드를 사용하여 자동으로 문자열로 변환</li>
+                    <li>자바스크립트 날짜 입력 형식에는 일반적으로 3가지 유형이 있다(ISO날짜,짧은 날짜, 긴 날짜)</li>
+                    <li><strong>ISO Date</strong>"2015-03-25" (The International Standard)</li>
+                    <li><strong>Short Date</strong>"03/25/2015"</li>
+                    <li><strong>Long Date</strong>"Mar 25 2015" or "25 Mar 2015"</li>
+                    <li>toUTCString()메서드는 날짜를 UTC문자열로 변환</li>
+                    <li>toDateString()메서드는 날짜를 더 읽기 쉬운 형식으로 변환</li>
+                    <li>toISOString()메서드는 ISO 표준 형식을 사용하여 Date 객체를 문자열로 변환</li>
+                    <li>유효한 날짜 문자열이 있는 경우 Date.parse()메서드를 사용하여 밀리초로 변환</li>
+                    <li>getFullYear(), getMonth(), getDate(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), getTime(), getDay(), Date.now()</li>
+                    <li>날짜 설정 방법 : setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds(), setTime()</li>
+                    <li>getTimezoneOffset()은 UTC와 Date 객체에 지정된 로캘 시간과의 차이를 분 단위로 반환</li>
+                    <li>toLocaleString(), toLocaleTimeString()</li>
+                </ul>
+
+            <h3><li>Math</li></h3>
+                <ul>
+                    <li>Math.PI, Math.abs, Math.round, Math.ceil, Math.floor, Math.sqrt, Math.random, Math.pow, Math.max, Math.min</li>
+                </ul>
+
+            <h3><li>Loop</li></h3>
+                <ul>
+                    <li>for : 코드 블록을 여러번 반복</li>
+                    <li>for/in : 객체의 속성을 통해 루프</li>
+                    <li>for/of : 반복 가능한 객체의 값을 반복</li>
+                    <li>while : 지정된 조건이 참인 동안 코드 블록을 반복</li>
+                    <li>do/while : 코드 블록을 한번 실행한 다음 지정된 조건이 참인 동안 루프를 반복</li>
+                </ul>
+
+            <h3><li>Set과 Map</li></h3>
+                <ul>
+                    <li>set객체는 중복되지 않는 유일한 값들의 집합이다.</li>
+                    <li>Set 객체의 요소 개수를 확인할 때는 Set.size를 사용</li>
+                    <li>Set.add() : 요소 추가</li>
+                    <li>===연산자는 NaN과 NaN을 다르다고 평가하지만 Set객체는 NaN과 NaN을 같다고 평가</li>
+                    <li>Set.has()는 객체에 특정 요소가 존재하는지 확인하여 불리언 값을 반환</li>
+                    <li>특정 요소를 삭제하려면 Set.delete를 사용, 모든 요소를 일괄 삭제하려면 Set.clear()사용</li>
+                    <li>Set 객체의 요소를 순회하려면 Set.forEach()를 사용, 3개의 인수를 전달받는다.</li>
+                    <li>교집합 : setA.intersection(setB), 합집합 : setA.union(setB), 차집합 : setA.difference(setB)</li>
+                    <li>상위집합 확인 : setA.isSuperset(setB)</li>
+                    <br>
+                    <li>Map 객체는 키와 값의 쌍으로 이루어진 컬렉션이다. Object를 키로 사용할 수 있다는 것은 Map의 중요한 기능입니다.</li>
+                    <li>set()을 사용하여 맵에 요소를 추가하고 값을 변경할 수도 있다.</li>
+                    <li>get()메서드는 Map의 키 값을 가져온다, size속성은 Map의 요소 수를 반환, delete()는 Map 요소를 제거, clear()메서드는 Map에서 모든 요소 제거,
+                        키가 Map에 존재하는 has() 경우 true를 반환</li>
+                    <li>지도는 객체로 typeof시 object반환</li>
+                    <li>forEach()메서드는 Map의 각 키/값 쌍에 대한 함수를 호출, entries()는 Map에 [key, values]가 있는 반복자 객체를 반환,
+                        Map.keys(), Map.values()
+                    </li>
+                </ul>
+
+            <h3><li>RegExp(Regular Expression)</li></h3>
+                <ul>
+                    <li>정규 표현식은 일정한 패턴을 가진 문자열의 집합을 표현하기 위해 사용하는 형식 언어다.</li>
+                    <li>정규표현식은 문자열을 대상으로 패턴 매치 기능을 제공</li>
+                    <li>/regexp/i : 정규 표현식 리터럴</li>
+                    <li>RegExp 생성자 함수를 사용하여 RegExp 객체를 생성할 수도 있다.</li>
+                    <li>exec()메서드는 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 배열로 반환</li>
+                    <li>test()메서드는 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 불리언 값으로 반환</li>
+                    <li>match()메서드는 대상 문자열과 인수로 전달받은 정규 표현식과의 매칭 결과를 배열로 모두 반환</li>
+                    <li>패턴과 함께 정규 표현식을 구성하는 플래그는 정규 표현식의 검색 방식을 설정하기 위해 사용</li>
+                        <ul>
+                            <li><strong>i</strong>(ignore case) : 대소문자를 구별하지 않고 패턴 검색</li>
+                            <li><strong>g</strong>(Global) : 대상 문자열 내에서 패턴과 일치하는 모든 문자열을 전역 검색</li>
+                            <li><strong>m</strong>(Multi line) : 문자열의 행이 바뀌더라도 패턴 검색을 계속한다.</li>
+                        </ul>
+                </ul>
+            
+            <h3><li>에러 처리</li></h3>
+                <ul>
+                    <li>에러는 언제나 발생할 수 있다. 발생한 에러에 대해 대처하지 않고 방치하면 프로그램은 강제 종료된다.</li>
+                    <li>try...catch문을 사용해 발생한 에러에 적절하게 대응하면 프로그램이 강제 종료되지 않고 계속해서 코드를 실행시킬 수 있다.</li>
+                    <li>try...catch...finally문</li>
+                    <li>Error 객체 : Error, SyntaxError, ReferenceError, TypeError, RangeError, URIError, EvalError</li>
+                    <li>throw명령문을 사용하면 사용자 지정 오류를 생성할 수 있다.</li>
+                    <li></li>
+                </ul>
+
+            <h3><li>this</li></h3>
+                <ul>
+                    <li>this는 자신이 속한 객체 또는 자신이 생성할 인스턴스를 가리키는 자기참조 변수다.</li>
+                    <li>this를 통해 자신이 속한 객체 또는 자신이 생성할 인스턴스의 프로퍼티나 메서드를 참조할 수 있다.</li>
+                    <li>JavaScript strict mode는 기본 바인딩을 허용하지 않는다.따라서 엄격모드에서 this는 undefined.</li>
+                </ul>
+
+            <h3><li>Class</li></h3>
+                <ul>
+                    <li>클래스는 새로운 객체 생성 메커니즘</li>
+                    <li>클래스 몸체에서 정의할 수 있는 메서드는 constructor(생성자), 프로토타입 메서드, 정적 메서드의 세가지가 있다.</li>
+                    <li>클래스의 구문은 "엄격 모드"로 작성해야 한다, 변수를 선언하지 않고 사용하면 오류 발생</li>
+                    <li>클래스 상속을 생성하려면 extends 키워드를 사용한다, 클래스 상속으로 생성된 클래스는 다른 클래스의 모든 메서드를 상속한다.</li>
+                    <li>super()메서드는 부모 클래스를 참조, 부모의 속성과 메서드에 액세스한다.</li>
+                    <li>클래스를 사용하면 getter와 setter도 사용할 수 있다, 클래스에 getter 및 setter를 추가하려면 get 및 set 키워드를 사용</li>
+                    <li>클래스 선언은 호이스트되지 않는다, 클래스를 사용하려면 먼저 선언해야 한다.</li>
+                    <li>"prototype"이 아닌 클래스 함수 자체에 메서드를 설정할 수도 있습니다. 이런 메서드를 정적(static) 메서드라고 부른다,
+                        정적 메서드는 메서드를 프로퍼티 형태로 직접 할당하는 것과 동일한 일을 한다.<br>
+                        정적 메서드는 어떤 특정한 객체가 아닌 클래스에 속한 함수를 구현하고자 할 때 주로 사용된다. </li>
+                </ul>
+
+            <h3><li>Object</li></h3>
+                <ul>
+                    <li>JavaScript에서 거의 "모든 것"은 객체이다.</li>
+                    <li>객체에서 명명된 값을 속성이라고 한다.</li>
+                    <li>개체의 속성에 액세스하는 구문은 objectName.property 또는 objectName["property"] 또는 objectName[expression]</li>
+                    <li>JavaScript에서 this키워드는 객체를 나타낸다.</li>
+                    <li>JavaScript 메소드는 함수 정의를 포함하는 속성으로 objectName.methodName()로 개체 메서드에 접근한다.</li>
+                    <li>JavaScript에는 기본 객체에 대한 기본 제공 생성자가 있다.(Math는 전역 개체로 new를 사용x)<br>
+                        new String(), new Number(), new Boolean(), new Array(), new RegExp(), new Function(), new Date()</li>
+                    <li>기본 데이터 유형의 객체 버전이 있지만 복잡한 객체를 만들 이유는 없다, 기본값이 훨씬 빠르다("", 50, true/false, {},[],/()/,())</li>
+                </ul>
+            
+            <h3><li>Property</li></h3>
+                <ul>
+                    <li>'Property'는 속성이란 뜻으로, JS에서는 객체 내부의 속성을 의미한다.</li>
+                    <li>객체의 프로퍼티에 접근하는 방법은 2가지가 있다.</li>
+                        <ol>
+                            <li>대괄호[]로 접근</li>
+                            <li>점 표기법을 이용한 접근</li>
+                        </ol>
+                    <li>프로퍼티는 총 6가지의 속성을 가지고 있다.</li>
+                        <ol>
+                            데이터 프로퍼티
+                            <li>value : 프로퍼티 키를 통해 프로퍼티 값에 접근하면 반환되는 값이다.</li>
+                            <li>writable : 프로퍼티 값의 변경 가능 여부를 나타내며 불리언 값을 갖는다.</li>
+                            <li>enumerable : 프로퍼티의 열거 가능 여부를 나타내며 불리언 값을 갖는다.</li>
+                            <li>configurable : 프로퍼티의 재정의 가능 여부를 나타내며 불리언 값을 갖는다.</li>
+                            접근자 프로퍼티
+                            <li>get : 접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 읽을 떄 호출되는 접근자</li>
+                            <li>set : 접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 저장할 때 호출되는 접근자 함수다.</li>
+                        </ol>
+                    <li>get&set은 객체의 속성값에 대한 접근 권한자 역할을 할 수 있다, get&set 자체로 writable의 역할을 가지고 있음</li>
+                    <li>프로퍼티 안에 함수를 받는 프로퍼티를 일반적으로 메소드라고 한다.</li>
+                    <li>프로퍼티는 object를 위해서 데이터를 저장, 메소드는 object가 요청 받을 수 있는 액션이다.</li>
+                    <li>Object.defineProperties()메서드를 사용하면 여러 프로퍼티를 동시에 설정할 수 있다.</li>
+                    <li></li>
+                </ul>
+        </ol>
+    </article>     
+
+        <input type="button" value="blue" onclick="
+        if(this.value==='blue'){
+            var target = document.querySelector('html,body');
+            document.querySelector('.main').style.border='border: 10px solid violet';
+            target.style.backgroundColor='blue';
+            target.style.color='ghostwhite';
+            this.value='day';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'powderblue';
+                i = i+1;
+            }
+        }else{
+            var target = document.querySelector('html,body');
+            document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
+            target.style.backgroundColor='ghostwhite';
+            target.style.color='black';
+            this.value='blue';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'blue';
+                i = i+1;
+            }
+        }">
+        <div>Hello Web : <span id="time"></span>일 경과</div>
+        <button onclick="
+                var newWin = window.open('index.html','','width=500,height=400');
+                if (newWin == null){alert('팝업이 차단되어 있습니다. 팝업 차단 해체해주세요.')}
+                newWin.moveBy(100,100);">팝업창</button>
+        </div>
+
+    <footer>
         
+        <div class="copyright">
+            copyright HYEON. All rights are reserved.
+        </div>
+    </footer>
 
-        <h3><li>표현식과 문</li></h3>
-            <ul>
-                <li><strong>값</strong>은 식이 평가되어 생성된 결과를 말한다.</li>
-                <li><strong>리터럴</strong>은 사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법을 말한다.</li>
-                <li><strong>표현식</strong>은 값으로 평가될 수 있는 문이다. 표현식이 평가되면 새로운 값을 생성하거나 기존값을 참조한다.</li>
-                <li><strong>문</strong>은 프로그램을 구성하는 기본 단위이자 최소 실행 단위다.<br>
-                            문은 여러 토큰으로 구성된다. 토큰이란 문법적인 의미를 가지며, 문법적으로 더 이상 나눌 수 없는 코드의 기본 요소를 의미한다.</li>
-                <li>세미콜론은 문의 종료를 나타낸다. </li>
-            </ul>
-        
-        <h3><li>데이터 타입</li></h3>
-            <ul>
-                <li><strong>숫자타입</strong>숫자, 정수와 실수 구분 없이 하나의 숫자 타입만 존재</li>
-                <li><strong>문자열타입</strong>문자열</li>
-                <li><strong>템플릿 리터럴</strong>ES6부터 도입된 새로운 문자열 표기법으로 멀티라인 문자열, 표현식 삽입, 테그드 템플릿 등 편리한 문자열 처리기능 제공</li>
-                <li><strong>불리언타입</strong>논리적 참(true)과 거짓(false)</li>
-                <li><strong>undefined타입</strong>var 키워드로 선언된 변수에 암묵적으로 할당되는 값</li>
-                <li><strong>null타입</strong>값이 없다는 것을 의도적으로 명시할 때 사용하는 값</li>
-                <li><strong>심벌 타입</strong>ES6에서 추가된 7번째 타입, 변경 불가능한 원시 타입의 값</li>
-                <li>위의 데이터 타입 이외의 값은 모두 객체 타입, 자바스크립트는 객체 기반의 언어이며 자바스크립트를 이루고 있는 거의 모든 것이 객체라는 것이다.</li>
-            </ul>
-        
-        <h3><li>typeof</li></h3>
-            <ul>
-                <li>JavaScript에는 값을 포함할 수 있는 5가지 다른 데이터 유형이 있다.</li>
-                    <ul>
-                        <li>string, number, boolean, object, function</li>
-                    </ul>
-                <li>6가지 유형의 객체</li>
-                    <ul>
-                        <li>Object, Date, Array, String, Number, Boolean</li>
-                    </ul>
-                <li>그리고 값을 포함할 수 없는 2가지 데이터 유형</li>
-                    <ul>
-                        <li>null, undefined</li>
-                    </ul>
-            </ul>
-
-        <h3><li>연산자</li></h3>
-            <ul>
-                <li><strong>산술 연산자</strong>{+  -  *  **  /  %  ++  --}</li>
-                <li><strong>할당 연산자</strong>{=  +=  -=  *=  /=  %=}</li>
-                <li><strong>비교 연산자</strong>{==  ===  !=  !==  >  <  >=  <=}</li>
-                <li>==는 값만 비교, ===는 값과 유형을 비교</li>
-                <li><strong>논리 연산자</strong>{&&  ||  !}</li>
-                <li><strong>유형 연산자</strong>{typeof  instanceof}</li>
-            </ul>
-
-        <h3><li>함수</li></h3>
-            <ul>
-                <li>함수 선언문은 표현식이 아닌 문이다.</li>
-                <li>함수 선언문으로 정의한 함수와 함수 표현식으로 정의한 함수의 생성(호출) 시점이 다르다.</li>
-                <li>함수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 함수 호이스팅이라 한다.</li>
-                <li>함수 표현식으로 함수를 정의하면 함수 호이스팅이 발생하는 것이 아니라 변수 호이스팅이 발생한다. </li>
-                <li>매개변수보다 인수가 더 많은 경우 초과된 인수는 무시된다.</li>
-            </ul>
-
-        <h3><li>JavaScript String</li></h3>
-            <ul>
-                <li>String Length</li>
-                <li>문자열 슬라이스 : slice(start, end), substring(start, end), substr(start, length)</li>
-                <li>replace()</li>
-                <li>대문자로 변환 : toUpperCase(), 소문자로 변환 : toLowerCase()</li>
-                <li>문자열 연결 : concat()</li>
-                <li>문자열의 양쪽에서 공백 제거 : trim()</li>
-                <li>문자열 패딩 : padStart(), padEnd()</li>
-                <li>문자열 문자 추출 : charAt() 문자열의 지정된 인덱스에 있는 문자를 반환, charCodeAt() 문자열의 지정된 인덱스에 있는 문자의 유니코드를 반환</li>
-                <li>문자열을 배열로 변환 : split()</li>
-                <li>문자열 검색 : indexOf(), lastIndexOf(), search()</li>
-                <li>문자열 일치 : match(), includes(), startsWith(), endsWith(), </li>
-                <li>template literals : 따옴표 대신 역따옴표를 사용하여 문자열 정의, 템플릿 리터럴은 여러 줄 문자열을 허용, Interpolation, 문자열에서 표현식 허용</li>
-            </ul>
-        
-        <h3><li>Number</li></h3>
-            <ul>
-                <li>숫자가 아닌 문자열을 사용하여 산술을 수행하면 NaN(숫자가 아님)이 발생</li>
-                <li>isNaN()를 사용하여 값이 숫자가 아닌지 확인할 수 있다.</li>
-                <li>Infinity는 가능한 가장 큰 수 이외의 수를 계산하는 경우 자바스크립트가 반환하는 값이다.</li>
-                <li>0으로 나누기도 Infinity를 생성</li>
-                <li>자바스크립트는 숫자 상수 앞에 0x가 있으면 16진수로 해석한다.</li>
-                <li><strong>toString()</strong>메서드는 숫자를 문자열로 반환</li>
-                <li><strong>toExponential()</strong>메서드는 반올림되고 지수 표기법을 사용하여 작성된 숫자가 있는 문자열을 반환, 매개변수는 소수점 뒤의 문자 수를 정의</li>
-                <li><strong>toFixed()</strong>메서드는 지정된 소수 자릿수로 작성된 숫자와 함께 문자열을 반환</li>
-                <li><strong>toPrecision()</strong>메서드는 지정된 길이로 작성된 숫자와 함께 문자열을 반환</li>
-                <li><strong>valueOf()</strong>메서드는 숫자를 숫자로 반환</li>
-                <li>MAX_VALUE는 자바스크립트에서 가능한 가장 큰 수를 반환, 변수나 표현식 또는 값인 상태에서 .MAX_VALUE를 사용하면 undefined를 반환</li>
-                <li>MIN_VALUE는 자바스크립트에서 가능한 가장 낮은 수를 반환</li>
-                <li>POSITIVE_INFINITY 오버플로 시 반환</li>
-                <li>NEGATIVE_INFINITY 오버플로 시 반환</li>
-                <h4>변수를 숫자로 변환</h4>
-                <li><strong>Number()</strong>변수를 숫자로 변환하는데 사용, 날짜도 변환(1.1.1970 이후의 밀리초 수를 반환)</li>
-                <li><strong>parseInt()</strong>구문 분석 후 정수를 반환, 공백 허용, 첫 번째 숫자만 반환, 변환할 수 없는 경우 NaN가 반환</li>
-                <li><strong>parseFloat()</strong>구문 분석 후 숫자를 반환, 공백 허용, 첫 번째 숫자만 반환</li>
-            </ul>
-
-        <h3><li>Array</li></h3>
-            <ul>
-                <li><strong>Array.forEach()</strong>는 각 배열 요소에 대해 한 번씩 함수를 호출</li>
-                <li>push() : 배열 요소 추가</li>
-                <li>length속성을 사용하여 새 요소를 배열에 추가할 수도 있습니다, 인덱스가 높은 요소를 추가하면 배열에 정의되지 않은 "구멍"이 생길 수 있다.</li>
-                <li>new Arry(), []</li>
-                <li>join(), pop(), push(), shift(), unshift(), delete, concat()</li>
-                <li><strong>splice()</strong>는 배열에 새 항목 추가, slice()는 배열의 조각을 잘라낸다.</li>
-                <li>sort()는 배열을 알파벳순으로 정렬</li>
-                <li>reverse()는 배열의 요소를 뒤집는다, 내림차순으로 배열을 정렬하는데 사용</li>
-                <li>배열에서 가장 높은 숫자를 찾을 때 Math.max.apply(), 가장 낮은 숫자를 찾을 때 Math.min.apply()</li>
-                <li><strong>map()</strong>메서드는 각 배열 요소에 대해 함수를 수행하여 새 배열을 만든다.</li>
-                <li><strong>filter()</strong>메서드는 테스트를 통과한 배열 요소로 새 배열을 만든다.</li>
-                <li><strong>reduce()</strong>메서드는 각 배열 요소에서 함수를 실행하여 단일 값을 생성한다.</li>
-                <li>reduceRight()메서드는 오른쪽에서 왼쪽으로 작동</li>
-                <li><strong>every()</strong>모든 배열 값이 테스트를 통과하는지 확인하여 불리언 타입으로 반환</li>
-                <li><strong>some()</strong>일부 배열 값이 테스트를 통과하는지 확인하여 불리언 타입으로 반환</li>
-                <li><strong>indexOf()</strong>는 원본 배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환</li>
-                <li>lastIndexOf()지정된 요소가 마지막으로 발생한 위치를 반환</li>
-                <li><strong>find()</strong>는 테스트 함수를 통과하는 첫 번째 배열 요소의 값을 반환</li>
-                <li>findIndex()는 테스트 함수를 통과하는 첫 번째 배열 요소의 인덱스를 반환</li>
-                <li><strong>Array.from()</strong>는 길이 속성이 있는 개체 또는 반복 가능한 개체에서 Array개체를 반환</li>
-                <li><strong>Array.keys()</strong>는 배열 키가 있는 Array Iterator개체를 반환</li>
-                <li><strong>Array.includes()</strong>는 요소가 배열에 있는지 확인할 수 있다.</li>
-                <li>const로 선언된 배열은 재할당할 수 없다, 배열의 요소는 변경할 수 있다.</li>
-                <li>const변수는 선언될 때 값을 할당해야 한다,</li>
-                <li>const에는 블록 범위가 있다.</li>
-            </ul>
-
-        <h3><li>Date</li></h3>
-            <ul>
-                <li>Date는 날짜와 시간을 위한 메서드를 제공하는 빌트인 객체이면서 생성자 함수다.</li>
-                <li>new Date()는 현재 날짜와 시간을 가지는 Date객체 반환</li>
-                <li>월은 생략할 수 없고, 매개변수를 하나만 제공하면 밀리초로 처리된다.</li>
-                <li>한 자리 및 두 자리 연도는 이전 세기(19xx)로 해석된다.</li>
-                <li>new Date(dateString)으로 새 날짜 개체를 만들 수 있다.</li> 
-                <li>자바스크립트는 1970년 1월 1일 00:00:00(UTC)이후의 날짜를 밀리초 단위로 저장한다.</li>
-                <li>자바스크립트는 기본적으로 날짜를 전체 텍스트 문자열 형식으로 출력, 날짜 개체를 HTML로 표시하면 toString()메서드를 사용하여 자동으로 문자열로 변환</li>
-                <li>자바스크립트 날짜 입력 형식에는 일반적으로 3가지 유형이 있다(ISO날짜,짧은 날짜, 긴 날짜)</li>
-                <li><strong>ISO Date</strong>"2015-03-25" (The International Standard)</li>
-                <li><strong>Short Date</strong>"03/25/2015"</li>
-                <li><strong>Long Date</strong>"Mar 25 2015" or "25 Mar 2015"</li>
-                <li>toUTCString()메서드는 날짜를 UTC문자열로 변환</li>
-                <li>toDateString()메서드는 날짜를 더 읽기 쉬운 형식으로 변환</li>
-                <li>toISOString()메서드는 ISO 표준 형식을 사용하여 Date 객체를 문자열로 변환</li>
-                <li>유효한 날짜 문자열이 있는 경우 Date.parse()메서드를 사용하여 밀리초로 변환</li>
-                <li>getFullYear(), getMonth(), getDate(), getHours(), getMinutes(), getSeconds(), getMilliseconds(), getTime(), getDay(), Date.now()</li>
-                <li>날짜 설정 방법 : setDate(), setFullYear(), setHours(), setMilliseconds(), setMinutes(), setMonth(), setSeconds(), setTime()</li>
-                <li>getTimezoneOffset()은 UTC와 Date 객체에 지정된 로캘 시간과의 차이를 분 단위로 반환</li>
-                <li>toLocaleString(), toLocaleTimeString()</li>
-            </ul>
-
-        <h3><li>Math</li></h3>
-            <ul>
-                <li>Math.PI, Math.abs, Math.round, Math.ceil, Math.floor, Math.sqrt, Math.random, Math.pow, Math.max, Math.min</li>
-            </ul>
-
-        <h3><li>Loop</li></h3>
-            <ul>
-                <li>for : 코드 블록을 여러번 반복</li>
-                <li>for/in : 객체의 속성을 통해 루프</li>
-                <li>for/of : 반복 가능한 객체의 값을 반복</li>
-                <li>while : 지정된 조건이 참인 동안 코드 블록을 반복</li>
-                <li>do/while : 코드 블록을 한번 실행한 다음 지정된 조건이 참인 동안 루프를 반복</li>
-            </ul>
-
-        <h3><li>Set과 Map</li></h3>
-            <ul>
-                <li>set객체는 중복되지 않는 유일한 값들의 집합이다.</li>
-                <li>Set 객체의 요소 개수를 확인할 때는 Set.size를 사용</li>
-                <li>Set.add() : 요소 추가</li>
-                <li>===연산자는 NaN과 NaN을 다르다고 평가하지만 Set객체는 NaN과 NaN을 같다고 평가</li>
-                <li>Set.has()는 객체에 특정 요소가 존재하는지 확인하여 불리언 값을 반환</li>
-                <li>특정 요소를 삭제하려면 Set.delete를 사용, 모든 요소를 일괄 삭제하려면 Set.clear()사용</li>
-                <li>Set 객체의 요소를 순회하려면 Set.forEach()를 사용, 3개의 인수를 전달받는다.</li>
-                <li>교집합 : setA.intersection(setB), 합집합 : setA.union(setB), 차집합 : setA.difference(setB)</li>
-                <li>상위집합 확인 : setA.isSuperset(setB)</li>
-                <hr>
-                <li>Map 객체는 키와 값의 쌍으로 이루어진 컬렉션이다. Object를 키로 사용할 수 있다는 것은 Map의 중요한 기능입니다.</li>
-                <li>set()을 사용하여 맵에 요소를 추가하고 값을 변경할 수도 있다.</li>
-                <li>get()메서드는 Map의 키 값을 가져온다, size속성은 Map의 요소 수를 반환, delete()는 Map 요소를 제거, clear()메서드는 Map에서 모든 요소 제거,
-                    키가 Map에 존재하는 has() 경우 true를 반환</li>
-                <li>지도는 객체로 typeof시 object반환</li>
-                <li>forEach()메서드는 Map의 각 키/값 쌍에 대한 함수를 호출, entries()는 Map에 [key, values]가 있는 반복자 객체를 반환,
-                    Map.keys(), Map.values()
-                </li>
-            </ul>
-
-        <h3><li>RegExp(Regular Expression)</li></h3>
-            <ul>
-                <li>정규 표현식은 일정한 패턴을 가진 문자열의 집합을 표현하기 위해 사용하는 형식 언어다.</li>
-                <li>정규표현식은 문자열을 대상으로 패턴 매치 기능을 제공</li>
-                <li>/regexp/i : 정규 표현식 리터럴</li>
-                <li>RegExp 생성자 함수를 사용하여 RegExp 객체를 생성할 수도 있다.</li>
-                <li>exec()메서드는 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 배열로 반환</li>
-                <li>test()메서드는 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 불리언 값으로 반환</li>
-                <li>match()메서드는 대상 문자열과 인수로 전달받은 정규 표현식과의 매칭 결과를 배열로 모두 반환</li>
-                <li>패턴과 함께 정규 표현식을 구성하는 플래그는 정규 표현식의 검색 방식을 설정하기 위해 사용</li>
-                    <ul>
-                        <li><strong>i</strong>(ignore case) : 대소문자를 구별하지 않고 패턴 검색</li>
-                        <li><strong>g</strong>(Global) : 대상 문자열 내에서 패턴과 일치하는 모든 문자열을 전역 검색</li>
-                        <li><strong>m</strong>(Multi line) : 문자열의 행이 바뀌더라도 패턴 검색을 계속한다.</li>
-                    </ul>
-            </ul>
-        
-        <h3><li>에러 처리</li></h3>
-            <ul>
-                <li>에러는 언제나 발생할 수 있다. 발생한 에러에 대해 대처하지 않고 방치하면 프로그램은 강제 종료된다.</li>
-                <li>try...catch문을 사용해 발생한 에러에 적절하게 대응하면 프로그램이 강제 종료되지 않고 계속해서 코드를 실행시킬 수 있다.</li>
-                <li>try...catch...finally문</li>
-                <li>Error 객체 : Error, SyntaxError, ReferenceError, TypeError, RangeError, URIError, EvalError</li>
-                <li>throw명령문을 사용하면 사용자 지정 오류를 생성할 수 있다.</li>
-                <li></li>
-            </ul>
-
-        <h3><li>this</li></h3>
-            <ul>
-                <li>this는 자신이 속한 객체 또는 자신이 생성할 인스턴스를 가리키는 자기참조 변수다.</li>
-                <li>this를 통해 자신이 속한 객체 또는 자신이 생성할 인스턴스의 프로퍼티나 메서드를 참조할 수 있다.</li>
-                <li>JavaScript strict mode는 기본 바인딩을 허용하지 않는다.따라서 엄격모드에서 this는 undefined.</li>
-            </ul>
-
-        <h3><li>Class</li></h3>
-            <ul>
-                <li>클래스는 새로운 객체 생성 메커니즘</li>
-                <li>클래스 몸체에서 정의할 수 있는 메서드는 constructor(생성자), 프로토타입 메서드, 정적 메서드의 세가지가 있다.</li>
-                <li>클래스의 구문은 "엄격 모드"로 작성해야 한다, 변수를 선언하지 않고 사용하면 오류 발생</li>
-                <li>클래스 상속을 생성하려면 extends 키워드를 사용한다, 클래스 상속으로 생성된 클래스는 다른 클래스의 모든 메서드를 상속한다.</li>
-                <li>super()메서드는 부모 클래스를 참조, 부모의 속성과 메서드에 액세스한다.</li>
-                <li>클래스를 사용하면 getter와 setter도 사용할 수 있다, 클래스에 getter 및 setter를 추가하려면 get 및 set 키워드를 사용</li>
-                <li>클래스 선언은 호이스트되지 않는다, 클래스를 사용하려면 먼저 선언해야 한다.</li>
-                <li>"prototype"이 아닌 클래스 함수 자체에 메서드를 설정할 수도 있습니다. 이런 메서드를 정적(static) 메서드라고 부른다,
-                    정적 메서드는 메서드를 프로퍼티 형태로 직접 할당하는 것과 동일한 일을 한다.<br>
-                    정적 메서드는 어떤 특정한 객체가 아닌 클래스에 속한 함수를 구현하고자 할 때 주로 사용된다. </li>
-            </ul>
-
-        <h3><li>Object</li></h3>
-            <ul>
-                <li>JavaScript에서 거의 "모든 것"은 객체이다.</li>
-                <li>객체에서 명명된 값을 속성이라고 한다.</li>
-                <li>개체의 속성에 액세스하는 구문은 objectName.property 또는 objectName["property"] 또는 objectName[expression]</li>
-                <li>JavaScript에서 this키워드는 객체를 나타낸다.</li>
-                <li>JavaScript 메소드는 함수 정의를 포함하는 속성으로 objectName.methodName()로 개체 메서드에 접근한다.</li>
-            </ul>
-        
-        <h3><li>Property</li></h3>
-            <ul>
-                <li>'Property'는 속성이란 뜻으로, JS에서는 객체 내부의 속성을 의미한다.</li>
-                <li>객체의 프로퍼티에 접근하는 방법은 2가지가 있다.</li>
-                    <ol>
-                        <li>대괄호[]로 접근</li>
-                        <li>점 표기법을 이용한 접근</li>
-                    </ol>
-                <li>프로퍼티는 총 6가지의 속성을 가지고 있다.</li>
-                    <ol>
-                        데이터 프로퍼티
-                        <li>value : 프로퍼티 키를 통해 프로퍼티 값에 접근하면 반환되는 값이다.</li>
-                        <li>writable : 프로퍼티 값의 변경 가능 여부를 나타내며 불리언 값을 갖는다.</li>
-                        <li>enumerable : 프로퍼티의 열거 가능 여부를 나타내며 불리언 값을 갖는다.</li>
-                        <li>configurable : 프로퍼티의 재정의 가능 여부를 나타내며 불리언 값을 갖는다.</li>
-                        접근자 프로퍼티
-                        <li>get : 접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 읽을 떄 호출되는 접근자</li>
-                        <li>set : 접근자 프로퍼티를 통해 데이터 프로퍼티의 값을 저장할 때 호출되는 접근자 함수다.</li>
-                    </ol>
-                <li>get&set은 객체의 속성값에 대한 접근 권한자 역할을 할 수 있다, get&set 자체로 writable의 역할을 가지고 있음</li>
-                <li>프로퍼티 안에 함수를 받는 프로퍼티를 일반적으로 메소드라고 한다.</li>
-                <li>프로퍼티는 object를 위해서 데이터를 저장, 메소드는 object가 요청 받을 수 있는 액션이다.</li>
-                <li>Object.defineProperties()메서드를 사용하면 여러 프로퍼티를 동시에 설정할 수 있다.</li>
-                <li></li>
-            </ul>
-
-    </ol>
-</div>     
-
-    <input type="button" value="blue" onclick="
-    if(this.value==='blue'){
-        var target = document.querySelector('html,body');
-        document.querySelector('.main').style.border='border: 10px solid violet';
-        target.style.backgroundColor='blue';
-        target.style.color='ghostwhite';
-        this.value='day';
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            alist[i].style.color = 'powderblue';
-            i = i+1;
+    <script>
+        function showDetail(tag){
+            document.querySelector(tag).style.opacity = '1';
         }
-    }else{
-        var target = document.querySelector('html,body');
-        document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
-        target.style.backgroundColor='ghostwhite';
-        target.style.color='black';
-        this.value='blue';
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            alist[i].style.color = 'blue';
-            i = i+1;
+        function hideDetail(tag){
+            document.querySelector(tag).style.opacity = '0';
         }
-    }">
 
-<div>Hello Web : <span id="time"></span>일 경과</div>
-<button onclick="
-        var newWin = window.open('index.html','','width=500,height=400');
-        if (newWin == null){alert('팝업이 차단되어 있습니다. 팝업 차단 해체해주세요.')}
-        newWin.moveBy(100,100);">팝업창</button>
-</div>
+        var now = new Date();
+        var firstDay = new Date("2021-04-16");
+        var toNow = now.getTime();
+        var toFirst = firstDay.getTime();
+        var passedTime = toNow - toFirst;
 
-<script>
-    function showDetail(tag){
-        document.querySelector(tag).style.opacity = '1';
-    }
-    function hideDetail(tag){
-        document.querySelector(tag).style.opacity = '0';
-    }
-
-    var now = new Date();
-    var firstDay = new Date("2021-04-16");
-    var toNow = now.getTime();
-    var toFirst = firstDay.getTime();
-    var passedTime = toNow - toFirst;
-
-    passedTime = Math.round(passedTime/(1000*60*60*24));
-    document.querySelector('#time').innerText = passedTime;
-</script>
-</body>
-
-
-<footer>
+        passedTime = Math.round(passedTime/(1000*60*60*24));
+        document.querySelector('#time').innerText = passedTime;
+    </script>
     
-    <div class="copyright">
-        copyright HYEON. All rights are reserved.
-    </div>
-</footer>
-
-
+</body>
 </html>

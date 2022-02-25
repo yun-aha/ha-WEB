@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+<head>
+    <title>WEB-free(unique) by ha</title>
+    <meta charset="utf-8">
+</head>
     <style>
         /* base */
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
@@ -39,7 +43,6 @@
         hr{
             width: 90%;
         }
-
 
         /* unique */
         #find_img{
@@ -143,19 +146,20 @@
         }
     </style>
 
-<header>
-    <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
-    <nav>
-        <ul>
-            <li><a href="html-world.html">HTML</a></li>
-            <li><a href="css-world.html">CSS</a></li>
-            <li><a href="json-world.html">JavaScript</a></li>
-            <li><a href="free.html">Free</a></li>
-        </ul>
-    </nav>
-</header>
-<hr>
-    <body>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
+        <nav>
+            <ul>
+                <li><a href="html-world.html">HTML</a></li>
+                <li><a href="css-world.html">CSS</a></li>
+                <li><a href="json-world.html">JavaScript</a></li>
+                <li><a href="free.html">Free</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
         <section id="find_img">
             <h2>Clover?</h2>
             <div class="main_box">
@@ -176,40 +180,41 @@
             </div>
         </section>
 
-        <script>
-            function test() {
-                var Box1 = document.getElementById("box1").checked;
-                var Box2 = document.getElementById("box2").checked;
-                var Box3 = document.getElementById("box3").checked;
-                var Box4 = document.getElementById("box4").checked;
-                var Box5 = document.getElementById("box5").checked;
-                var Box6 = document.getElementById("box6").checked;
-                var Box7 = document.getElementById("box7").checked;
-                var Box8 = document.getElementById("box8").checked;
-                var Right = document.getElementById("right");
-                var Wrong = document.getElementById("wrong");
+    <hr>
+    <footer>
+        <div class="copyright">
+            <p>copyright HYEON. All rights are reserved.</p>
+        </div>
+    </footer>
 
-                if (Box1==true && Box4==true && Box5==true && Box8==true){
-                    if(Box2==false && Box3==false && Box6==false && Box7==false){
-                    Right.style.opacity = 1;
-                    Wrong.style.opacity = 0;
-                    }
-                    else{
-                    Wrong.style.opacity = 1;
-                    Right.style.opacity = 0;
-                    }
-                } 
-                else{
-                    Wrong.style.opacity = 1;
-                    Right.style.opacity = 0;
+    <script>
+        function test() {
+            var Box1 = document.getElementById("box1").checked;
+            var Box2 = document.getElementById("box2").checked;
+            var Box3 = document.getElementById("box3").checked;
+            var Box4 = document.getElementById("box4").checked;
+            var Box5 = document.getElementById("box5").checked;
+            var Box6 = document.getElementById("box6").checked;
+            var Box7 = document.getElementById("box7").checked;
+            var Box8 = document.getElementById("box8").checked;
+            var Right = document.getElementById("right");
+            var Wrong = document.getElementById("wrong");
+
+            if (Box1==true && Box4==true && Box5==true && Box8==true){
+                if(Box2==false && Box3==false && Box6==false && Box7==false){
+                Right.style.opacity = 1;
+                Wrong.style.opacity = 0;
                 }
+                else{
+                Wrong.style.opacity = 1;
+                Right.style.opacity = 0;
+                }
+            } 
+            else{
+                Wrong.style.opacity = 1;
+                Right.style.opacity = 0;
             }
-        </script>
-    </body>
-<hr>
-<footer>
-    <div class="copyright">
-        <p>copyright HYEON. All rights are reserved.</p>
-    </div>
-</footer>
+        }
+    </script>
+</body>
 </html>
