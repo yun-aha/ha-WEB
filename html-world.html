@@ -18,7 +18,14 @@
             </ul>
         </nav>
     </header>
-
+    <aside>
+        <ul>
+            <li><a href="#structure">HTML구조</a></li>
+            <li><a href="#tag">HTML 태그</a></li>
+            <li><a href="#form">FORM</a></li>
+            <li><a href="#add">추가 내용</a></li>
+        </ul>
+    </aside>
     <div class="main">
         <article>
         <h2>Let's learn about HTML.</h2>
@@ -28,7 +35,7 @@
                     HTML</a>이란 무엇일까?</h4>
                 do you know about tag? <br><strong>'br'</strong> is line tag<br>
                 Also <strong>'p'</strong> is paragraph line tag.</p>
-                <h3>HTML 구조</h3>
+                <h3 id="structure">HTML 구조</h3>
                     <p>
                         <ul>
                             <li>HTMl문서는 일반 문서와 달리 정해진 형식에 맞추어 내용을 입력해야 한다.</li>
@@ -62,11 +69,127 @@
                             <li>같은 파일에 두 언어를 사용하는 것은 읽는데 피로감,, 따로 작성하도록 한다!</li>
                         </ul>
                     </p>
-                <h3>HTML 태그들</h3>
+                <h3 id="tag">HTML 태그</h3>
                     <p>
-                        
+                        <ol>
+                            <li>텍스트 입력하기</li>
+                                <ul>
+                                    <li>hn : 제목을 나타내는 태그(n은 1~6)</li>
+                                    <li>p : 텍스트 단락을 만드는 태그</li>
+                                    <li>br : 줄을 바꾸는 태그</li>
+                                    <li>blockquote : 인용할 때 쓰는 태그</li>
+                                    <li>strong, b : 텍스트를 굵게 표시하는 태그</li>
+                                    <li>em, i : 기울인 텍스트를 입력해주는 태그</li>
+                                    <li>abbr, cite, code, small, sub, sup, s, u, ins, del</li>
+                                </ul>
+                            <li>목록 만들기</li>
+                                <ul>
+                                    <li>ol, li : 순서 있는 목록을 만드는 태그<br>
+                                        ol 태그는 type속성을 사용하여 영문자나 로마 숫자 등으로 순서를 나타낼 수 있다.<br>
+                                        start 속성을 사용하면 시작 번호를 바꿀 수 있다.</li>
+                                    <li>ul, li : 순서 없는 목록을 만드는 태그</li>
+                                    <li>dl, dt, dd : 설명 목록을 만드는 태그(description list)</li>
+                                </ul>
+                            <li>표 만들기</li>
+                                <ul>
+                                    <li>table, caption : 표를 만드는 태그(caption은 생략가능)</li>
+                                    <li>tr : 행을 만듬</li>
+                                    <li>td, th : 셀을 만드는 태그</li>
+                                    <li>thead, tbody, tfoot : 표의 구조를 지정하는 태그</li>
+                                    <li>rowspan, colspan : 행이나 열을 합치는 속성</li>
+                                    <li>col, colgroup : 열을 묶어주는 태그</li>
+                                </ul>
+                            <li>이미지 삽입하기</li>
+                                <ul>
+                                    <li>img srg="이미지 파일 경로" alt="대체용 텍스트"</li>
+                                    <li>이미지 크기를 조절하는 width, height 속성</li>
+                                </ul>
+                            <li>오디오나 비디오 삽입하기</li>
+                                <ul>
+                                    <li>object, embed : 다양한 멀티미디어 파일을 삽입할 때 쓰는 태그</li>
+                                    <li>audio, video : 오디오나 비디오 파일을 삽입하는 태그</li>
+                                </ul>
+                            <li>하이퍼링크 삽입하기</li>
+                                <ul>
+                                    <li>a href="링크할 주소"</li>
+                                    <li>클릭하면 새로운 탭에서 사이트가 열리도록 target 속성을 _blank로 지정한다.</li>
+                                </ul>
+                        </ol>
                     </p>
-                <h3>Now, Let's learn about attribute</h3>
+                <h3 id="form">FORM</h3>
+                    <p>
+                        <ol>
+                            <li>폼 삽입하기</li>
+                                <ul>
+                                    <li>form [속성="속성값"]</li>
+                                    <li>method : 사용자가 입력한 내용을 서버쪽 프로그램으로 어떻게 넘겨줄 것인지 지정(get, post)<br>
+                                        get - 데이터를 256~4,096byte까지만 서버로 넘길 수 있다, 주소 표시줄에 사용자가 입력한 내용이 그대로 드러나는 단점<br>
+                                        post - 입력한 내용의 길이에 제한받지 않고 사용자가 입력한 내용도 드러나지 않는다.</li>
+                                    <li>name : 자바스크립트로 폼을 제어할 때 사용할 폼의 이름을 지정</li>
+                                    <li>action : form태그 안의 내용을 처리해 줄 서버 프로그램을 지정</li>
+                                    <li>target : action 속성에서 지정한 스크립트 파일을 현재 창이 아닌 다른 위치에서 열도록 한다.</li>
+                                    <li>autocomplete : 자동 완성 기능을 타나내는 속성</li>
+                                    <li>fieldset, legend : 폼 요소를 그룹으로 묶는 태그</li>
+                                    <li>label : 폼 요소에 레이블을 붙이는 태그<br>
+                                        - label 태그 안에 폼 요소를 넣는다.<br>
+                                        - label태그와 폼 요소를 따로 사용하고 label의 for속성과 폼 요소의 id속성을 이용해 서로 연결한다.</li>
+                                </ul>
+                            <li>사용자 입력을 위한 input태그</li>
+                                input 태그의 type 속성
+                                <ul>
+                                    <li>text : 한 줄 짜리 텍스트를 입력할 수 있는 텍스트 박스를 넣는다.</li>
+                                    <li>search : 검색할 때 입력하는 필드를 넣는다.</li>
+                                    <li>password,email, url, tel, date, month, week, time, datetime, datetime-local</li>
+                                    <li>checkbox : 주어진 여러 항목에서 2개 이상 선택할 수 있는 체크 박스를 넣는다.<br>
+                                        radio : 주어진 여러 항목에서 1개만 선택할 수 있는 라디오 버튼을 넣는다.</li>
+                                    <li>number : 숫자를 조절할 수 잇는 스핀 박스를 넣는다.<br>
+                                        range: 숫자를 조절할 수 있는 슬라이드 막대를 넣는다.</li>
+                                    <li>submit, reset, button, image : submit 버튼 대신 사용할 이미지를 넣는다.</li>
+                                    <li>file : 파일을 첨부할 수 있는 버튼을 넣는다.<br>
+                                        hidden : 사용자에게는 보이지 않지만 서버로 넘겨주는 값이 있는 필드를 만든다.</li>
+                                    <br>
+                                    <li>(text, password)에서 사용하는 주요 속성<br>
+                                        size : 화면에 몇 글자가 보이도록 할 것인지 지정<br>
+                                        value : 텍스트 필드 요소가 화면에 표시될 때 텍스트 필드 부분에 보여주는 내용, 지정하지 않으면 빈 텍스트 필드 표시<br>
+                                        maxlength : 입력할 수 있는 최대 문자 수 지정</li>
+                                    <li>(checkbox, radio)에서 사용하는 주요 속성<br>
+                                        value : 선택한 체크 박스나 라디오 버튼을 서버에 알려줄 때 넘겨줄 값 지정<br>
+                                        checked : 여러 항목 중에서 기본으로 선택해 놓고 싶은 항목에 사용</li>
+                                    <li>(number, range, 날짜나 시간)에서 사용할 수 있는 속성<br>
+                                        min : 필드에 입력할 수 있는 최솟값을 지정, 기본 최솟값은 0<br>
+                                        max : 필드에 입력할 수 있는 최댓값을 지정, 기본 최댓값은 100<br>
+                                        step : 숫자 간격을 지정, 기본값은 1<br>
+                                        value : 필드에 표시할 초깃값</li>
+                                    <br>
+                                    <li>autofocus : 자동으로 입력 커서를 갖다 놓는 속성</li>
+                                    <li>placeholder : 힌트를 표시해 주는 속성</li>
+                                    <li>readonly : 읽기 전용 필드를 만들어 주는 속성</li>
+                                    <li>required : 필수 입력 필드를 지정하는 속성</li>
+                                </ul>
+                            <li>폼에서 사용하는 다양한 태그</li>
+                                <ul>
+                                    <li>textarea : 여러줄을 입력하는 텍스트 영역 태그<br>
+                                        cols - 너비 크기를 지정하는 속성<br>
+                                        rows - 세로길이를 줄 단위로 지정, 지정한 숫자보다 줄 개수가 많아지면 스크롤 막대가 생긴다.</li>
+                                    <li>select, option : 드롭다운 목록을 만들어 주는 태그<br>
+                                        select 태그로 드롭다운 목록의 시작과 끝을 표시하고, 그 안에 option 태그를 사용해 원하는 항목을 추가<br>
+                                        option 태그에는 value 속성을 이용해 서버로 넘겨주는 값을 지정</li>
+                                    <li>select태그를 사용해 만든 드롭다운 목록은 기본적으로 옵션이 하나만 표시되는데,<br>
+                                        size속성이나 multiple속성을 이용하면 드롭다운 목록의 크기나 선택할 항목의 개수를 조절할 수 있다.</li>
+                                    <li>option태그는 항목마다 value 속성을 사용해서 서버로 넘겨줄 값을 지정,<br>
+                                        기본적으로 목록에 보이도록 selected속성을 추가한다.</li>
+                                    <li>datalist, option : 데이터 목록을 만들어주는 태그<br>
+                                        datalist태그를 이용해 데이터 목록의 시작과 끝을 표시하고 그 사이에 option 태그를 사용해 각 데이터의 옵션을 표시한다.<br>
+                                        그리고 데이터 목록을 사용할 텍스트 필드에서 어떤 데이터 목록을 연결할지 id값을 지정한다.(datalist와 input text의 id연결)</li>
+                                    <li>button : 버튼을 만들어주는 태그<br>
+                                        submit - 폼을 서버로 전송, input type="submit"과 같은 기능<br>
+                                        reset - 폼에 입력한 내용을 초기화 input type="reset"과 같은 기능<br>
+                                        button - 버튼 형태만 만들뿐 자체 기능은 없다 input type="button"과 같은 기능 </li>
+                                </ul>
+                        </ol>
+                    </p>
+
+                <h3 id="add">Now, Let's learn about attribute</h3>
                 <p style='margin-top:30px;'>
                     <strong>'img'</strong> you can add image and also
                     you can use 'width' to control image len.<br>
