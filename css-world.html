@@ -20,50 +20,104 @@
     </header>
 
     <div class="main">
-    <h2> It's CSS</h2>
-        <article class="detail">
-            <h4>Css Tag</h4>
+        <article>
+        <h2> It's CSS</h2>
             <section class="main-content">
-                <ol>
-                    <li>footer tag - p tag를 사용한 것과 화면상 다를게 없다.</li>
-                    <li>text-align: center; - 중앙으로 정렬</li>
-                    <li>float: left,right; - 붕붕떠다니면서 정렬</li>
-                    <li>overflow: hidden; - float를 묶어준다.</li>
-                    <li>background-color: black; - 배경색깔</li>
-                    <li>color: white; - 글자색깔</li>
-                    <li>font-size: 30px; - 글자 크기</li>
-                    <li>font-weight: lighter, bold,,; - 글자 무게</li>
-                    <li>font-style: italic; - 글자 스타일(글자 기울이기)</li>
-                    <li>line-height: 10px; - 줄간 간격 늘리기</li>
-                    <li>border: 두께 방식 색깔; - 상자그리기</li>
-                    <li>border-bottom: border-top: border-right: border-left: - 상하좌우에 선이 생김</li>
-                    <li>width: -상자 넓이조절</li>
-                    <li>height: -상자 높이 조절</li>
-                    <li>margin-left,margin-right: -상자위치 조절</li>
-                    <li>padding: 상자 크기와 글자 사이 거리 조절</li>
-                    <li>box-shadow: 가로축 세로축 그림자흐림정도 그림자퍼짐도 그림자의색(rgba)(r,g,b,투명도) - 상자에 그림자 넣는 코드</li>
-                </ol>
+                <h3>Css Tag</h3>
+                    <p>
+                        <ol>
+                            <li>footer tag - p tag를 사용한 것과 화면상 다를게 없다.</li>
+                            <li>text-align: center; - 중앙으로 정렬</li>
+                            <li>float: left,right; - 붕붕떠다니면서 정렬</li>
+                            <li>overflow: hidden; - float를 묶어준다.</li>
+                            <li>background-color: black; - 배경색깔</li>
+                            <li>color: white; - 글자색깔</li>
+                            <li>font-size: 30px; - 글자 크기</li>
+                            <li>font-weight: lighter, bold,,; - 글자 무게</li>
+                            <li>font-style: italic; - 글자 스타일(글자 기울이기)</li>
+                            <li>line-height: 10px; - 줄간 간격 늘리기</li>
+                            <li>border: 두께 방식 색깔; - 상자그리기</li>
+                            <li>border-bottom: border-top: border-right: border-left: - 상하좌우에 선이 생김</li>
+                            <li>width: -상자 넓이조절</li>
+                            <li>height: -상자 높이 조절</li>
+                            <li>margin-left,margin-right: -상자위치 조절</li>
+                            <li>padding: 상자 크기와 글자 사이 거리 조절</li>
+                            <li>box-shadow: 가로축 세로축 그림자흐림정도 그림자퍼짐도 그림자의색(rgba)(r,g,b,투명도) - 상자에 그림자 넣는 코드</li>
+                        </ol>
+                        <ul>
+                            <li>class를 꾸밀 때는 .클래스 이름</li>
+                            <li>꾸밀 태그 이름을 먼저 쓰고 중괄호를 열고 중괄호를 닫는다, 그리고 어떤 요소를 어떻게 꾸밀건지 :과 ;으로 구분</li>
+                            <li>html color code에서 다양한 색깔을 고를 수 있다.</li>
+                            <li>상자의 외부넓이부터 Margin, Border, Padding, Content</li>
+                            <li>구글에서 폰트를 @import한 후 font-family코드</li>
+                            <li>*는 모든 문서에 적용한다는 의미</li>
+                        </ul>
+                    </p>
+                <h3>애니메이션</h3>
+                    <p>
+                        <ul>
+                            <li>animation 속성은 특정 지점에서 스타일을 바꾸면서 애니메이션을 만드는데, 이렇게 애니메이션 중간에 스타일이 바뀌는 지점을 키프레임keyframe이라고 한다.</li>
+                            <li>키프레임은 @keyframes속성으로 정의하고, animation 속성과 그 하위 속성을 이용해서 애니메이션의 실행 시간이나 반복 여부 등을 지정한다.</li>
+                        </ul>
+                        <h4>Position</h4>
+                        <ul>
+                            <li>static속성은 대부분의 html태그들의 기본 속성, 정적인 위치를 갖는다.</li>
+                            <li>fixed속성은 위치를 설정하지 않으면 (x=0,y=0)으로 설정한 것처럼 보여지게 된다.</li>
+                            <li>sticky 속성은 static과 fixed속성의 특징을 모두 가지고 있는 속성이다.</li>
+                        </ul>
+                    </p>
             </section>
-            <section class="add-content">
-                <ul>
-                    <li>class를 꾸밀 때는 .클래스 이름</li>
-                    <li>꾸밀 태그 이름을 먼저 쓰고 중괄호를 열고 중괄호를 닫는다, 그리고 어떤 요소를 어떻게 꾸밀건지 :과 ;으로 구분</li>
-                    <li>html color code에서 다양한 색깔을 고를 수 있다.</li>
-                    <li>상자의 외부넓이부터 Margin, Border, Padding, Content</li>
-                    <li>구글에서 폰트를 @import한 후 font-family코드</li>
-                    <li>*는 모든 문서에 적용한다는 의미</li>
-                </ul>
-                <h4>애니메이션</h4>
-                <ul>
-                    <li>animation 속성은 특정 지점에서 스타일을 바꾸면서 애니메이션을 만드는데, 이렇게 애니메이션 중간에 스타일이 바뀌는 지점을 키프레임keyframe이라고 한다.</li>
-                    <li>키프레임은 @keyframes속성으로 정의하고, animation 속성과 그 하위 속성을 이용해서 애니메이션의 실행 시간이나 반복 여부 등을 지정한다.</li>
-                </ul>
-                <h4>Position</h4>
-                <ul>
-                    <li>static속성은 대부분의 html태그들의 기본 속성, 정적인 위치를 갖는다.</li>
-                    <li>fixed속성은 위치를 설정하지 않으면 (x=0,y=0)으로 설정한 것처럼 보여지게 된다.</li>
-                    <li>sticky 속성은 static과 fixed속성의 특징을 모두 가지고 있는 속성이다.</li>
-                </ul>
+            <section class="responsive">
+                <h3>Responsive</h3>
+                    <p>
+                        <ol>
+                            <b><li>meta 태그 - viewport</li></b>
+                                <ul>
+                                    <li>viewport란 웹페이지에서 사용자의 보이는 영역(visible area)를 말한다.</li>
+                                    <li>viewport를 지정하면 접속한 기기의 화면에 맞추어 확대하거나 축소해서 표시할 수 있다.</li>
+                                    <li>viewport는 head태그에 작성<br>
+                                        meta name="viewport" content=""</li>
+                                    <li>content 안에서 사용하는 속성<br>
+                                        - width : 뷰포트 너비, device-width 또는 크기 입력<br>
+                                        - height : 뷰포트 높이, device-height 또는 크기 입력<br>
+                                        - user-scalable : 확대축소 가능여부, yes or no<br>
+                                        - initial-scale : 초기 확대축소 값, 1~10<br>
+                                        - minimum-scale, maximum-scale : 뷰포트의 최소최대배율값(0~10)</li>
+                                    <li>뷰포트 단위<br>
+                                        - vm : viewport width, 1vw는 뷰포트 너비의 1%와 같다.<br>
+                                        - vh : viewport height, 1vh는 뷰포트 높이의 1%와 같다.<br>
+                                        - vmin : viewport minimum, 뷰포트의 너비와 높이 중에서 작은 값의 1%와 같다.<br>
+                                        - vmax : viewport maximum, 뷰포트의 너비와 높이 중에서 큰 값의 1%와 같다.</li>
+                                </ul>
+                            <b><li>미디어 쿼리</li></b>
+                                <ul>
+                                    <li>미디어 쿼리media queries는 사이트에 접속하는 장치에 따라 특정한 css 스타일을 사용하는 방법</li>
+                                    <li>미디어 쿼리를 사용하면 접속하는 기기의 화면 크기에 따라 레이아웃이 달라진다.</li>
+                                    <li>@media[only|not|and] 미디어 유형</li>
+                                    <li>미디어 유형의 종류<br>
+                                        all, print, screen, tv<br>
+                                        aural(음성 합성 장치,화면을 읽어 소리로 출력해 주는 장치)<br>
+                                        braille(점자 표시 장치), handheld(패드처럼 손에 들고 다니는 장치)<br>
+                                        projection, tty(디스플레이 기능이 제한된 장치, px단위를 사용할 수 없다.), embossed(점자 프린터)</li>
+                                    <li>뷰포트의 너비와 높이를 미디어의 쿼리의 조건으로 사용할 수 있다.<br>
+                                        width, height, min-width, max-width</li>
+                                    <li>단말기 너비나 높이를 고려해 사용<br>
+                                        device-width, device-height, min-device-width, max-device-width</li>
+                                    <li>화면 회전 속성<br>
+                                        orientation: portrait , 단말기의 세로 모드 지정<br>
+                                        orientation: landscape, 단말기의 가로 모드 지정</li>
+                                    <li>미디어 쿼리를 작성할 때 화면 크기에 따라 서로 다른 CSS를 적용할 분기점을 중단점이라고 한다.</li>
+                                    <li>시중에 나온 기기를 모두 반영할 수는 없으므로 모바일과 태블릿, 데스크톱 정도로만 구분하는 것이 좋다</li>
+                                    <li>처리 속도나 화면 크기 등에서 다른 기기보다 모바일의 제약 조건이 더 많으므로 모바일의 레이아웃을 기본으로 CSS를 만든다<br>
+                                        그러고 나서 태블릿과 데스크톱에 맞춰 기능과 스타일을 추가(모바일 퍼스트 기법)</li>
+                                    <li>스마트폰(세로minwidth - portrait 320px, 가로min-width - landscape 480px<br>
+                                        태블릿 : 세로 크기가 768px이상, 가로는 데스크톱과 똑같이 1024px이상으로 지정<br>
+                                        데스크톱 : 화면 크기가 1024px이상</li>
+                                    <li><a href="https://yesviz.com/devices.php" target="_blanck">모바일 기기의 뷰포트 크깃값이 정리되어 있는 사이트</a></li>
+                                    </ul>
+                        </ol>
+                    </p>
+
             </section>
         </article>
     </div>
