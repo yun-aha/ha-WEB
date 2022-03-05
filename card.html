@@ -25,23 +25,34 @@
             display: block;
             width: 60%;
         }
-        nav li{
-            list-style: none;
-            display: inline-block;
-        }
-        nav a{
-            padding: 15px 20px;
-            text-decoration: none;
-        }
-        nav a:hover{
-            color:cornflowerblue;
-        }
+            nav li{
+                list-style: none;
+                display: inline-block;
+            }
+            nav a{
+                padding: 15px 20px;
+                text-decoration: none;
+            }
+                nav a:hover{
+                    color:cornflowerblue;
+                }
         .copyright{
             color: cornflowerblue;
             text-align: center;
         }
         hr{
             width: 90%;
+        }
+
+        /* card */
+        #card{
+            display: block;
+            position: relative;
+        }
+        .wrap{
+            display: inline-grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
         }
     </style>
 <body>
@@ -58,7 +69,22 @@
     </header>
 
     <hr>
-    <div></div>
+    <section id="card">
+        <h2>Card</h2>
+        <div class="wrap">
+            <button type="button"></button>
+            <button type="button"></button>
+            <button type="button"></button>
+
+            <button type="button"></button>
+            <button type="button"></button>
+            <button type="button"></button>
+
+            <button type="button"></button>
+            <button type="button"></button>
+            <button type="button"></button>
+        </div>
+    </section>
 
     <hr>
     <footer>

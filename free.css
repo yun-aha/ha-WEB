@@ -67,22 +67,22 @@ video{
     grid-gap: 50px;
     justify-content: center;
     text-align: center;
-    position:absolute;
+    position: absolute;
     left: 350px;
     top: 350px;
 }
-#free a{
-    font-size: 43px;
-    font-weight: 600;
-    color: rgb(252, 252, 95);
-    text-decoration: none;
-    background-color: rgba(32, 32, 24, 0.85);
-    padding: 10px;
-    transition: 1s;
-}
-#free a:hover{
-    transform: scale(1.1);
-    border-radius: 50px;
-    text-decoration: wavy rgba(153, 205, 50, 0.7) underline;
-    color: yellow;
-}
+    #free a{
+        font-size: 43px;
+        font-weight: 600;
+        color: rgb(252, 252, 95);
+        text-decoration: none;
+        background-color: rgba(32, 32, 24, 0.85);
+        padding: 10px;
+        transition: 1s;
+    }
+    #free a:hover{
+        transform: scale(1.1);
+        border-radius: 50px;
+        text-decoration: wavy rgba(153, 205, 50, 0.7) underline;
+        color: yellow;
+    }
