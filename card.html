@@ -53,6 +53,7 @@
             display: inline-grid;
             grid-template-columns: repeat(3, 100px);
             grid-template-rows: repeat(3, 100px);
+            margin: 30px;
         }
     </style>
 <body>
@@ -72,17 +73,17 @@
     <section id="card">
         <h2>Card</h2>
         <div class="wrap">
-            <button type="button"></button>
-            <button type="button"></button>
-            <button type="button"></button>
+            <button type="button" id="a" onclick="cardNum()"></button>
+            <button type="button" id="b"></button>
+            <button type="button" id="c"></button>
 
-            <button type="button"></button>
-            <button type="button"></button>
-            <button type="button"></button>
+            <button type="button" id="d"></button>
+            <button type="button" id="e"></button>
+            <button type="button" id="f"></button>
 
-            <button type="button"></button>
-            <button type="button"></button>
-            <button type="button"></button>
+            <button type="button" id="g"></button>
+            <button type="button" id="h"></button>
+            <button type="button" id="i"></button>
         </div>
     </section>
 
@@ -93,7 +94,29 @@
         </div>
     </footer>
     <script>
-
+        function cardNum(){
+            let card = [];
+            let i = 0;
+            
+            do{
+                let n = Math.floor(Math.random()*9)+1;
+                card.push(n)
+                i+=1;
+            }
+            while (i<9){
+                let n = Math.floor(Math.random()*9)+1;
+                if (card.includes(n) == true){
+                    i+=0;
+                }
+                else{
+                    card.push(n);
+                    i+=1;
+                }
+            }
+            let a = document.getElementById('a');
+            a.innerText = (card[0])
+            return card
+        }
     </script>
 </body>
 </html>
