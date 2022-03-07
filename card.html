@@ -54,6 +54,10 @@
             grid-template-columns: repeat(3, 100px);
             grid-template-rows: repeat(3, 100px);
             margin: 30px;
+            opacity: 0;
+        }
+        .again{
+            opacity: 0;
         }
     </style>
 <body>
@@ -72,18 +76,25 @@
     <hr>
     <section id="card">
         <h2>Card</h2>
+        <div>
+        <button type="button" id="start" onclick="start()">START</button>
+        </div>
         <div class="wrap">
-            <button type="button" id="a" onclick="cardNum()"></button>
-            <button type="button" id="b"></button>
-            <button type="button" id="c"></button>
+            <button type="button" id="a" onclick="cardNum('a', 0)"></button>
+            <button type="button" id="b" onclick="cardNum('b', 1)"></button>
+            <button type="button" id="c" onclick="cardNum('c', 2)"></button>
 
-            <button type="button" id="d"></button>
-            <button type="button" id="e"></button>
-            <button type="button" id="f"></button>
+            <button type="button" id="d" onclick="cardNum('d', 3)"></button>
+            <button type="button" id="e" onclick="cardNum('e', 4)"></button>
+            <button type="button" id="f" onclick="cardNum('f', 5)"></button>
 
-            <button type="button" id="g"></button>
-            <button type="button" id="h"></button>
-            <button type="button" id="i"></button>
+            <button type="button" id="g" onclick="cardNum('g', 6)"></button>
+            <button type="button" id="h" onclick="cardNum('h', 7)"></button>
+            <button type="button" id="i" onclick="cardNum('i', 8)"></button>
+        </div>
+        <div class="again">
+            <a href="#" onclick="window.location.reload()" 
+            style="cursor: pointer;">AGAIN</a>
         </div>
     </section>
 
@@ -94,28 +105,29 @@
         </div>
     </footer>
     <script>
-        function cardNum(){
-            let card = [];
+        var card = [];
+        function start(){
+            let startCard = document.querySelector('.wrap')
+            let againCard = document.querySelector('.again')
+            startCard.style.opacity = 1;
+            againCard.style.opacity = 1;
+
             let i = 0;
-            
-            do{
-                let n = Math.floor(Math.random()*9)+1;
-                card.push(n)
-                i+=1;
-            }
-            while (i<9){
-                let n = Math.floor(Math.random()*9)+1;
-                if (card.includes(n) == true){
-                    i+=0;
+            while(i<9){
+                let m = Math.floor(Math.random()*9)+1;
+                if (card.includes(m) == true){
+                    continue;
                 }
                 else{
-                    card.push(n);
+                    card.push(m);
                     i+=1;
                 }
             }
-            let a = document.getElementById('a');
-            a.innerText = (card[0])
-            return card
+        }
+
+        function cardNum(alpha, num){
+            let A = document.getElementById(alpha);
+            A.innerText = (card[num])
         }
     </script>
 </body>
