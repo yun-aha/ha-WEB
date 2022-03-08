@@ -43,6 +43,9 @@ nav a:hover{
 p{
     opacity: 0;
 }
+.disc{
+    list-style-type: disc;
+}
 .copyright{
     color: cornflowerblue;
     text-align: center;
