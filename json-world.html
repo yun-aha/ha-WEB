@@ -18,6 +18,14 @@
             </ul>
         </nav>
     </header>
+    <aside>
+        <ul>
+            <li><a href="#var">변수</a></li>
+            <li><a href="#expression">표현식과 문</a></li>
+            <li><a href="#dataType">데이터 타입</a></li>
+            <li><a href="#operator">연산자</a></li>
+        </ul>
+    </aside>
 
     <div class="main">
         <input id="night_day" type="button" value="night" onclick="
@@ -48,7 +56,7 @@
 
     <article>
         <ol>
-            <h2><li>변수</li></h2>
+            <h2><li id="var">변수</li></h2>
                 <ul class="disc">
                     <li><strong>undefined</strong>는 자바스크립트에서 제공하는 원시 타입의 값이다.<br></li>
                     <li>변수를 사용하려면 반드시 선언이 필요. 변수를 선언할 때는 var, let, const 키워드를 사용</li>
@@ -63,9 +71,8 @@
                     <li>값을 재할당할 수 없어서 변수에 저장된 값을 변경할 수 없다면 변수가 아니라 <strong>상수</strong>라 한다.</li>
                     <li>가비지 콜렉터, 언매니지드 언어, 매니지드 언어</li>
                 </ul>
-            
 
-            <h2><li>표현식과 문</li></h2>
+            <h2><li id="expression">표현식과 문</li></h2>
                 <ul class="disc">
                     <li><strong>값</strong>은 식이 평가되어 생성된 결과를 말한다.</li>
                     <li><strong>리터럴</strong>은 사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 값을 생성하는 표기법을 말한다.</li>
@@ -73,9 +80,9 @@
                     <li><strong>문</strong>은 프로그램을 구성하는 기본 단위이자 최소 실행 단위다.<br>
                                 문은 여러 토큰으로 구성된다. 토큰이란 문법적인 의미를 가지며, 문법적으로 더 이상 나눌 수 없는 코드의 기본 요소를 의미한다.</li>
                     <li>세미콜론은 문의 종료를 나타낸다. </li>
-                </ul>
-            
-            <h2><li>데이터 타입</li></h2>
+                </ul>   
+                
+            <h2><li id="dataType">데이터 타입</li></h2>
                 <ul class="disc">
                     <li><strong>숫자타입</strong>숫자, 정수와 실수 구분 없이 하나의 숫자 타입만 존재</li>
                     <li><strong>문자열타입</strong>문자열</li>
@@ -86,40 +93,92 @@
                     <li><strong>심벌 타입</strong>ES6에서 추가된 7번째 타입, 변경 불가능한 원시 타입의 값</li>
                     <li>위의 데이터 타입 이외의 값은 모두 객체 타입, 자바스크립트는 객체 기반의 언어이며 자바스크립트를 이루고 있는 거의 모든 것이 객체라는 것이다.</li>
                 </ul>
-            
-            <h2><li>typeof</li></h2>
-                <ul class="disc">
-                    <li>JavaScript에는 값을 포함할 수 있는 5가지 다른 데이터 유형이 있다.</li>
-                        <ul>
-                            <li>string, number, boolean, object, function</li>
-                        </ul>
-                    <li>6가지 유형의 객체</li>
-                        <ul>
-                            <li>Object, Date, Array, String, Number, Boolean</li>
-                        </ul>
-                    <li>그리고 값을 포함할 수 없는 2가지 데이터 유형</li>
-                        <ul>
-                            <li>null, undefined</li>
-                        </ul>
-                </ul>
 
-            <h2><li>연산자</li></h2>
+            <h2><li id="operator">연산자</li></h2>
                 <ul class="disc">
                     <li><strong>산술 연산자</strong>{+  -  *  **  /  %  ++  --}</li>
                     <li><strong>할당 연산자</strong>{=  +=  -=  *=  /=  %=}</li>
                     <li><strong>비교 연산자</strong>{==  ===  !=  !==  >  <  >=  <=}</li>
                     <li>==는 값만 비교, ===는 값과 유형을 비교</li>
-                    <li><strong>논리 연산자</strong>{&&  ||  !}</li>
+                    <li><strong>논리 연산자</strong>{&&(and)  ||(or)  !(not)}</li>
+                    <li><strong>비트 연산자</strong>: 논리 연산자와 비슷하지만, 비트(bit) 단위로 논리 연산을 수행<br>
+                        비트 단위로 전체 비트를 왼쪽이나 오른쪽으로 이동시킬 때도 사용{&  |  ^  ~  <<  >>  >>>}</li>
                     <li><strong>유형 연산자</strong>{typeof  instanceof}</li>
+                    <li><h4>typeof</h4></li>
+                        <ul>
+                            <li>JavaScript에는 값을 포함할 수 있는 5가지 다른 데이터 유형이 있다.</li>
+                                - string, number, boolean, object, function
+                            <li>6가지 유형의 객체</li>
+                                - Object, Date, Array, String, Number, Boolean
+                            <li>그리고 값을 포함할 수 없는 2가지 데이터 유형</li>
+                                - null, undefined
+                        </ul>
+                    <li><strong>삼항 연산자</strong>{표현식 ? 반환값1 : 반환값2} : (?) 앞의 표현식에 따라 결괏값이 참이면 반환값1 반환, 결괏값이 거짓이면 반환값2를 반환</li>
+                </ul>
+
+            <h2><li>제어문(control flow statements)- Loop, conditional statements</li></h2>
+                <ul class="disc">
+                    <li>Loop</li>
+                        <ol>
+                            <li>for : 코드 블록을 여러번 반복</li>
+                            <li>for/in : 객체의 속성을 통해 루프</li>
+                            <li>for/of : 반복 가능한 객체의 값을 반복</li>
+                            <li>while : 지정된 조건이 참인 동안 코드 블록을 반복</li>
+                            <li>do/while : 코드 블록을 한번 실행한 다음 지정된 조건이 참인 동안 루프를 반복</li>
+                        </ol>
+                    <li>conditional statements</li>
+                        <ol>
+                            <li>if</li>
+                            <li>if/else</li>
+                            <li>if/ else if /else</li>
+                            <li>switch/case/default</li>
+                        </ol>
+                    <li>기타 제어문</li>
+                        <ol>
+                            <li>label : 프로그램 내의 특정 영역을 식별할 수 있도록 해주는 식별자,<br>
+                                label 문을 사용하면 continue 문과 break 문의 동작이 프로그램의 흐름을 특정 영역으로 이동시킬 수 있다.</li>
+                            <li>continue : 루프 내에서 사용하여 해당 루프의 나머지 부분을 건너뛰고, 바로 다음 표현식의 판단으로 넘어간다.</li>
+                            <li>break :  루프 내에서 사용하여 해당 반복문을 완전히 종료시키고, 반복문 바로 다음에 위치한 실행문으로 프로그램의 흐름을 이동</li>
+                        </ol>
                 </ul>
 
             <h2><li>함수</li></h2>
                 <ul class="disc">
+                    <li></li>
                     <li>함수 선언문은 표현식이 아닌 문이다.</li>
                     <li>함수 선언문으로 정의한 함수와 함수 표현식으로 정의한 함수의 생성(호출) 시점이 다르다.</li>
                     <li>함수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 함수 호이스팅이라 한다.</li>
                     <li>함수 표현식으로 함수를 정의하면 함수 호이스팅이 발생하는 것이 아니라 변수 호이스팅이 발생한다. </li>
                     <li>매개변수보다 인수가 더 많은 경우 초과된 인수는 무시된다.</li>
+                </ul>
+
+            <h2><li>Array</li></h2>
+                <ul class="disc">
+                    <li><strong>Array.forEach()</strong>는 각 배열 요소에 대해 한 번씩 함수를 호출</li>
+                    <li>push() : 배열 요소 추가</li>
+                    <li>length속성을 사용하여 새 요소를 배열에 추가할 수도 있습니다, 인덱스가 높은 요소를 추가하면 배열에 정의되지 않은 "구멍"이 생길 수 있다.</li>
+                    <li>new Arry(), []</li>
+                    <li>join(), pop(), push(), shift(), unshift(), delete, concat()</li>
+                    <li><strong>splice()</strong>는 배열에 새 항목 추가, slice()는 배열의 조각을 잘라낸다.</li>
+                    <li>sort()는 배열을 알파벳순으로 정렬</li>
+                    <li>reverse()는 배열의 요소를 뒤집는다, 내림차순으로 배열을 정렬하는데 사용</li>
+                    <li>배열에서 가장 높은 숫자를 찾을 때 Math.max.apply(), 가장 낮은 숫자를 찾을 때 Math.min.apply()</li>
+                    <li><strong>map()</strong>메서드는 각 배열 요소에 대해 함수를 수행하여 새 배열을 만든다.</li>
+                    <li><strong>filter()</strong>메서드는 테스트를 통과한 배열 요소로 새 배열을 만든다.</li>
+                    <li><strong>reduce()</strong>메서드는 각 배열 요소에서 함수를 실행하여 단일 값을 생성한다.</li>
+                    <li>reduceRight()메서드는 오른쪽에서 왼쪽으로 작동</li>
+                    <li><strong>every()</strong>모든 배열 값이 테스트를 통과하는지 확인하여 불리언 타입으로 반환</li>
+                    <li><strong>some()</strong>일부 배열 값이 테스트를 통과하는지 확인하여 불리언 타입으로 반환</li>
+                    <li><strong>indexOf()</strong>는 원본 배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환</li>
+                    <li>lastIndexOf()지정된 요소가 마지막으로 발생한 위치를 반환</li>
+                    <li><strong>find()</strong>는 테스트 함수를 통과하는 첫 번째 배열 요소의 값을 반환</li>
+                    <li>findIndex()는 테스트 함수를 통과하는 첫 번째 배열 요소의 인덱스를 반환</li>
+                    <li><strong>Array.from()</strong>는 길이 속성이 있는 개체 또는 반복 가능한 개체에서 Array개체를 반환</li>
+                    <li><strong>Array.keys()</strong>는 배열 키가 있는 Array Iterator개체를 반환</li>
+                    <li><strong>Array.includes()</strong>는 요소가 배열에 있는지 확인할 수 있다.</li>
+                    <li>const로 선언된 배열은 재할당할 수 없다, 배열의 요소는 변경할 수 있다.</li>
+                    <li>const변수는 선언될 때 값을 할당해야 한다,</li>
+                    <li>const에는 블록 범위가 있다.</li>
                 </ul>
 
             <h2><li>JavaScript String</li></h2>
@@ -160,35 +219,6 @@
                     <li><strong>parseFloat()</strong>구문 분석 후 숫자를 반환, 공백 허용, 첫 번째 숫자만 반환</li>
                 </ul>
 
-            <h2><li>Array</li></h2>
-                <ul class="disc">
-                    <li><strong>Array.forEach()</strong>는 각 배열 요소에 대해 한 번씩 함수를 호출</li>
-                    <li>push() : 배열 요소 추가</li>
-                    <li>length속성을 사용하여 새 요소를 배열에 추가할 수도 있습니다, 인덱스가 높은 요소를 추가하면 배열에 정의되지 않은 "구멍"이 생길 수 있다.</li>
-                    <li>new Arry(), []</li>
-                    <li>join(), pop(), push(), shift(), unshift(), delete, concat()</li>
-                    <li><strong>splice()</strong>는 배열에 새 항목 추가, slice()는 배열의 조각을 잘라낸다.</li>
-                    <li>sort()는 배열을 알파벳순으로 정렬</li>
-                    <li>reverse()는 배열의 요소를 뒤집는다, 내림차순으로 배열을 정렬하는데 사용</li>
-                    <li>배열에서 가장 높은 숫자를 찾을 때 Math.max.apply(), 가장 낮은 숫자를 찾을 때 Math.min.apply()</li>
-                    <li><strong>map()</strong>메서드는 각 배열 요소에 대해 함수를 수행하여 새 배열을 만든다.</li>
-                    <li><strong>filter()</strong>메서드는 테스트를 통과한 배열 요소로 새 배열을 만든다.</li>
-                    <li><strong>reduce()</strong>메서드는 각 배열 요소에서 함수를 실행하여 단일 값을 생성한다.</li>
-                    <li>reduceRight()메서드는 오른쪽에서 왼쪽으로 작동</li>
-                    <li><strong>every()</strong>모든 배열 값이 테스트를 통과하는지 확인하여 불리언 타입으로 반환</li>
-                    <li><strong>some()</strong>일부 배열 값이 테스트를 통과하는지 확인하여 불리언 타입으로 반환</li>
-                    <li><strong>indexOf()</strong>는 원본 배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환</li>
-                    <li>lastIndexOf()지정된 요소가 마지막으로 발생한 위치를 반환</li>
-                    <li><strong>find()</strong>는 테스트 함수를 통과하는 첫 번째 배열 요소의 값을 반환</li>
-                    <li>findIndex()는 테스트 함수를 통과하는 첫 번째 배열 요소의 인덱스를 반환</li>
-                    <li><strong>Array.from()</strong>는 길이 속성이 있는 개체 또는 반복 가능한 개체에서 Array개체를 반환</li>
-                    <li><strong>Array.keys()</strong>는 배열 키가 있는 Array Iterator개체를 반환</li>
-                    <li><strong>Array.includes()</strong>는 요소가 배열에 있는지 확인할 수 있다.</li>
-                    <li>const로 선언된 배열은 재할당할 수 없다, 배열의 요소는 변경할 수 있다.</li>
-                    <li>const변수는 선언될 때 값을 할당해야 한다,</li>
-                    <li>const에는 블록 범위가 있다.</li>
-                </ul>
-
             <h2><li>Date</li></h2>
                 <ul class="disc">
                     <li>Date는 날짜와 시간을 위한 메서드를 제공하는 빌트인 객체이면서 생성자 함수다.</li>
@@ -217,15 +247,6 @@
                     <li>Math.PI, Math.abs, Math.round, Math.ceil, Math.floor, Math.sqrt, Math.random, Math.pow, Math.max, Math.min</li>
                 </ul>
 
-            <h2><li>Loop</li></h2>
-                <ul class="disc">
-                    <li>for : 코드 블록을 여러번 반복</li>
-                    <li>for/in : 객체의 속성을 통해 루프</li>
-                    <li>for/of : 반복 가능한 객체의 값을 반복</li>
-                    <li>while : 지정된 조건이 참인 동안 코드 블록을 반복</li>
-                    <li>do/while : 코드 블록을 한번 실행한 다음 지정된 조건이 참인 동안 루프를 반복</li>
-                </ul>
-
             <h2><li>Set과 Map</li></h2>
                 <ul class="disc">
                     <li>set객체는 중복되지 않는 유일한 값들의 집합이다.</li>
@@ -246,40 +267,6 @@
                     <li>forEach()메서드는 Map의 각 키/값 쌍에 대한 함수를 호출, entries()는 Map에 [key, values]가 있는 반복자 객체를 반환,
                         Map.keys(), Map.values()
                     </li>
-                </ul>
-
-            <h2><li>RegExp(Regular Expression)</li></h2>
-                <ul class="disc">
-                    <li>정규 표현식은 일정한 패턴을 가진 문자열의 집합을 표현하기 위해 사용하는 형식 언어다.</li>
-                    <li>정규표현식은 문자열을 대상으로 패턴 매치 기능을 제공</li>
-                    <li>/regexp/i : 정규 표현식 리터럴</li>
-                    <li>RegExp 생성자 함수를 사용하여 RegExp 객체를 생성할 수도 있다.</li>
-                    <li>exec()메서드는 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 배열로 반환</li>
-                    <li>test()메서드는 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 불리언 값으로 반환</li>
-                    <li>match()메서드는 대상 문자열과 인수로 전달받은 정규 표현식과의 매칭 결과를 배열로 모두 반환</li>
-                    <li>패턴과 함께 정규 표현식을 구성하는 플래그는 정규 표현식의 검색 방식을 설정하기 위해 사용</li>
-                        <ul>
-                            <li><strong>i</strong>(ignore case) : 대소문자를 구별하지 않고 패턴 검색</li>
-                            <li><strong>g</strong>(Global) : 대상 문자열 내에서 패턴과 일치하는 모든 문자열을 전역 검색</li>
-                            <li><strong>m</strong>(Multi line) : 문자열의 행이 바뀌더라도 패턴 검색을 계속한다.</li>
-                        </ul>
-                </ul>
-            
-            <h2><li>에러 처리</li></h2>
-                <ul class="disc">
-                    <li>에러는 언제나 발생할 수 있다. 발생한 에러에 대해 대처하지 않고 방치하면 프로그램은 강제 종료된다.</li>
-                    <li>try...catch문을 사용해 발생한 에러에 적절하게 대응하면 프로그램이 강제 종료되지 않고 계속해서 코드를 실행시킬 수 있다.</li>
-                    <li>try...catch...finally문</li>
-                    <li>Error 객체 : Error, SyntaxError, ReferenceError, TypeError, RangeError, URIError, EvalError</li>
-                    <li>throw명령문을 사용하면 사용자 지정 오류를 생성할 수 있다.</li>
-                    <li></li>
-                </ul>
-
-            <h2><li>this</li></h2>
-                <ul class="disc">
-                    <li>this는 자신이 속한 객체 또는 자신이 생성할 인스턴스를 가리키는 자기참조 변수다.</li>
-                    <li>this를 통해 자신이 속한 객체 또는 자신이 생성할 인스턴스의 프로퍼티나 메서드를 참조할 수 있다.</li>
-                    <li>JavaScript strict mode는 기본 바인딩을 허용하지 않는다.따라서 엄격모드에서 this는 undefined.</li>
                 </ul>
 
             <h2><li>Class</li></h2>
@@ -333,6 +320,12 @@
                             <li>생성자 함수를 작성하고 new 연산자를 사용해 객체를 생성하면, 같은 프로토타입을 가지는 객체들을 생성할 수 있다.</li>
                             <li>prototype 프로퍼티를 이용하면 현재 존재하고 있는 프로토타입에 새로운 프로퍼티나 메소드를 손쉽게 추가할 수 있다.</li>
                         </ul>
+                    <li><h4>this</h4></li>
+                        <ul>
+                            <li>this는 자신이 속한 객체 또는 자신이 생성할 인스턴스를 가리키는 자기참조 변수다.</li>
+                            <li>this를 통해 자신이 속한 객체 또는 자신이 생성할 인스턴스의 프로퍼티나 메서드를 참조할 수 있다.</li>
+                            <li>JavaScript strict mode는 기본 바인딩을 허용하지 않는다.따라서 엄격모드에서 this는 undefined.</li>
+                        </ul>
                 </ul>
             
             <h2><li>Property</li></h2>
@@ -358,8 +351,22 @@
                     <li>프로퍼티 안에 함수를 받는 프로퍼티를 일반적으로 메소드라고 한다.</li>
                     <li>프로퍼티는 object를 위해서 데이터를 저장, 메소드는 object가 요청 받을 수 있는 액션이다.</li>
                     <li>Object.defineProperties()메서드를 사용하면 여러 프로퍼티를 동시에 설정할 수 있다.</li>
-                    <li></li>
+                    <li>delete 키워드를 사용하여 객체의 프로퍼티를 삭제할 수 있다.<br>
+                        - delete 객체이름.프로퍼티이름;</li>
+                    <li>객체 메소드(method) : 모든 자바스크립트 객체는 Object 객체와 Object.prototype 객체의 모든 프로퍼티와 메소드를 상속받는다.<br>
+                        자주 사용되는 대표적인 객체 메소드는 다음과 같습니다.</li>
+                        <ol>
+                            <li>hasOwnProperty() : 특정 프로퍼티가 해당 객체에 존재하는지를 검사</li>
+                            <li>propertyIsEnumerable() : 메소드는 특정 프로퍼티가 해당 객체에 존재하고, 열거할 수 있는 프로퍼티인지를 검사<br>
+                                열거할 수 있는 프로퍼티란 내부적으로 enumerable 플래그가 true로 설정된 프로퍼티를 의미<br>
+                                이러한 프로퍼티들은 for / in 문으로 접근할 수 있게 됩니다.</li>
+                            <li>isPrototypeOf()</li>
+                            <li>isExtensible()</li>
+                            <li>toString()</li>
+                            <li>valueOf()</li>
+                        </ol>
                 </ul>
+
             <h2><li>DOM</li></h2>
                 <ul class="disc">
                     <li>Document Object Model of the page문서 객체 모델<br>
@@ -370,6 +377,7 @@
                     <li>DOM은 가상 요소를 포함하지 않는다(ex, ::after)</li>
                     <li></li>
                 </ul>
+
             <h2><li>Execute context</li></h2>
                 <ul class="disc">
                     <li>JavaScript의 동작 원리를 담고 있는 핵심 개념으로<br>
@@ -377,6 +385,34 @@
                         클로저의 동작 방식, 그리고 테스크 큐와 함께 동작하는 이벤트 핸들러와 비동기 처리의 동작 방식을 이해할 수 있다.</li>
                     <li></li>
                 </ul>
+
+            <h2><li>RegExp(Regular Expression)</li></h2>
+                <ul class="disc">
+                    <li>정규 표현식은 일정한 패턴을 가진 문자열의 집합을 표현하기 위해 사용하는 형식 언어다.</li>
+                    <li>정규표현식은 문자열을 대상으로 패턴 매치 기능을 제공</li>
+                    <li>/regexp/i : 정규 표현식 리터럴</li>
+                    <li>RegExp 생성자 함수를 사용하여 RegExp 객체를 생성할 수도 있다.</li>
+                    <li>exec()메서드는 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 배열로 반환</li>
+                    <li>test()메서드는 인수로 전달받은 문자열에 대해 정규 표현식의 패턴을 검색하여 매칭 결과를 불리언 값으로 반환</li>
+                    <li>match()메서드는 대상 문자열과 인수로 전달받은 정규 표현식과의 매칭 결과를 배열로 모두 반환</li>
+                    <li>패턴과 함께 정규 표현식을 구성하는 플래그는 정규 표현식의 검색 방식을 설정하기 위해 사용</li>
+                        <ul>
+                            <li><strong>i</strong>(ignore case) : 대소문자를 구별하지 않고 패턴 검색</li>
+                            <li><strong>g</strong>(Global) : 대상 문자열 내에서 패턴과 일치하는 모든 문자열을 전역 검색</li>
+                            <li><strong>m</strong>(Multi line) : 문자열의 행이 바뀌더라도 패턴 검색을 계속한다.</li>
+                        </ul>
+                </ul>
+
+            <h2><li>에러 처리</li></h2>
+                <ul class="disc">
+                    <li>에러는 언제나 발생할 수 있다. 발생한 에러에 대해 대처하지 않고 방치하면 프로그램은 강제 종료된다.</li>
+                    <li>try...catch문을 사용해 발생한 에러에 적절하게 대응하면 프로그램이 강제 종료되지 않고 계속해서 코드를 실행시킬 수 있다.</li>
+                    <li>try...catch...finally문</li>
+                    <li>Error 객체 : Error, SyntaxError, ReferenceError, TypeError, RangeError, URIError, EvalError</li>
+                    <li>throw명령문을 사용하면 사용자 지정 오류를 생성할 수 있다.</li>
+                    <li></li>
+                </ul>
+
             <h2><li>출처</li></h2>
                 <ul class="disc">
                     <li>http://www.tcpschool.com/</li>

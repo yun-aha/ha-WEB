@@ -8,7 +8,17 @@ html{
 h1{
     text-align: center;
     text-shadow: 7px 7px 7px #7c12dfa6;
+    transition: 0.5s;
 }
+    h1:hover{
+        transform: scale(1.1);
+    }
+h1 a{
+    transition: 0.5s;   
+}
+    h1 a:hover{
+        color:cadetblue;
+    }
 nav{
     margin: auto;
     padding: 5px;
