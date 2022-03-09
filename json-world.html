@@ -144,12 +144,29 @@
 
             <h2><li>함수</li></h2>
                 <ul class="disc">
-                    <li></li>
+                    <li>함수(function)란 하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 의미</li>
                     <li>함수 선언문은 표현식이 아닌 문이다.</li>
                     <li>함수 선언문으로 정의한 함수와 함수 표현식으로 정의한 함수의 생성(호출) 시점이 다르다.</li>
                     <li>함수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 함수 호이스팅이라 한다.</li>
                     <li>함수 표현식으로 함수를 정의하면 함수 호이스팅이 발생하는 것이 아니라 변수 호이스팅이 발생한다. </li>
                     <li>매개변수보다 인수가 더 많은 경우 초과된 인수는 무시된다.</li>
+                    <li>미리 정의된 전역 함수</li>
+                        <ol>
+                            <li>eval() : 문자열로 표현된 자바스크립트 코드를 실행하는 함수</li>
+                            <li>isFinite() : 전달된 값이 숫자(유한한 수)인지를 검사하여 그 결과를 반환</li>
+                            <li>isNaN() : 전달된 값이 NaN(숫자가 아닌)인지를 검사하여 그 결과를 반환<br>
+                                이 함수는 숫자로의 강제 변환에 따라 예상치 못한 결과를 얻을 수 있으므로 ECMA6부터는 Number.isNaN() 메소드의 사용을 권장</li>
+                            <li>parseFloat(), parseInt() : 문자열을 파싱하여 부동 소수점 수(floating point number), 정수로 반환</li>
+                            <li>decodeURI(), decodeURIComponent() : decodeURI() 함수는 encodeURI() 함수나 다른 방법으로 만들어진 URI를 해독,<br>
+                                decodeURIComponent() 함수는 encodeURIComponent() 함수나 다른 방법으로 만들어진 URI 컴포넌트를 해독</li>
+                            <li>encodeURI(), encodeURIComponent() : encodeURI() 함수는 URI에서 주소를 표시하는 특수문자를 제외하고, 모든 문자를 이스케이프 시퀀스 처리하여 부호화,<br>
+                                하지만 encodeURIComponent() 함수는 URI에서 encodeURI() 함수에서 부호화하지 않은 모든 문자까지 포함하여 이스케이프 시퀀스 처리</li>
+                            <li>escape(), unescape() : escape() 함수는 전달받은 문자열에서 특정 문자들을 16진법 이스케이프 시퀀스 문자로 변환,<br>
+                                unescape() 함수는 전달받은 문자열에서 escape() 함수나 다른 방법으로 만들어진 16진법 이스케이프 시퀀스 문자를 원래의 문자로 변환</li>
+                            <li>Number(), String()</li>
+                            <li>Escape Sequence(이스케이프 시퀀스) : 프로그래밍 언어 특성상 표현할 수 없는 기능과 문자를 표현, 컴퓨터를 제어하는 목적으로 사용되는 특수한 문자</li>
+                        </ol>
+
                 </ul>
 
             <h2><li>Array</li></h2>
@@ -375,7 +392,31 @@
                         브라우저는 DOM을 통해 화면에 웹 콘텐츠들을 렌더링</li>
                     <li>렌더 트리는 오직 스크린에 그려지는 것으로 구성되어 있어 DOM과 다르다.(렌더링 되는 요소만 관련 있기 때문에 시각적으로 보이지 않는 요소는 제외된다.)</li>
                     <li>DOM은 가상 요소를 포함하지 않는다(ex, ::after)</li>
+                    <li>DOM의 종류</li>
+                        <ol>
+                            <li>Core DOM : 모든 문서 타입을 위한 DOM 모델</li>
+                            <li>HTML DOM : HTML 문서를 위한 DOM 모델</li>
+                            <li>XML DOM : XML 문서를 위한 DOM 모델</li>
+                        </ol>
+                    <li>Document 객체 : 웹 페이지 그 자체를 의미, 웹 페이지에 존재하는 HTML 요소에 접근하고자 할 때는 반드시 Document 객체부터 시작</li>
+                        Document 메소드
+                            <ol>
+                                <li>HTMl 요소 선택 : document.getElementsByTagName(태그이름), document.getElementById(아이디),<br>
+                                    document.getElementsByClassName(클래스이름), document.getElementsByName(name속성값), document.querySelectorAll(선택자)</li>
+                                <li>HTML 요소 생성 : document.createElement(HTML요소), document.write(텍스트)</li>
+                                <li>HTML 이벤트 핸들러 추가 : document.getElementById(아이디).onclick = function(){ 실행할 코드 }</li>
+                                <li>HTML 객체의 선택 : document.anchors, document.body, document.cookie, document.domain,<br>
+                                    document.title, document.URL, document.doctype, document.documentElement.... </li>
+                            </ol>
+                    <li>HTML DOM을 이용하면 HTML 요소의 내용(content)이나 속성값, 스타일 등을 손쉽게 변경할 수 있다.<br>
+                        HTML 요소의 내용을 변경하는 가장 쉬운 방법은 innerHTML 프로퍼티를 이용</li>
+                    <li>HTML DOM은 노드(node)라고 불리는 계층적 단위에 정보를 저장. HTML DOM은 이러한 노드들을 정의하고, 그들 사이의 관계를 설명해 주는 역할(노드 트리)</li>
+                    <li>노드의 종류 : 문서 노드, 요소 노드, 속성 노드, 텍스트 노드, 주석 노드</li>
+                    <li>노드 트리의 가장 상위에는 단 하나의 루트 노드(root node)가 존재, 루트 노드를 제외한 모든 노드는 단 하나의 부모 노드(parent node)만을 가짐<br>
+                        모든 요소 노드는 자식 노드(child node)를 가질 수 있고, 형제 노드(sibling node)란 같은 부모 노드를 가지는 모든 노드를 가리킨다.<br>
+                        조상 노드(ancestor node)란 부모 노드를 포함해 계층적으로 현재 노드보다 상위에 존재하는 모든 노드, 자손 노드(descendant node)란 자식 노드를 포함해 계층적으로 현재 노드보다 하위에 존재하는 모든 노드</li>
                     <li></li>
+
                 </ul>
 
             <h2><li>Execute context</li></h2>

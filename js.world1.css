@@ -31,6 +31,9 @@ header{
         width: 30%;
         background-color: rgba(248, 248, 255, 0.8);
     }
+        nav ul{
+            padding-inline-start: 0;
+        }
         nav li{
             list-style: none;
             display: inline-block;
