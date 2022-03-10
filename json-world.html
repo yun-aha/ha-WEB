@@ -446,7 +446,38 @@
                 </ul>
             <h2><li>BOM</li></h2>
                 <ul class="disc">
-                    <li>DOM(Document Object Model) 으로 통합해서 칭하기도 함</li>
+                    <li>브라우저 객체 모델로 브라우저의 기능적인 요소들을 직접 제어하고 관리할 방법 제공<br>
+                        DOM(Document Object Model) 으로 통합해서 칭하기도 한다.</li>
+                    <li>Window 객체 : 웹 브라우저의 창(window)을 나타내는 객체로, 대부분의 웹 브라우저에서 지원하고 있다.<br>
+                        - innerHeight, innerWidth 프로퍼티를 이용하여 브라우저의 창 크기 설정<br>
+                        - open()메소드를 이용하면 새로운 브라우저 창을 열 수 있다, 세부적인 옵션들도 설정 가능<br>
+                        - close()메소드를 이용하면 현재 브라우저나 특정 브라우저 창을 닫을 수 있다.</li>
+                    <li>Location 객체 : 현재 브라우저에 표시된 HTML 문서의 주소를 얻거나, 브라우저에 새 문서를 불러올 때 사용할 수 있다.<br>
+                        - href, hostname, pathname 프로퍼티<br>
+                        - assign()메소드는 브라우저 창에 지정된 URL 주소에 존재하는 문서를 불러온다.<br>
+                        - replace()메소드는 새 문서를 불러오기 전에, 현재 문서를 브라우저의 히스토리에서 제거한다는 점이 assign() 메소드와 다르다.<br>
+                        - reload() 메소드는 브라우저 창에 현재 문서를 다시 불러온다.</li>
+                    <li>History 객체 : 브라우저의 히스토리 정보를 문서와 문서 상태 목록으로 저장하는 객체, <br>
+                        자바스크립트는 사용자의 개인 정보를 보호하기 위해 이 객체에 접근하는 방법을 일부 제한<br>
+                        - length프로퍼티는 브라우저 히스토리 목록의 개수 반환<br>
+                        - back(), forward()메소드는 브라우저의 뒤로가기 앞으로 가기<br>
+                        - go()메소드를 이용하면 인수로 전달받는 정수만큼 히스토리 목록 사이를 이동할 수 있다.</li>
+                    <li>Screen 객체 : 사용자의 디스플레이 화면에 대한 다양한 정보를 저장하는 객체<br>
+                        - width, height 프로퍼티는 사용자의 디스플레이 화면크기를 픽셀 단위로 반환, availWidth, availHeight(실제 사용할 수 있는 화면의 크기)<br>
+                        - colorDepth 프로퍼티는 사용자 화면에서 한 색상당 사용할 수 있는 비트 수를 반환<br>
+                        (대부분의 컴퓨터는 24비트의 트루 컬러(true colors)나 30/36/48비트의 디프 컬러(deep colors)를 사용)<br>
+                        - pixelDepth 프로퍼티는 사용자 화면에서 픽셀당 표시할 수 있는 비트 수를 반환</li>
+                    <li>Navigator 객체 : 브라우저 공급자 및 버전 정보 등을 포함한 브라우저에 대한 다양한 정보를 저장하는 객체<br>
+                        - 브라우저 스니핑 : 브라우저 간의 호환성을 유지하는 방법, navigator 객체는 브라우저 스니핑에서 사용할 수 있는 다양한 표준비표준 프로퍼티 제공<br>
+                        - appName과 appCodeName 프로퍼티는 현재 사용하고 있는 브라우저의 전체 이름을 반환<br>
+                        (브라우저 간 호환성을 위해 스니핑 코드로 대부분의 브라우저가 브라우저 이름을 "Netscape", 브러우저 코드명을 "Mozilla"로 사용<br>
+                        - appVersion과 userAgent(상세 정보를 추가로 포함) 프로퍼티는 현재 사용하고 있는 브라우저의 버전 정보를 문자열로 반환<br>
+                        - platform 프로퍼티는 현재 브라우저가 실행되고 있는 운영체제를 식별하는 문자열을 반환<br>
+                        -  language 프로퍼티는 현재 사용 중인 브라우저의 기본 언어 설정을 반환<br>
+                        - javaEnabled() 메소드는 현재 사용 중인 브라우저가 자바 애플릿을 실행할 수 있는지를 검사하는 비표준 메소드<br>
+                        - cookieEnabled 프로퍼티는 현재 사용 중인 브라우저가 쿠키를 사용할 수 있는지를 검사하는 비표준 프로퍼티</li>
+                    <li>대화 상자(dialog box) : alert(), confirm(), prompt()</li>
+                    <li>타이머(timer) : setTimeout(), setInterval(), clearTimeout(), clearInterval()</li>
                 </ul>
 
             <h2><li>Execute context</li></h2>
@@ -486,8 +517,8 @@
 
             <h2><li>출처</li></h2>
                 <ul class="disc">
-                    <li>http://www.tcpschool.com/</li>
-                    <li>https://www.w3schools.com/</li>
+                    <li><a href="http://www.tcpschool.com/">TCP SCHOOL</a></li>
+                    <li><a href="https://www.w3schools.com/">W3SCHOOLS</a></li>
                     <li>책 : </li>
                 </ul>
         </ol>
