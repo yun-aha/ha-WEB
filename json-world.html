@@ -84,15 +84,15 @@
                 
             <h2><li id="dataType">데이터 타입</li></h2>
                 <ul class="disc">
-                    <li><strong>숫자타입</strong>숫자, 정수와 실수 구분 없이 하나의 숫자 타입만 존재</li>
-                    <li><strong>문자열타입</strong>문자열</li>
-                    <li><strong>템플릿 리터럴</strong>ES6부터 도입된 새로운 문자열 표기법으로 멀티라인 문자열, 표현식 삽입, 테그드 템플릿 등 편리한 문자열 처리기능 제공</li>
-                    <li><strong>불리언타입</strong>논리적 참(true)과 거짓(false)</li>
-                    <li><strong>undefined타입</strong>var 키워드로 선언된 변수에 암묵적으로 할당되는 값</li>
-                    <li><strong>null타입</strong>값이 없다는 것을 의도적으로 명시할 때 사용하는 값</li>
-                    <li><strong>심벌 타입</strong>ES6에서 추가된 7번째 타입, 변경 불가능한 원시 타입의 값</li>
+                    <li><strong>숫자타입</strong> : 숫자, 정수와 실수 구분 없이 하나의 숫자 타입만 존재</li>
+                    <li><strong>문자열타입</strong> : 문자열</li>
+                    <li><strong>템플릿 리터럴</strong> : ES6부터 도입된 새로운 문자열 표기법으로 멀티라인 문자열, 표현식 삽입, 테그드 템플릿 등 편리한 문자열 처리기능 제공</li>
+                    <li><strong>불리언타입</strong> : 논리적 참(true)과 거짓(false)</li>
+                    <li><strong>undefined타입</strong> : var 키워드로 선언된 변수에 암묵적으로 할당되는 값</li>
+                    <li><strong>null타입</strong> : 값이 없다는 것을 의도적으로 명시할 때 사용하는 값</li>
+                    <li><strong>심벌 타입</strong> : ES6에서 추가된 7번째 타입, 변경 불가능한 원시 타입의 값</li>
                     <li>위의 데이터 타입 이외의 값은 모두 객체 타입, 자바스크립트는 객체 기반의 언어이며 자바스크립트를 이루고 있는 거의 모든 것이 객체라는 것이다.</li>
-                </ul>
+                </ul>v 
 
             <h2><li id="operator">연산자</li></h2>
                 <ul class="disc">
@@ -480,6 +480,26 @@
                     <li>타이머(timer) : setTimeout(), setInterval(), clearTimeout(), clearInterval()</li>
                 </ul>
 
+            <h2><li>이벤트(event)</li></h2>
+                <ul class="disc">
+                    <li>이벤트란 웹브라우저가 알려주는 HTML 요소에 대한 사건의 발생을 의미, 웹페이지에 사용된 js는 발생한 이벤트에 반응하여 특정 동작을 수행</li>
+                    <li>이벤트 리스너란 이벤트가 발생했을 떄 그 처리를 담당하는 함수를 가리키며, 이벤트 핸들러라고도 한다.<br>
+                        지정된 타입의 이벤트가 특정 요소에서 발생하면, 웹 브라우저는 그 요소에 등록된 이벤트 리스너를 실행</li>
+                    <li>이벤트 리스너 등록<br>
+                        1. 객체나 요소에 프로퍼티로 등록 : js코드에서 프로퍼티로 등록, HTML태그에 속성으로 등록<br>
+                        2. 객체나 요소의 메소드에 이벤트 리스너를 전달 :  addEventListener(), attachEvent(), removeEventListener()는 등록된 이벤트 리스너 삭제</li>
+                    <li>이벤트 리스너 호출<br>
+                        이벤트 리스너가 등록되고 해당 객체나 요소에 지정된 타입의 이벤트가 발생하면 브라우저는 자동으로 등록된 이벤트 리스너를 호출</li>
+                    <li>이벤트 리스너는 인수로 이벤트 객체(event object)를 전달받으며, 식별자를 통해 전달받은 이벤트 객체를 참조</li>
+                    <li>이벤트 객체는 해당 타입의 이벤트에 대한 상세 정보 저장, 모든 이벤트 객체는 type,target 프로퍼티를 가진다.</li>
+                    <li>이벤트 전파 : 이벤트가 발생했을 때, 브라우저가 이벤트 리스너를 실행시킬 대상 요소를 결정하는 과정<br>
+                        1. 버블링(bubbling) 전파 : 이벤트가 발생한 요소부터 시작해서, DOM 트리를 따라 위쪽으로 올라가며 전파되는 방식<br>
+                        2. 캡쳐링(capturing) 전파 : 이벤트가 발생한 요소까지 DOM 트리의 최상위부터 아래쪽으로 내려가면 전파되는 방식<br>
+                        (addEventListener() 메소드의 세 번째 인수에 true를 전달)</li>
+                    <li>preventDefalult() 메소드나 returnValue 프로퍼티를 이용하면 기본 동작의 실행을 취소</li>
+                    <li>stopPropagation() 메소드나 cancelBubble 프로퍼티를 이용하면 이벤트의 전파를 취소</li>
+                </ul>
+
             <h2><li>Execute context</li></h2>
                 <ul class="disc">
                     <li>JavaScript의 동작 원리를 담고 있는 핵심 개념으로<br>
@@ -517,8 +537,8 @@
 
             <h2><li>출처</li></h2>
                 <ul class="disc">
-                    <li><a href="http://www.tcpschool.com/">TCP SCHOOL</a></li>
-                    <li><a href="https://www.w3schools.com/">W3SCHOOLS</a></li>
+                    <li><a href="http://www.tcpschool.com/" target="_blank">TCP SCHOOL</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3SCHOOLS</a></li>
                     <li>책 : </li>
                 </ul>
         </ol>
