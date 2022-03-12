@@ -529,10 +529,20 @@
                 <ul class="disc">
                     <li>에러는 언제나 발생할 수 있다. 발생한 에러에 대해 대처하지 않고 방치하면 프로그램은 강제 종료된다.</li>
                     <li>try...catch문을 사용해 발생한 에러에 적절하게 대응하면 프로그램이 강제 종료되지 않고 계속해서 코드를 실행시킬 수 있다.</li>
-                    <li>try...catch...finally문</li>
+                    <li>try...catch...finally, try...finally</li>
                     <li>Error 객체 : Error, SyntaxError, ReferenceError, TypeError, RangeError, URIError, EvalError</li>
-                    <li>throw명령문을 사용하면 사용자 지정 오류를 생성할 수 있다.</li>
-                    <li></li>
+                    <li>throw명령문을 사용하면 사용자 지정 오류를 생성할 수 있다.(throw 표현식;)</li>
+                    <li><h4>Strict 모드</h4></li>
+                        <ul>
+                            <li>ECMAScript 5에서 처음으로 소개된 strict 모드는 자바스크립트 코드에 더욱 엄격한 오류 검사를 적용</li>
+                            <li>strict 모드는 스크립트나 함수의 맨 처음에 "use strict" 지시어를 사용하여 선언</li>
+                            <li>자바스크립트의 strict 모드는 기존 자바스크립트 언어의 일부 기능을 제한한 문법을 사용</li>
+                            <li>몇 가지 중요한 기능을 수정하여 강력한 오류 검사와 함께 향상된 보안 기능을 제공</li>
+                            <table>
+                                <tr><th>변수</th><td>선언되지 않은 변수나 객체를 사용할 수 없음, eval() 함수 내에서 선언된 변수는 외부에서 사용할 수 없음.</td></tr>
+                                <tr><th>프로퍼티</th><td>읽기 전용 프로퍼티에는 대입할 수 없음, 한 프로퍼티를 여러 번 정의할 수 없음.</td></tr>
+                            </table>
+                        </ul>
                 </ul>
 
             <h2><li>출처</li></h2>
