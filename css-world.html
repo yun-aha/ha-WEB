@@ -3,21 +3,13 @@
 <head>
     <title>WEB-css by ha</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="ht+css_world.css">
+    <link rel="stylesheet" href="ht_css_js-world.css">
+    <!-- JQUERY 적용 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
-        <nav>
-            <ul>
-                <li><a href="html-world.html">HTML</a></li>
-                <li><a href="css-world.html">CSS</a></li>
-                <li><a href="json-world.html">JavaScript</a></li>
-                <li><a href="free.html">Free</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
 
     <div class="main">
         <article>
@@ -158,11 +150,13 @@
             </section>
         </article>
     </div>
-    <footer>
-        <div class="copyright">
-            <p>copyright HYEON. All rights are reserved.</p>
-        </div>
-    </footer>
-    
+
+    <div id="footer"></div>
+    <script type="text/javascript">
+        $(function(){
+            $("#header").load("./template/header.html");
+            $("#footer").load("./template/footer.html");
+        });
+    </script>
 </body>
 </html>

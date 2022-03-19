@@ -3,41 +3,13 @@
 <head>
     <title>WEB-free(catch) by ha</title>
     <meta charset="utf-8">
+    <!-- JQUERY 적용 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 </head>
     <style>
         /* base */
-        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-        *{
-            font-family:'Gowun Dodum', sans-serif;;
-        }
-        html,body{
-            text-align: center;
-            border: 0;
-            background-color: ghostwhite;
-        }
-        h1{
-            text-align: center;
-            text-shadow: 7px 7px 7px #7c12dfa6;
-        }
-        nav{
-            margin: auto;
-            text-align: center;
-            display: block;
-            width: 60%;
-        }
-        nav li{
-            list-style: none;
-            display: inline-block;
-        }
-        nav a{
-            padding: 15px 20px;
-            text-decoration: none;
-        }
-        nav a:hover{
-            color:cornflowerblue;
-        }
-        .copyright{
-            color: cornflowerblue;
+        body{
             text-align: center;
         }
         hr{
@@ -137,17 +109,7 @@
     </style>
 
 <body>
-    <header>
-        <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
-        <nav>
-            <ul>
-                <li><a href="html-world.html">HTML</a></li>
-                <li><a href="css-world.html">CSS</a></li>
-                <li><a href="json-world.html">JavaScript</a></li>
-                <li><a href="free.html">Free</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
 
     <hr>  
         <section id="catch">
@@ -167,13 +129,13 @@
         </section>
     
     <hr>
-    <footer>
-        <div class="copyright">
-            <p>copyright HYEON. All rights are reserved.</p>
-        </div>
-    </footer>
+    <div id="footer"></div>
+    <script type="text/javascript">
+        $(function(){
+            $("#header").load("./template/header.html");
+            $("#footer").load("./template/footer.html");
+        });
 
-    <script>
         function wrong(thing){
             var wrong_btn = document.getElementById(thing);
             var wrong_check = document.getElementById("check");

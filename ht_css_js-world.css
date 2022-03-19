@@ -1,0 +1,49 @@
+aside{
+    float:left;
+    position: fixed;
+}
+    aside ul{
+        margin: 3px;
+        margin-top: 30px;
+        padding: 0;
+        list-style-type: none;
+        line-height: 30px;
+    }
+    aside a{
+        text-decoration: none;
+        color: rgb(50, 15, 83);
+    }
+        aside a:hover{
+        color: violet;
+    }
+.main{
+    border: 7px solid rgba(63, 12, 110, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    line-height: 30px;
+    width: 80%;
+    margin:auto;
+}
+    section{
+        font-size: 17px;
+    }
+    .js_p{
+        opacity: 0;
+    }
+    .disc{
+        list-style-type: disc;
+    }
+
+table{
+    border-collapse: collapse;
+    float: left;
+    position: fixed;
+}
+caption{
+    font-weight: bold;
+}
+th, td{
+    font-style: italic;
+    border: 0.1rem dotted cadetblue;
+    padding: 5px;
+}

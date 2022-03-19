@@ -4,39 +4,30 @@
         <title>WEB-free by ha</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="free.css">
+            <!-- JQUERY 적용 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
 
 
-<header>
-    <h1><a href="index.html" style="text-decoration: none;"> &lt;: Hello WEB :) </a></h1>
-    <nav>
-        <ul>
-            <li><a href="html-world.html">HTML</a></li>
-            <li><a href="css-world.html">CSS</a></li>
-            <li><a href="json-world.html">JavaScript</a></li>
-            <li><a href="free.html">Free</a></li>
-        </ul>
-    </nav>
-</header>
+<div id="header"></div>
 
 
 <body>
     <div class="main">
-        <video src="snow_trees.mp4" autoplay muted></video>
+        <video src="./content/snow_trees.mp4" autoplay muted></video>
         <div id="free">
-            <a href="unique.html">Clover?</a>
-            <a href="catch.html">Catch things!</a>
-            <a href="card.html">Card</a>
+            <a href="free_unique.html">Clover?</a>
+            <a href="free_catch.html">Catch things!</a>
+            <a href="free_card.html">Card</a>
         </div>
     </div>
+
+    <div id="footer"></div>
+    <script type="text/javascript">
+        $(function(){
+            $("#header").load("./template/header.html");
+            $("#footer").load("./template/footer.html");
+        });
+    </script>
 </body>
-
-
-<footer>
-    <div class="copyright">
-        <p>copyright HYEON. All rights are reserved.</p>
-    </div>
-</footer>
-
-
 </html>
