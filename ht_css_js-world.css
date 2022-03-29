@@ -16,6 +16,9 @@ aside{
         aside a:hover{
         color: violet;
     }
+.index{
+    text-align: center;
+}
 .main{
     border: 7px solid rgba(63, 12, 110, 0.8);
     border-radius: 20px;
