@@ -1,3 +1,4 @@
+
 aside{
     float:left;
     position: fixed;
@@ -26,6 +27,9 @@ aside{
     line-height: 30px;
     width: 80%;
     margin:auto;
+}
+.main p{
+    padding-right: 10%;
 }
     section{
         font-size: 17px;
