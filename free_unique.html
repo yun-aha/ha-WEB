@@ -150,30 +150,60 @@
         });
 
         function test() {
-            var Box1 = document.getElementById("box1").checked;
-            var Box2 = document.getElementById("box2").checked;
-            var Box3 = document.getElementById("box3").checked;
-            var Box4 = document.getElementById("box4").checked;
-            var Box5 = document.getElementById("box5").checked;
-            var Box6 = document.getElementById("box6").checked;
-            var Box7 = document.getElementById("box7").checked;
-            var Box8 = document.getElementById("box8").checked;
+            //// version : 1
+            // var Box1 = document.getElementById("box1").checked;
+            // var Box2 = document.getElementById("box2").checked;
+            // var Box3 = document.getElementById("box3").checked;
+            // var Box4 = document.getElementById("box4").checked;
+            // var Box5 = document.getElementById("box5").checked;
+            // var Box6 = document.getElementById("box6").checked;
+            // var Box7 = document.getElementById("box7").checked;
+            // var Box8 = document.getElementById("box8").checked;
+            
+            // for (let i of BoxRight){
+
+            //     if (i==true){
+            //         Right.style.opacity = 1;
+            //         Wrong.style.opacity = 0;
+            //     }
+            // }
+            // if (BoxRight.forEach(function(i){i== true}) ){
+            //     if(BoxWrong == false){
+            //         Right.style.opacity = 1;
+            //         Wrong.style.opacity = 0;
+            //     }else{
+            //         Wrong.style.opacity = 1;
+            //         Right.style.opacity = 0;
+            //     }
+            // }else{
+            //     Wrong.style.opacity = 1;
+            //     Right.style.opacity = 0;
+            // }
+
+            //// version:2
+            var MainBox = document.querySelector(".main_box").children;
+            var RightBox = [MainBox[0].checked, MainBox[6].checked, MainBox[8].checked, MainBox[14].checked];
+            var WrongBox = [MainBox[2].checked, MainBox[4].checked, MainBox[10].checked, MainBox[12].checked];
+
             var Right = document.getElementById("right");
             var Wrong = document.getElementById("wrong");
 
-            if (Box1==true && Box4==true && Box5==true && Box8==true){
-                if(Box2==false && Box3==false && Box6==false && Box7==false){
-                Right.style.opacity = 1;
-                Wrong.style.opacity = 0;
+            for (let right of RightBox){
+                for(let wrong of WrongBox){
+                    if(right == true){
+                        if(wrong == false){
+                            Right.style.opacity = 1;
+                            Wrong.style.opacity = 0;
+                        }else{
+                            Wrong.style.opacity = 1;
+                            Right.style.opacity = 0;
+                        }
+                    }else{
+                        Wrong.style.opacity = 1;
+                    Right.style.opacity = 0;
+                    }
                 }
-                else{
-                Wrong.style.opacity = 1;
-                Right.style.opacity = 0;
-                }
-            } 
-            else{
-                Wrong.style.opacity = 1;
-                Right.style.opacity = 0;
+                
             }
         }
     </script>
