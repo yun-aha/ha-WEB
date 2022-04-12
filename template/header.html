@@ -8,6 +8,7 @@
             <li><a href="js-world.html">JavaScript</a></li>
             <li><a href="free.html">Free</a></li>
             <li><a href="jquery-world.html">JQuery</a></li>
+            <li><a href="react.html">REACT</a></li>
         </ul>
     </nav>
 </header>
@@ -15,16 +16,15 @@
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
     *{
     font-family:'Gowun Dodum', sans-serif;}
-    html,body{
-        background-color: ghostwhite;
+    html{
+        background-color: rgba(226, 217, 243, 0.5);
+        font-size: 1rem;
+    }
+    html,body,p,h1,h4,h5,h6,ul,li{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         border: 0;
-    }
-    h4,h5,h6{
-        margin: 0;
-        padding: 0;
     }
     h1{
         padding: 1% 0;
@@ -36,27 +36,25 @@
             transform: scale(0.95);
         }
     h1 a{
-        transition: 0.5s;   
+        transition: 1s;   
     }
         h1 a:hover{
-            color:cadetblue;
+            color:cornflowerblue;
+            letter-spacing: 0.2rem;
         }
     nav{
-        margin: auto;
-        padding: 5px;
+        margin: 0 auto;
+        padding: 1% 0;
         text-align: center;
         display: block;
-        width: 60%;
+        width: 80%;
     }
-        nav ul{
-            padding-inline-start: 0;
-        }
         nav li{
             list-style: none;
             display: inline-block;
+            margin: 0 2%;
         }
         nav a{
-            padding: 15px 20px;
             text-decoration: none;
         }
             nav a:hover{

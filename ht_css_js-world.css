@@ -1,6 +1,4 @@
-h1,p{
-    margin: 0;
-}
+/* aside bar */
 aside{
     float:left;
     position: fixed;
@@ -10,7 +8,7 @@ aside{
         margin-top: 30px;
         padding: 0;
         list-style-type: none;
-        line-height: 30px;
+        line-height: 1.2;
     }
     aside a{
         text-decoration: none;
@@ -22,20 +20,24 @@ aside{
 .index{
     text-align: center;
 }
+/* main */
 .main{
-    border: 7px solid rgba(63, 12, 110, 0.8);
-    border-radius: 20px;
-    padding: 30px;
-    line-height: 30px;
+    border: 7px solid rgba(44, 26, 77, 0.7);
+    background-color: ghostwhite;
+    border-radius: 2rem;
+    padding: 3%;
     width: 80%;
-    margin:auto;
+    margin: auto;
 }
 .main p{
     padding-right: 10%;
 }
-    section{
-        font-size: 17px;
-    }
+.main ul{
+    padding-left: 3%;
+}
+.main li{
+    margin-bottom: 1%;
+}
     .js_p{
         opacity: 0;
     }

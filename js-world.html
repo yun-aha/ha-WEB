@@ -23,13 +23,13 @@
         <input id="night_day" type="button" value="night" onclick="
         alert('click!');
         if(document.querySelector('#night_day').value==='night'){
-            document.querySelector('.main').style.border='border: 10px solid white';
+            document.querySelector('.main').style.backgroundColor='black';
             document.querySelector('body').style.backgroundColor='black';
             document.querySelector('body').style.color='ghostwhite';
             document.querySelector('#night_day').value='day';
         }else{
-            document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
-            document.querySelector('body').style.backgroundColor='ghostwhite';
+            document.querySelector('.main').style.backgroundColor='ghostwhite';
+            document.querySelector('body').style.backgroundColor='rgba(226, 217, 243, 0.5)';
             document.querySelector('body').style.color='black';
             document.querySelector('#night_day').value='night';
         }">
@@ -559,9 +559,7 @@
         <input type="button" value="blue" onclick="
         if(this.value==='blue'){
             var target = document.querySelector('body');
-            document.querySelector('.main').style.border='border: 10px solid violet';
             target.style.backgroundColor='blue';
-            target.style.color='ghostwhite';
             this.value='day';
             var alist = document.querySelectorAll('a');
             var i = 0;
@@ -571,9 +569,7 @@
             }
         }else{
             var target = document.querySelector('body');
-            document.querySelector('.main').style.border='border: 10px solid cornflowerblue';
-            target.style.backgroundColor='ghostwhite';
-            target.style.color='black';
+            target.style.backgroundColor='rgba(226, 217, 243, 0.5)';
             this.value='blue';
             var alist = document.querySelectorAll('a');
             var i = 0;
