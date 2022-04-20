@@ -1,39 +1,34 @@
 .main{
-    
-    border-radius: 20px;
-    padding: 0px;
+    padding: 2%;
     width: 80%;
-    margin:auto;
-    text-align: center;
+    margin: auto;
+    position: relative;
 }
 video{
     border: 2px solid rgba(63, 12, 110, 0.8);
     margin: 0;
     padding: 0;
-    border-radius: 20px;
-    position: relative;
+    border-radius: 2rem;
     width: 100%;
 }
 
 #free{
-    display: grid;
-    grid-template-columns: repeat(2,300px);
-    grid-template-rows: 150px;
-    line-height: 130px;
-    grid-gap: 50px;
-    justify-content: center;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
-    left: 350px;
-    top: 300px;
+    justify-content: center;
+    width: 90%;
+    left: 5%;
+    top: 20%;
 }
     #free a{
-        font-size: 43px;
+        font-size: 2rem;
         font-weight: 600;
         color: rgb(252, 252, 95);
         text-decoration: none;
         background-color: rgba(32, 32, 24, 0.85);
-        padding: 10px;
+        padding: 5%;
+        margin: 3%;
         transition: 1s;
     }
     #free a:hover{
