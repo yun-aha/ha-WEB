@@ -16,6 +16,7 @@
             <li><a href="#expression">표현식과 문</a></li>
             <li><a href="#dataType">데이터 타입</a></li>
             <li><a href="#operator">연산자</a></li>
+            <li><a href="#conditional">제어문</a></li>
         </ul>
     </aside>
 
@@ -48,10 +49,21 @@
 
     <article>
         <ol>
-            <h2><li id="var">변수</li></h2>
+            <h2><li>async & defer</li></h2>
                 <ul class="disc">
-                    <li><strong>undefined</strong>는 자바스크립트에서 제공하는 원시 타입의 값이다.<br></li>
-                    <li>변수를 사용하려면 반드시 선언이 필요. 변수를 선언할 때는 var, let, const 키워드를 사용</li>
+                    <li>script async src(async 스크립트 또는 비동기 스크립트)<br>
+                        async 속성이 붙은 스크립트는 페이지와 완전히 독립적으로 동작한다.<br>
+                        async 스크립트는 백그라운드에서 다운로드 되고 바로 실행된다. async 스크립트 샐힝중에는 HTML 파싱이 멈춘다.<br>
+                        async는 크기가 작은 스크립트 먼저 다운되고 실행되기 때문에 정확한 순서를 예측할 수 없다.</li>
+                    <li>script defer src<br>
+                        브라우저는 defer 속성이 있는 스크립트를 HTML파싱을 멈추지 않고 '백그라운드'에서 다운로드를 한다.<br>
+                        그리고 defer 스크립트의 실행은 페이지 구성(DOM)이 끝난 후 실행된다. DOM이 준비된 후에 실행되지만 DOMContentLoaded 이벤트 발생 전에 실행된다.<br>
+                        defer 스크립트가 실행될 때는 순서대로 실행된다.(작은 스크립트가 먼저 다운되지만 실행은 순서대로)</li>
+                </ul>
+            <h2><li id="var">변수 Variable</li></h2>
+                <ul class="disc">
+                    <li><strong>undefined</strong>는 자바스크립트에서 제공하는 원시 타입의 값이다.</li>
+                    <li>변수를 사용하려면 반드시 선언이 필요. 변수를 선언할 때는 var, let 키워드를 사용</li>
                     <li>var키워드를 사용한 변수 선언은 선언 단계와 초기화 단계가 동시에 진행된다.<br>
                         만약 초기화 단계를 거치지 않으면 확보된 메모리 공간에는 이전에 다른 애플리케이션이 사용했던 값이 남아 있을 수 있다.<br>
                         이 값을 <strong>쓰레기 값(garbage value)</strong>라 한다.   </li>
@@ -60,7 +72,7 @@
                         이처럼 변수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 <strong>변수 호이스팅(variable hoisting)</strong>이라 한다.<br>
                         사실 변수 선언뿐 아니라 var, let, const, function, function*, class 키워드를 사용해서 선언하는 모든 식별자(변수, 함수, 클래스 등)는 호이스팅 된다.</li>
                     <li>변수 선언은 소스코드가 순차적으로 실행되는 시점인 런타임 이전에 먼저 실행되지만 값의 할당은 소스코드가 순차적으로 실행되는 시점인 런타임에 실행된다.</li>   
-                    <li>값을 재할당할 수 없어서 변수에 저장된 값을 변경할 수 없다면 변수가 아니라 <strong>상수</strong>라 한다.</li>
+                    <li>값을 재할당할 수 없어서 변수에 저장된 값을 변경할 수 없다면 변수가 아니라 <strong>상수(constant)</strong>라 한다. const</li>
                     <li>가비지 콜렉터, 언매니지드 언어, 매니지드 언어</li>
                 </ul>
 
@@ -76,39 +88,40 @@
                 
             <h2><li id="dataType">데이터 타입</li></h2>
                 <ul class="disc">
-                    <li><strong>숫자타입</strong> : 숫자, 정수와 실수 구분 없이 하나의 숫자 타입만 존재</li>
-                    <li><strong>문자열타입</strong> : 문자열</li>
+                    <li><strong>숫자타입 number</strong> : 숫자, 정수와 실수 구분 없이 하나의 숫자 타입만 존재(NaN, Infinity)</li>
+                    <li><strong>문자열타입 string</strong> : 문자열</li>
                     <li><strong>템플릿 리터럴</strong> : ES6부터 도입된 새로운 문자열 표기법으로 멀티라인 문자열, 표현식 삽입, 테그드 템플릿 등 편리한 문자열 처리기능 제공</li>
-                    <li><strong>불리언타입</strong> : 논리적 참(true)과 거짓(false)</li>
+                    <li><strong>불리언타입 boolean</strong> : 논리적 참(true)과 거짓(false)</li>
                     <li><strong>undefined타입</strong> : var 키워드로 선언된 변수에 암묵적으로 할당되는 값</li>
                     <li><strong>null타입</strong> : 값이 없다는 것을 의도적으로 명시할 때 사용하는 값</li>
-                    <li><strong>심벌 타입</strong> : ES6에서 추가된 7번째 타입, 변경 불가능한 원시 타입의 값</li>
+                    <li><strong>심벌 타입 symbol</strong> : ES6에서 추가된 7번째 타입, 변경 불가능한 원시 타입의 값, 고유한 식별자가 필요할 때 사용(출력할 때는 .description을 붙여서 출력)</li>
                     <li>위의 데이터 타입 이외의 값은 모두 객체 타입, 자바스크립트는 객체 기반의 언어이며 자바스크립트를 이루고 있는 거의 모든 것이 객체라는 것이다.</li>
-                </ul>v 
+                    <li>javascript는 Dynamic typing : dynamically typed language</li>
+                </ul>
 
             <h2><li id="operator">연산자</li></h2>
                 <ul class="disc">
                     <li><strong>산술 연산자</strong>{+  -  *  **  /  %  ++  --}</li>
                     <li><strong>할당 연산자</strong>{=  +=  -=  *=  /=  %=}</li>
-                    <li><strong>비교 연산자</strong>{==  ===  !=  !==  >  <  >=  <=}</li>
-                    <li>==는 값만 비교, ===는 값과 유형을 비교</li>
+                    <li><strong>비교 연산자</strong>{==  ===  !=  !==  >  <  >=  <=}<br>
+                        ==는 값만 비교(loose equality), ===는 값과 유형을 비교(strict equality)</li>
                     <li><strong>논리 연산자</strong>{&&(and)  ||(or)  !(not)}</li>
                     <li><strong>비트 연산자</strong>: 논리 연산자와 비슷하지만, 비트(bit) 단위로 논리 연산을 수행<br>
                         비트 단위로 전체 비트를 왼쪽이나 오른쪽으로 이동시킬 때도 사용{&  |  ^  ~  <<  >>  >>>}</li>
                     <li><strong>유형 연산자</strong>{typeof  instanceof}</li>
                     <li><h4>typeof</h4></li>
                         <ul>
-                            <li>JavaScript에는 값을 포함할 수 있는 5가지 다른 데이터 유형이 있다.</li>
-                                - string, number, boolean, object, function
-                            <li>6가지 유형의 객체</li>
-                                - Object, Date, Array, String, Number, Boolean
-                            <li>그리고 값을 포함할 수 없는 2가지 데이터 유형</li>
-                                - null, undefined
+                            <li>JavaScript에는 값을 포함할 수 있는 5가지 다른 데이터 유형이 있다.<br>
+                                - string, number, boolean, object, function</li>
+                            <li>6가지 유형의 객체<br>
+                                - Object, Date, Array, String, Number, Boolean</li>                                
+                            <li>그리고 값을 포함할 수 없는 2가지 데이터 유형<br>
+                                - null, undefined</li>                                
                         </ul>
                     <li><strong>삼항 연산자</strong>{표현식 ? 반환값1 : 반환값2} : (?) 앞의 표현식에 따라 결괏값이 참이면 반환값1 반환, 결괏값이 거짓이면 반환값2를 반환</li>
                 </ul>
 
-            <h2><li>제어문(control flow statements)- Loop, conditional statements</li></h2>
+            <h2><li id="conditional">제어문(control flow statements)- Loop, conditional statements</li></h2>
                 <ul class="disc">
                     <li>Loop</li>
                         <ol>
@@ -124,6 +137,8 @@
                             <li>if/else</li>
                             <li>if/ else if /else</li>
                             <li>switch/case/default</li>
+                            <li>condition ? value1 : value2<br>
+                                name === 'ha' ? 'yes' : 'no'</li>
                         </ol>
                     <li>기타 제어문</li>
                         <ol>
