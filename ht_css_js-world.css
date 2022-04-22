@@ -29,14 +29,20 @@ aside{
     width: 80%;
     margin: auto;
 }
+.main h1{
+    text-shadow: 1px 1px 3px #7c12dfa6;
+}
 .main p{
     padding-right: 10%;
 }
 .main ul{
     padding-left: 3%;
 }
-.main li{
-    margin-bottom: 1%;
+.spacing ul{
+    margin-bottom: 3%;
+}
+.spacing_li li{
+    margin-bottom: 3%;
 }
     .js_p{
         opacity: 0;

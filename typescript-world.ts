@@ -1,8 +1,8 @@
 function harry(person: string){
     let a :number = 12;
-    return `Hello + ${person} ${a}`;
+    return `Hello + ${person} : ${a}age`;
 }
 
-let user = "Harry Potter";
+let user : string = "Harry Potter";
 
 document.body.textContent = harry(user);

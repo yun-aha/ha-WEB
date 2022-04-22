@@ -20,7 +20,7 @@
         </ul>
     </aside>
 
-    <div class="main">
+    <div class="main spacing">
         <input id="night_day" type="button" value="night" onclick="
         alert('click!');
         if(document.querySelector('#night_day').value==='night'){
@@ -35,7 +35,7 @@
             document.querySelector('#night_day').value='night';
         }">
 
-    <h2> It's JavaScript</h2>
+    <h1> It's JavaScript</h1>
     <button onclick="
         if(document.querySelector('p').style.opacity=='0'){
             showDetail('p')
@@ -151,12 +151,12 @@
 
             <h2><li>함수</li></h2>
                 <ul class="disc">
-                    <li>함수(function)란 하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 의미</li>
-                    <li>함수 선언문은 표현식이 아닌 문이다.</li>
+                    <li>함수(function)란 하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 의미, 함수 선언문은 표현식이 아닌 문이다.</li>
                     <li>함수 선언문으로 정의한 함수와 함수 표현식으로 정의한 함수의 생성(호출) 시점이 다르다.</li>
-                    <li>함수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 함수 호이스팅이라 한다.</li>
-                    <li>함수 표현식으로 함수를 정의하면 함수 호이스팅이 발생하는 것이 아니라 변수 호이스팅이 발생한다. </li>
-                    <li>매개변수보다 인수가 더 많은 경우 초과된 인수는 무시된다.</li>
+                    <li>함수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을 함수 호이스팅이라 한다.<br>
+                        함수 표현식으로 함수를 정의하면 함수 호이스팅이 발생하는 것이 아니라 변수 호이스팅이 발생한다. </li>
+                    <li>매개변수보다 인수가 더 많은 경우 초과된 인수는 무시된다.<br>
+                        [es6] (...agrs) 인자는 배열 형태로 전달된다.</li>
                     <li>미리 정의된 전역 함수</li>
                         <ol>
                             <li>eval() : 문자열로 표현된 자바스크립트 코드를 실행하는 함수</li>
@@ -173,6 +173,15 @@
                             <li>Number(), String()</li>
                             <li>Escape Sequence(이스케이프 시퀀스) : 프로그래밍 언어 특성상 표현할 수 없는 기능과 문자를 표현, 컴퓨터를 제어하는 목적으로 사용되는 특수한 문자</li>
                         </ol>
+                    <li><strong>Arrow Function</strong><br>
+                        const simpleArrow = () => console.log('simpleArrow')
+                    </li>
+                    <li>
+                        IIFE : Immediately Invoked Function Expression - 함수가 바로 실행된다.<br>
+                        function hello(){
+                            console.log('IIFE')
+                        }();
+                    </li>
                 </ul>
 
             <h2><li>Array</li></h2>
@@ -294,16 +303,20 @@
 
             <h2><li>Class</li></h2>
                 <ul class="disc">
-                    <li>클래스는 새로운 객체 생성 메커니즘</li>
-                    <li>클래스 몸체에서 정의할 수 있는 메서드는 constructor(생성자), 프로토타입 메서드, 정적 메서드의 세가지가 있다.</li>
+                    <li>클래스는 새로운 객체 생성 메커니즘 / 클래스 몸체에서 정의할 수 있는 메서드는 constructor(생성자), 프로토타입 메서드, 정적 메서드의 세가지가 있다.</li>
                     <li>클래스의 구문은 "엄격 모드"로 작성해야 한다, 변수를 선언하지 않고 사용하면 오류 발생</li>
-                    <li>클래스 상속을 생성하려면 extends 키워드를 사용한다, 클래스 상속으로 생성된 클래스는 다른 클래스의 모든 메서드를 상속한다.</li>
-                    <li>super()메서드는 부모 클래스를 참조, 부모의 속성과 메서드에 액세스한다.</li>
+                    <li>상속 : 클래스 상속을 생성하려면 extends 키워드를 사용한다, 클래스 상속으로 생성된 클래스는 다른 클래스의 모든 메서드를 상속한다.<br>
+                        super()메서드는 부모 클래스를 참조, 부모의 속성과 메서드에 액세스한다.</li>
                     <li>클래스를 사용하면 getter와 setter도 사용할 수 있다, 클래스에 getter 및 setter를 추가하려면 get 및 set 키워드를 사용</li>
-                    <li>클래스 선언은 호이스트되지 않는다, 클래스를 사용하려면 먼저 선언해야 한다.</li>
-                    <li>"prototype"이 아닌 클래스 함수 자체에 메서드를 설정할 수도 있습니다. 이런 메서드를 정적(static) 메서드라고 부른다,
+                    <li>Public & Private : publicField(외부에서 접근 가능) , #privateField(클래스 내부에서만 값을 읽고 변경가능)</li>
+                    <li>Static : 오브젝트로 복제가 되지 않고 클래스 자체가 가진 보유한 값,메소드<br>
+                        "prototype"이 아닌 클래스 함수 자체에 메서드를 설정할 수도 있습니다. 이런 메서드를 정적(static) 메서드라고 부른다,
                         정적 메서드는 메서드를 프로퍼티 형태로 직접 할당하는 것과 동일한 일을 한다.<br>
-                        정적 메서드는 어떤 특정한 객체가 아닌 클래스에 속한 함수를 구현하고자 할 때 주로 사용된다. </li>
+                        정적 메서드는 어떤 특정한 객체가 아닌 클래스에 속한 함수를 구현하고자 할 때 주로 사용된다.
+                    </li>
+                    <li>클래스 선언은 호이스트되지 않는다, 클래스를 사용하려면 먼저 선언해야 한다.</li>
+                    <li>instanceof : 왼쪽에 있는 오브젝트가 오른쪽에 있는 클래스를 이용해서 만들어졌는지 확인(true, false)<br>
+                        aaa instanceof A</li>
                 </ul>
 
             <h2><li>Object</li></h2>
