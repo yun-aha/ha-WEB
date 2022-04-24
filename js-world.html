@@ -192,25 +192,26 @@
 
                     <li>push() : 배열의 뒤에 요소 추가, pop() : 배열의 뒤 요소 제거<br>
                         unshift() : 배열의 앞에 요소 추가, shift() : 배열의 앞 요소 제거<br>
-                        join(), delete, concat() : 배열 합침</li>
-                    <li>splice()는 배열의 지정된 위치에서 요소 제거(제거 후 추가도 가능), slice()는 배열의 조각을 잘라낸다.<br>
+                        join() : 배열의 모든 요소를 연결해 하나의 문자열로 만든다<br>
+                        split() : String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눈다<br>
+                        delete, concat() : 배열 합침</li>
+                    <li>splice()는 배열의 기존 요소 제거(제거 후 추가도 가능), slice()는 배열에서 일부만 잘라내어 새로운 문자열 반환<br>
                         sort()는 배열을 알파벳순으로 정렬<br>
                         reverse()는 배열의 요소를 뒤집는다, 내림차순으로 배열을 정렬하는데 사용</li>    
                     <li>length속성을 사용하여 새 요소를 배열에 추가할 수도 있습니다, 인덱스가 높은 요소를 추가하면 배열에 정의되지 않은 "구멍"이 생길 수 있다.</li>
+                    <li><strong>find()</strong>는 테스트 함수를 통과하는 첫 번째 배열 요소의 값을 반환<br>
+                        <strong>filter()</strong>메서드는 테스트 함수를 통과한 모든 요소로 새 배열을 반환</li>
+                    <li><strong>indexOf()</strong>는 배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환, 배열안에 찾는 요소가 없으면 -1 반환<br>
+                        lastIndexOf()지정된 요소가 마지막으로 발생한 위치를 반환, findIndex()는 테스트 함수를 통과하는 첫 번째 배열 요소의 인덱스를 반환<br>
+                        <strong>Array.includes()</strong>는 요소가 배열에 있는지 확인(true,false)</li>
                     
                     <li>배열에서 가장 높은 숫자를 찾을 때 Math.max.apply(), 가장 낮은 숫자를 찾을 때 Math.min.apply()</li>
                     <li><strong>map()</strong>메서드는 각 배열 요소에 대해 함수를 수행하여 새 배열을 만든다.</li>
-                    <li><strong>filter()</strong>메서드는 테스트를 통과한 배열 요소로 새 배열을 만든다.</li>
                     <li><strong>reduce()</strong>메서드는 각 배열 요소에서 함수를 실행하여 단일 값을 생성한다.<br>
                         reduceRight()메서드는 오른쪽에서 왼쪽으로 작동</li>
                     <li><strong>every()</strong>모든 배열 값이 테스트를 통과하는지 확인(true,false)<br>
                         <strong>some()</strong>일부 배열 값이 테스트를 통과하는지 확인(true,false)</li>
 
-                    <li><strong>indexOf()</strong>는 배열에서 인수로 전달된 요소를 검색하여 인덱스를 반환, 배열안에 찾는 요소가 없으면 -1 반환<br>
-                        lastIndexOf()지정된 요소가 마지막으로 발생한 위치를 반환, findIndex()는 테스트 함수를 통과하는 첫 번째 배열 요소의 인덱스를 반환<br>
-                        <strong>Array.includes()</strong>는 요소가 배열에 있는지 확인(true,false)</li>
-
-                    <li><strong>find()</strong>는 테스트 함수를 통과하는 첫 번째 배열 요소의 값을 반환</li>
                     <li><strong>Array.from()</strong>는 길이 속성이 있는 개체 또는 반복 가능한 개체에서 Array개체를 반환</li>
                     <li><strong>Array.keys()</strong>는 배열 키가 있는 Array Iterator개체를 반환</li>
                     <li>const로 선언된 배열은 재할당할 수 없다, 배열의 요소는 변경할 수 있다.</li>
