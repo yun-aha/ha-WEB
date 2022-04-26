@@ -605,7 +605,45 @@
                     <li>Json to Object : JSON.parse(json)</li>
                 </ul>
 
-            
+            <h2><li>비동기처리 Asynchronous</li></h2>
+                <ol>
+                    <li>JavaScript is synchronous</li>
+                    <li>
+                        <h4>Callback</h4>
+                        <ul>
+                            <li>다른 함수의 인자로써 넘겨진 후 특정 이벤트에 의해 호출되는 함수</li>
+                            <li>Synchronous callback, Asynchronous callback</li>
+                            <li>setTimeout</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Promise</h4>
+                        <ul>
+                            <li>JavaScript object for asynchronous operation</li>
+                            <li>State : pending -> fulfilled or rejected</li>
+                            <li>Producer vs Consumer</li>
+                            <li>Producer<br>
+                                const promise = new Promise((resolve, reject) => {
+                                    resolve('a'); || reject(new Error('no'))
+                                })<br>
+                                when new Promise is created, the executor runs automatically.</li>
+                            <li>
+                                Consumer : then, catch, finally<br>
+                                promise.then(value => {}) / then은 promise가 정상적으로 수행되어서 resolve함수를 통해서 전달한 값이 value의 파라미터로 전달되어져서 들어온다<br>
+                                promise.catch(error ={}) / catch는 error가 발생했을 때 어떻게 처리할 건지<br>
+                                promise.finally(()=>{}) / finally는 무조건 마지막으로 호출된다<br>
+                                promise.then().catch().finally()
+                            </li>
+                            <li>Promise chaining<br>
+                                promise.then(num => num*2).then(num => num*3).then(...)</li>
+                            <li>Promise APIs<br>
+                                promise.all() : 주어진 모든 프로미스가 이행하거나 한 프로미스가 거부될 때까지 대기하는 새로운 프로미스를 반환<br>
+                                promise.race() : 주어진 모든 프로미스 중 하나라도 처리될 때까지 대기하는 프로미스를 반환</li>
+                        </ul>
+                    </li>
+
+                </ol>
+
             <h2><li>출처</li></h2>
                 <ul class="disc">
                     <li><a href="http://www.tcpschool.com/" target="_blank">TCP SCHOOL</a></li>
