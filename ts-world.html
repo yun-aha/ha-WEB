@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title>WEB-javascript by ha</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="ht_css_js-world.css">
+    <!-- JQUERY 적용 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="main spacing">
+        <h1> It's TypeScript</h1>
+        <article>
+            <h4>TypeScript type</h4>
+                <ul>
+                    <li>string, number, boolean, null, undefined<br>
+                        배열 : number[] || Array< number > || [string, number] ....</li>
+                    <li>void : 함수에서 아무것도 반환하지 않을 때 주로 사용<br>
+                        never : 항상 error를 반환하거나 끝나지 않는 반복문의 타입으로 쓸 수 있다.</li>
+                    <li>enum : 열거형으로 이름이 있는 상수들의 집합을 정의할 수 있다. 열거형을 사용하면 의도를 문서화 하거나 구분되는 사례 집합을 더 쉽게 만들수 있다. 
+                        TypeScript는 숫자와 문자열-기반 열거형을 제공</li>
+                    <li>타입은 변수에 담아쓸 수 있다.</li>
+                </ul>
+            <h4>Union type</h4>
+                <ul>
+                    <li></li>
+                </ul>
+            <h4>인터페이스 interface</h4>
+                <ul>
+                    <li>interface</li>
+                    <li>있어도 되고 없어도 되는 optional한 속성을 만들려면 뒤에 ?를 붙여준다</li>
+                    <li>값을 읽기만 하고 수정할 수 없게 하려면 앞에 readonly를 붙여준다.</li>
+                    <li>interface로 함수도 정의할 수 있다.</li>
+                    <li>implements를 이용하여 클래스도 정의할 수 있다.</li>
+                    <li>extends를 사용하여 interface를 확장할 수 있다.</li>
+                </ul>
+
+            <h4>함수</h4>
+                <ul>
+                    <li></li>
+                </ul>
+            <h4>출처</h4>
+                <ol>
+                    <li>https://www.typescriptlang.org/ko/</li> 
+                </ol>
+        </article>
+        
+    </div>
+    <div id="footer"></div>
+    <script type="text/javascript">
+        $(function(){
+            $("#header").load("./template/header.html");
+            $("#footer").load("./template/footer.html");
+        });
+    </script>
+</body>
+</html>
