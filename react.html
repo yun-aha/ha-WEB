@@ -65,10 +65,15 @@
                         <li>props 값을 객체로 하위 컴포넌트에 전달할 경우, 자료형을 object로 선언한다. 하지만 객체 형태(객체 내부 변수들)의 자료형을 선언할 때는 shape라는 유형을 사용한다.</li>
                         <li>props를 하위 컴포넌트 태그 안쪽에 선언해 전달하는 것 이외에도 하위 컴포넌트 태그 사이에 작성된 node를 전달할 수 있다<br>
                             .props.children으로 접근해 사용</li>
+                <h2><li>state</li></h2>
+                    <ul class="disc">
+                        <li>Props를 상위 컴포넌트에서 하위 컴포넌트로 데이터를 전달할 때 사용했다면, state는 하나의 컴포넌트 안에서 전역 변수처럼 사용 </li>
+                        <li>가장 먼저 실행되는 생성자 함수 constructor 안에서 state 변수의 초깃값을 정의해야 한다.</li>
+                        <li>setState()함수로 state를 변경하면 render()를 호출해 변경된 값을 화면에 보여줄 수 있다.</li>
+                        <li>직접 state를 변경하면 render()함수를 호출하지 않으므로 화면에 보이는 state값은 바뀌기 전 상태로 남는다<br>
+                            이 때 forceUpdate()함수로 화면을 새로 고침하면, render()함수를 호출해 변경된 값을 화면에 보여줄 수 있다.</li>
+                    </ul>    
 
-                        
-
-                    </ul>
                 <h2><li>배열 함수</li></h2>
                     <ul class="disc">
                         <li>전개 연산자 : 변수 앞에 ...(마침표 3개)를 입력하여 사용<br>
