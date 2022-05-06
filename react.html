@@ -89,6 +89,25 @@
                         <li>React Class 구성 요소에는 내장 state객체가 있다, state 객체는 구성 요소에 속한 속성 값을 저장하는 위치이다<br>
                             개체가 변경 되면 state 구성 요소가 다시 렌더링 된다.</li>
                         <li>this.setState()메서드를 이용해서 상태 개체의 값 변경</li>
+                        <li>class형 컴포넌트에는 Component와 PureComponent가 있다. 두 컴포넌트 모두 props와 state의 변경에 따라 render() 함수를 
+                            호출하는데, 변경에 대한 기준이 다르다.<br>
+                            Component : 비교 대상이 완전히 동일하지 않으면 변경이 발생했다고 본다.<br>
+                            PureComponent : 비교 대상의 값을 비교해 동일하지 않으면 변경이 발생했다고 본다. 불필요한 render()함수 실행을 줄이면
+                                            페이지 성능을 향상시킬 수 있다.</li>
+                    </ul>
+                <h2><li>함수</li></h2>
+                    <ul class="disc">
+                        <li>함수형 컴포넌트는 클래스형 컴포넌트와 달리, state가 없고 생명주기 함수를 사용할 수 없다.</li>
+                        <li>상위 컴포넌트에서 props와 context를 파라미터로 전달받아 사용하고 render()함수가 없으므로 return만 사용해 화면을 그려준다.</li>
+                    </ul>
+                <h2><li>Hook</li></h2>
+                    <ul class="disc">
+                        <li>함수형 컴포넌트에서 클래스형 컴포넌트와 같이 state와 생명주기 함수와 같은 기능을 사용하기 위해 hook을 이용한다.</li>
+                        <li>useState(), useEffect()</li>
+                        <li>useState() : state변숫값을 선언 및 할당한다. 이 때 두가지 인자가 선언된 배열이 반환된다.<br>
+                            첫번 째 인자는 state변수명, 두번째 인자는 state변숫값을 변경해주는 함수다.</li>
+                        <li>useEffect() : 생명주기 함수 componentDidMount()와 같이 return되는 html 코드들이 화면에 그려진 이후에 실행된다.<br>
+                            최초 페이지가 로딩될 때 한번 실행되고 setContents()함수로 state값이 변경되면 한번 더 실행된다.</li>
                     </ul>
                 <h2><li>JQUERY 사용</li></h2>
                     <ul class="disc">
