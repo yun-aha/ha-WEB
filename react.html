@@ -103,11 +103,14 @@
                 <h2><li>Hook</li></h2>
                     <ul class="disc">
                         <li>함수형 컴포넌트에서 클래스형 컴포넌트와 같이 state와 생명주기 함수와 같은 기능을 사용하기 위해 hook을 이용한다.</li>
-                        <li>useState(), useEffect()</li>
                         <li>useState() : state변숫값을 선언 및 할당한다. 이 때 두가지 인자가 선언된 배열이 반환된다.<br>
                             첫번 째 인자는 state변수명, 두번째 인자는 state변숫값을 변경해주는 함수다.</li>
                         <li>useEffect() : 생명주기 함수 componentDidMount()와 같이 return되는 html 코드들이 화면에 그려진 이후에 실행된다.<br>
                             최초 페이지가 로딩될 때 한번 실행되고 setContents()함수로 state값이 변경되면 한번 더 실행된다.</li>
+                        <li>Hook은 React의 함수 컴포넌트 내에서만 호출가능, 구성 요소의 최상위 수준에서만 호출, 조건부일 수 없다.</li>
+                        <li>React Context는 상태를 전역적으로 관리하는 방법<br>
+                            createContext : 컨텍스트를 생성하려면 컨텍스트를 가져오고 초기화해야 합니다.<br>
+                            useContext : 자식 구성 요소에서 컨텍스트를 사용하려면 useContext을 사용하여 컨텍스트에 액세스</li>
                     </ul>
                 <h2><li>JQUERY 사용</li></h2>
                     <ul class="disc">
